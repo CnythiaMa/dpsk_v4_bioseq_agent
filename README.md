@@ -20,7 +20,7 @@ DeepSeek-V4 总体很强,但在长序列任务(互补配对、碱基计数、特
 | 配置                           |                 成绩 |
 | ------------------------------ | -------------------: |
 | v4-flash · 无工具             |           3/14 (21%) |
-| v4-flash · 代码 Agent         |           4/14 (29%) |
+| **v4-flash · 代码 Agent**    |      **4/14 (29%)** |
 | v4-pro · 无工具               |           3/14 (21%) |
 | **v4-pro · 代码 Agent** | **5/14 (36%)** |
 | GPT-5.5 codex(全工具)          |           8/14 (57%) |
@@ -28,14 +28,11 @@ DeepSeek-V4 总体很强,但在长序列任务(互补配对、碱基计数、特
 
 **SeqQA2**(400 题,计算密集)—— 完整表见 [`docs/seqqa_comparison.md`](docs/seqqa_comparison.md):
 
-| 配置                             |      原始准确率 | **已作答准确率** |
-| -------------------------------- | --------------: | ---------------------: |
-| flash · 无工具(序列注入 prompt) |           42.8% |                  44.8% |
-| flash · 代码 Agent              |           38.8% |        **66.8%** |
-| **pro · 代码 Agent**      | **50.7%** |        **79.9%** |
-
-工具把**"算得准"几乎翻倍**(已作答准确率 ~45% → 67–80%,长序列类如 `gc_content`/`restriction_counts` 4→20 近满分);
-但原始分被拉低,因为有些题模型**算对了却没按 `<answer>` 格式输出**(本轮没接格式对齐层——这是工程缺口,不是模型能力问题)。
+| 配置                             | **已作答准确率** |
+| -------------------------------- | ---------------------: |
+| flash · 无工具(序列注入 prompt) |                  44.8% |
+| flash · 代码 Agent              |        **70.2%** |
+| **pro · 代码 Agent**      |        **79.9%** |
 
 ## 安装
 
@@ -70,7 +67,7 @@ src/dpsk_v4_bioseq_agent/
 ├── agent.py             # 代码 Agent 循环:design_cloning() / solve_seqqa()
 ├── scoring.py           # 官方 cloning_reward + seqqa-validator 打分
 ├── llm.py               # Ark 请求层 + 429/5xx 重试退避 + thinking 开关
-├── adaptive.py          # AIMD 自适应并发限流器
+├── adaptive.py          # API 自适应动态调度并发限流器
 ├── config.py            # env 驱动的配置 + 外部 LabBench2 接入
 ├── run_cloning.py / run_seqqa.py   # CLI 驱动(同时是 console 入口)
 ├── monitor/             # 可选:进度追踪 + 零依赖网页看板
