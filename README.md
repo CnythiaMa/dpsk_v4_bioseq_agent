@@ -1,103 +1,100 @@
 # dpsk_v4_bioseq_agent
 
-A minimal **code-execution agent** that lets a tool-less LLM (here: **DeepSeek-V4-flash / -pro**
-via Volcengine Ark) solve **LabBench2** sequence/cloning tasks by *writing and running its own
-Python* in a sandbox, instead of doing error-prone nucleotide bookkeeping in its head.
+一个极简的**代码执行 Agent：**让本身没有工具的大模型(**DeepSeek-V4-flash / -pro**)
+通过**自己写并运行 Python**(在沙箱里)来解 **LabBench2** 的序列 / 克隆题——而不是在思维链里硬数碱基、易出错。
 
-The whole "tool environment" is **one Python sandbox + one in-silico assembly self-check**. There is
-**no routing layer and no output-formatting layer** — every question goes straight into the agent loop.
+整套"工具环境"只有 **一个 Python 沙箱 + 一个 in-silico 装配自检**。**没有路由层、也没有输出格式对齐层**——每道题直接进 Agent 循环。
 
-> 完整的研究思路与方法学(中文)见 [`docs/methodology.md`](docs/methodology.md)。
+> 完整的研究思路与方法学见 [`docs/methodology.md`](docs/methodology.md)。
 
-## Why
+## 为什么需要它
 
-DeepSeek-V4 is strong in general, but on long-sequence tasks (complementary pairing, base counting,
-feature location) it gets stuck in long, error-prone chain-of-thought "counting". Those are
-deterministic, numerically-exact tasks — exactly what code solves cleanly. So we give the model a
-sandbox and let it offload the mechanical work, keeping the *design/decision* in the model.
+DeepSeek-V4 总体很强,但在长序列任务(互补配对、碱基计数、特征定位)上容易**陷入冗长、易错的"反复计数"思维链**。
+而这些是**确定性、对数值敏感**的任务——恰好是代码能一击解决的。所以给模型一个沙箱,把机械计算卸载出去,
+**设计与决策仍留在模型**。
 
-## Results (official LabBench2 validators)
+## 结果(官方 LabBench2 验证器评分)
 
-**CloningQA** (14 tasks, design-heavy) — full table in [`docs/cloning_comparison.md`](docs/cloning_comparison.md):
+**CloningQA**(14 题,设计密集)—— 完整表见 [`docs/cloning_comparison.md`](docs/cloning_comparison.md):
 
-| config | score |
-|---|---:|
-| v4-flash · no tools | 3/14 (21%) |
-| v4-flash · code-agent | 4/14 (29%) |
-| v4-pro · no tools | 3/14 (21%) |
-| **v4-pro · code-agent** | **5/14 (36%)** |
-| GPT-5.5 codex (full tools) | 8/14 (57%) |
-| Opus 4.8 (full tools) | 10/14 (71%) |
+| 配置                           |                 成绩 |
+| ------------------------------ | -------------------: |
+| v4-flash · 无工具             |           3/14 (21%) |
+| v4-flash · 代码 Agent         |           4/14 (29%) |
+| v4-pro · 无工具               |           3/14 (21%) |
+| **v4-pro · 代码 Agent** | **5/14 (36%)** |
+| GPT-5.5 codex(全工具)          |           8/14 (57%) |
+| Opus 4.8(全工具)               |          10/14 (71%) |
 
-**SeqQA2** (400 tasks, compute-heavy) — full table in [`docs/seqqa_comparison.md`](docs/seqqa_comparison.md):
+**SeqQA2**(400 题,计算密集)—— 完整表见 [`docs/seqqa_comparison.md`](docs/seqqa_comparison.md):
 
-| config | raw | **answered-only** |
-|---|---:|---:|
-| flash · no tools (sequence injected) | 42.8% | 44.8% |
-| flash · code-agent | 38.8% | **66.8%** |
-| **pro · code-agent** | **50.7%** | **79.9%** |
+| 配置                             |      原始准确率 | **已作答准确率** |
+| -------------------------------- | --------------: | ---------------------: |
+| flash · 无工具(序列注入 prompt) |           42.8% |                  44.8% |
+| flash · 代码 Agent              |           38.8% |        **66.8%** |
+| **pro · 代码 Agent**      | **50.7%** |        **79.9%** |
 
-The tool nearly doubles *compute* accuracy (answered-only ≈45% → 67–80%, near-perfect on long-sequence
-types like `gc_content`/`restriction_counts` 4→20), but the raw score is dragged down by questions where
-the model computed correctly yet didn't emit `<answer>` (no format layer — an engineering gap, not a
-model-capability one).
+工具把**"算得准"几乎翻倍**(已作答准确率 ~45% → 67–80%,长序列类如 `gc_content`/`restriction_counts` 4→20 近满分);
+但原始分被拉低,因为有些题模型**算对了却没按 `<answer>` 格式输出**(本轮没接格式对齐层——这是工程缺口,不是模型能力问题)。
 
-## Install
+## 安装
 
 ```bash
-pip install -e .            # or: pip install -e ".[test]"
-cp .env.example .env        # fill in ARK_API_KEY, LABBENCH_ROOT, LABBENCH_DATA_ROOT
+pip install -e .            # 或:pip install -e ".[test]"
+cp .env.example .env        # 填入 ARK_API_KEY、LABBENCH_ROOT、LABBENCH_DATA_ROOT
 ```
 
-Requires a local checkout of the **external** [LabBench2 eval repo](https://github.com/EdisonScientific/labbench2)
-(official scorers / in-silico assembly engine / question-file downloader); point `LABBENCH_ROOT` and
-`LABBENCH_DATA_ROOT` at it.
+需要一个本地的**外部** [LabBench2 评测仓库](https://github.com/EdisonScientific/labbench2)
+(提供官方打分器 / in-silico 装配引擎 / 题目文件下载器);把 `LABBENCH_ROOT` 和 `LABBENCH_DATA_ROOT` 指向它。
 
-## Run
+## 运行
 
 ```bash
-dpsk-bioseq-cloning --model pro                 # 14 CloningQA tasks
+dpsk-bioseq-cloning --model pro                 # 14 道 CloningQA
 dpsk-bioseq-seqqa   --model flash --type gc_content
-# or as modules:
+# 或以模块运行:
 python -m dpsk_v4_bioseq_agent.run_cloning --model flash
-# optional live dashboard (separate terminal):
+# 可选的实时看板(另开一个终端):
 dpsk-bioseq-dashboard --progress runs/cloning_pro/progress.json --port 8765 --title CloningQA
 ```
-Each run writes `runs/<task>_<model>/`: `results.json` (per-question score/reason) and
-`transcripts/*.json` (the **complete raw model I/O**: system+user prompt, every assistant turn with
-tool_calls/reasoning, every tool result, final answer).
 
-## Repository layout
+每次运行写到 `runs/<任务>_<模型>/`:`results.json`(逐题 score/reason)和
+`transcripts/*.json`(**完整的原始模型 I/O**:system+user prompt、每个 assistant 轮含 tool_calls/reasoning、
+每个 tool 返回、最终答案)。
+
+## 仓库结构
 
 ```
 src/dpsk_v4_bioseq_agent/
-├── sandbox.py            # the tool substrate: run_python + dry_run_protocol (NO biology logic)
-├── agent.py             # the code-agent loop: design_cloning() / solve_seqqa()
-├── scoring.py           # official cloning_reward + seqqa-validator scoring
-├── llm.py               # Ark client + 429/5xx retry-backoff + thinking toggle
-├── adaptive.py          # AIMD adaptive concurrency limiter
-├── config.py            # env-driven settings + external LabBench2 wiring
-├── run_cloning.py / run_seqqa.py   # CLI drivers (also console entry points)
-├── monitor/             # optional: progress tracker + zero-dep web dashboard
-└── prompt_injection/    # a recorded dead end: inject structured summaries into the prompt
-                         #   (dnacode.py for SeqQA, restructure_prompt.py for CloningQA)
-docs/      # methodology (中文) + result comparisons + baseline
-results/   # per-question result JSONs
-tests/     # unit tests for the no-API modules (sandbox, adaptive, dnacode)
+├── sandbox.py            # 工具本体:run_python + dry_run_protocol(不含任何生物学逻辑)
+├── agent.py             # 代码 Agent 循环:design_cloning() / solve_seqqa()
+├── scoring.py           # 官方 cloning_reward + seqqa-validator 打分
+├── llm.py               # Ark 请求层 + 429/5xx 重试退避 + thinking 开关
+├── adaptive.py          # AIMD 自适应并发限流器
+├── config.py            # env 驱动的配置 + 外部 LabBench2 接入
+├── run_cloning.py / run_seqqa.py   # CLI 驱动(同时是 console 入口)
+├── monitor/             # 可选:进度追踪 + 零依赖网页看板
+└── prompt_injection/    # 一条记录在案的弯路:把结构化摘要注进 prompt
+                         #   (SeqQA 用 dnacode.py,CloningQA 用 restructure_prompt.py)
+docs/      # 方法学(中文)+ 结果对比
+results/   # 逐题结果 JSON
+tests/     # 无 API 模块的单元测试(sandbox、adaptive、dnacode)
 ```
 
-## How one round works
+## 一轮长什么样
 
-The model emits a `run_python` tool call whose argument is Python *it wrote*:
+模型发出一个 `run_python` 工具调用,参数是**它自己写的** Python:
+
 ```python
 from Bio import SeqIO
 rec = SeqIO.read("plvx-egfp-ires-puro.gb", "genbank")
 egfp = next(f for f in rec.features if "EGFP" in (f.qualifiers.get("label") or [""])[0])
 print(int(egfp.location.start), int(egfp.location.end))
 ```
-`sandbox.run_python` just executes it in a subprocess and returns stdout — it never knows what "EGFP"
-is. All domain logic lives in the model-written code.
 
-## License
+`sandbox.run_python` 只是把它丢进子进程执行、返回 stdout——它从不知道 "EGFP" 是什么。
+所有领域逻辑都在模型现写的代码里。
 
-MIT — see [LICENSE](LICENSE).
+## 许可
+
+MIT —— 见 [LICENSE](LICENSE)。
