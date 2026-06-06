@@ -20,9 +20,6 @@ from .adaptive import AdaptiveLimiter
 from .monitor.progress import Progress, heartbeat_loop
 from .scoring import score_cloning
 
-config.ensure_labbench_on_path()
-from evals.utils import GCS_BUCKET, download_question_files  # noqa: E402
-
 PARQUET = config.LABBENCH_DATA_ROOT / "labbench2/cloning/train-00000-of-00001.parquet"
 _print_lock = threading.Lock()
 
@@ -34,6 +31,8 @@ def main():
     ap.add_argument("--limit", type=int, default=None, help="only the first N tasks")
     ap.add_argument("--outdir", default="runs", help="output root")
     args = ap.parse_args()
+    config.ensure_labbench_on_path()
+    from evals.utils import GCS_BUCKET, download_question_files
     config.MODEL = config.MODEL_ALIASES.get(args.model, args.model)
     tag = config.MODEL.replace("deepseek-v4-", "")
 
