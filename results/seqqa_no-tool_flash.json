@@ -1,0 +1,4833 @@
+[
+  {
+    "id": "043636c1-7fce-4a3f-a0ea-da1ebe82b7b1",
+    "type": "orf_amino_acid",
+    "ideal": "D",
+    "latency_s": 606.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "S"
+    },
+    "answer_tail": "The amino acid encoded at position 11 of the protein is serine, represented by the single-letter code S.  <answer>S</answer>"
+  },
+  {
+    "id": "372862e5-6d2c-4642-a3d8-daaf58f67f50",
+    "type": "orf_amino_acid",
+    "ideal": "I",
+    "latency_s": 277.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "S"
+    },
+    "answer_tail": "is determined by identifying the correct start codon (ATG) at base 501, which initiates a long open reading frame, and translating the first 11 codons, where the 11th codon is AGT.  <answer>S</answer>"
+  },
+  {
+    "id": "09778c05-7e4a-4ba8-a5c7-e1c6b3d84c09",
+    "type": "orf_amino_acid",
+    "ideal": "A",
+    "latency_s": 352.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "G"
+    },
+    "answer_tail": "dons from this start yields the amino acid sequence: Met-Gly-Arg-Ser-Gly-Met-Pro-Phe-Glu-Arg-Pro-Ile-Ser-Leu-Gly. The 15th amino acid is glycine, which is encoded by the codon GGA.  <answer>G</answer>"
+  },
+  {
+    "id": "baad82ba-b53c-43e0-96a9-1a28ca592713",
+    "type": "orf_amino_acid",
+    "ideal": "Q",
+    "latency_s": 1025.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "R"
+    },
+    "answer_tail": "The amino acid encoded at position 15 in the protein is arginine, represented by the single-letter code R.  <answer>R</answer>"
+  },
+  {
+    "id": "ef846879-a1a9-4285-a2cc-848eb169c7d2",
+    "type": "orf_amino_acid",
+    "ideal": "Q",
+    "latency_s": 708.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "E"
+    },
+    "answer_tail": "ate strand for the phoU gene. The reverse complement yields the coding strand, which translates to the known PhoU protein. The 15th amino acid in this protein is glutamic acid (E).  <answer>E</answer>"
+  },
+  {
+    "id": "4d30876b-df93-4072-abe0-65f15664b0a7",
+    "type": "orf_amino_acid",
+    "ideal": "K",
+    "latency_s": 176.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "N"
+    },
+    "answer_tail": " forward frame, leading to a long coding sequence. The 15th codon in this frame (bases 68–70, AAT) codes for asparagine (N). Therefore, the amino acid at position 15 is asparagine.  <answer>N</answer>"
+  },
+  {
+    "id": "c98fbf3f-565f-418d-b578-72bf48d0d5e7",
+    "type": "orf_amino_acid",
+    "ideal": "R",
+    "latency_s": 189.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "Q"
+    },
+    "answer_tail": "d reading frame. Translation of the first 15 codons gives the amino acid sequence Met-Pro-Leu-Ala-Lys-Ser-Ile-Thr-Arg-Ser-Val-Glu-Tyr-Lys-Gln, so the 15th residue is glutamine (Q).  <answer>Q</answer>"
+  },
+  {
+    "id": "ec6d2f4d-d57e-465c-bd54-930c7169bda1",
+    "type": "orf_amino_acid",
+    "ideal": "Y",
+    "latency_s": 646.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "K"
+    },
+    "answer_tail": "2085. Translation of the first 15 codons yields the following amino acid sequence: Met-Leu-Glu-Ile-Lys-Thr-Thr-Ser-Cys-Asp-Ser-Leu-Ile-Tyr-Lys. Thus, the 15th amino acid is lysine.  <answer>K</answer>"
+  },
+  {
+    "id": "c5403ccc-1c7e-4ca7-9255-988d9ff33b81",
+    "type": "orf_amino_acid",
+    "ideal": "G",
+    "latency_s": 274.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "G"
+    },
+    "answer_tail": "The amino acid at position 15 in the protein encoded by the provided sequence is glycine (G).  <answer>G</answer>"
+  },
+  {
+    "id": "643fad2d-abd9-4800-9635-414346de00cc",
+    "type": "orf_amino_acid",
+    "ideal": "K",
+    "latency_s": 295.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "T"
+    },
+    "answer_tail": "The 15th amino acid encoded by the provided sequence, starting from the first methionine in the longest open reading frame, is threonine.  <answer>T</answer>"
+  },
+  {
+    "id": "9c5b51d1-66a5-4828-b335-be93e52fc628",
+    "type": "orf_amino_acid",
+    "ideal": "Y",
+    "latency_s": 667.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "N"
+    },
+    "answer_tail": " and translating the first 15 codons yields the amino acid sequence: Met-Ile-Lys-Lys-Leu-Asn-His-Ser-Phe-Lys-Phe-Met-Thr-Met-Asn. The 15th amino acid is asparagine, encoded by AAC.  <answer>N</answer>"
+  },
+  {
+    "id": "9128ca6b-a666-423a-acce-e697bdd084bb",
+    "type": "orf_amino_acid",
+    "ideal": "Q",
+    "latency_s": 312.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "Q"
+    },
+    "answer_tail": "rection starts at position 404 with an ATG codon, encoding a 21-amino-acid protein. The 15th amino acid in this protein is glutamine, which corresponds to the single-letter code Q.  <answer>Q</answer>"
+  },
+  {
+    "id": "3403f995-b5da-49e9-ac2f-92db22213777",
+    "type": "orf_amino_acid",
+    "ideal": "A",
+    "latency_s": 1082.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "F"
+    },
+    "answer_tail": "ng frame is located at position 62 of the reverse complement. Translating the first 45 bases (15 codons) from that start gives the 15th amino acid as phenylalanine, encoded by TTT.  <answer>F</answer>"
+  },
+  {
+    "id": "1974f0d4-1643-419f-bfbd-0cb7023bbcff",
+    "type": "orf_amino_acid",
+    "ideal": "L",
+    "latency_s": 408.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "F"
+    },
+    "answer_tail": "t position 608 with an ATG codon in the second reading frame. The 15th codon (positions 650–652) is TTC, which encodes phenylalanine (Phe), represented by the single-letter code F.  <answer>F</answer>"
+  },
+  {
+    "id": "5f6c401d-027f-487c-bcb1-1405953027d9",
+    "type": "orf_amino_acid",
+    "ideal": "T",
+    "latency_s": 689.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "I"
+    },
+    "answer_tail": "The start codon (ATG) corresponds to a \"CAT\" in the template at positions 2012–2014. Translating the reverse complement from that start gives the 11th amino acid as isoleucine (I).  <answer>I</answer>"
+  },
+  {
+    "id": "920a4263-67e9-42f4-b4f0-d59a5d235e02",
+    "type": "orf_amino_acid",
+    "ideal": "S",
+    "latency_s": 259.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "S"
+    },
+    "answer_tail": "ts at the ATG at position 354 (considering the forward strand). Translating from this start codon, the 15th amino acid is encoded by the codon AGC, which corresponds to serine (S).  <answer>S</answer>"
+  },
+  {
+    "id": "3b2393c6-d041-4961-aa1c-2c3874442547",
+    "type": "orf_amino_acid",
+    "ideal": "Y",
+    "latency_s": 209.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "F"
+    },
+    "answer_tail": "The amino acid encoded at position 11 in the protein is phenylalanine, represented by the single-letter code F.  <answer>F</answer>"
+  },
+  {
+    "id": "bf631185-911a-4b19-9814-44931ad2f3a6",
+    "type": "orf_amino_acid",
+    "ideal": "E",
+    "latency_s": 235.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "F"
+    },
+    "answer_tail": "ranslating the open reading frame from that start yields a 72-amino-acid protein. The 15th codon is TTT, which encodes phenylalanine (Phe), represented by the single-letter code F.  <answer>F</answer>"
+  },
+  {
+    "id": "c0effda0-f62f-404b-983a-2e1fe2a8deec",
+    "type": "orf_amino_acid",
+    "ideal": "I",
+    "latency_s": 411.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "K"
+    },
+    "answer_tail": "h an ATG codon at nucleotide positions 15-17. Translating from this start codon, the 15th amino acid corresponds to the codon at positions 57-59, which is AAA, encoding lysine (K).  <answer>K</answer>"
+  },
+  {
+    "id": "9da00ad5-6c89-49dd-bb92-33dc2e729b9e",
+    "type": "orf_amino_acid",
+    "ideal": "T",
+    "latency_s": 518.7,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "C,T -> ACT i=108: C,T,T -> CTT i=109: T,T,G -> TTG i=110: T,G,T -> TGT i=111: G,T,T -> GTT i=112: T,T,A -> TTA i=113: T,A,A -> TAA at 113-115? Actually 113=T,114=A,115=A -> TAA. i=114: A,A,A -> AAA i="
+  },
+  {
+    "id": "65da7066-c9e5-4177-bf8a-85e73b1f9226",
+    "type": "mutation_synonymous",
+    "ideal": "Q",
+    "latency_s": 314.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "L"
+    },
+    "answer_tail": "Codon 10 is at positions 53–55, which is CTC, encoding leucine. Changing the third base to G gives CTG, which also codes for leucine. Thus, the newly encoded amino acid is leucine.  <answer>L</answer>"
+  },
+  {
+    "id": "48f5986c-0d5b-4e45-a5b9-e4e9a22dccf3",
+    "type": "mutation_synonymous",
+    "ideal": "S",
+    "latency_s": 656.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "N"
+    },
+    "answer_tail": "The third base of codon 10 in the rplB coding sequence is mutated from C to T, resulting in a silent change from AAC to AAT, both encoding asparagine.  <answer>N</answer>"
+  },
+  {
+    "id": "6d32a8b6-348d-4fab-b1c4-6ee45cf04757",
+    "type": "mutation_synonymous",
+    "ideal": "I",
+    "latency_s": 227.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "N"
+    },
+    "answer_tail": "The coding sequence begins with an ATG start codon, and the tenth codon is AAC. Mutating its third base from C to T yields AAT, which still codes for asparagine (Asn).  <answer>N</answer>"
+  },
+  {
+    "id": "ad2a3fc6-e4e2-4d83-96e3-76d3f7b809f3",
+    "type": "mutation_synonymous",
+    "ideal": "K",
+    "latency_s": 334.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "L"
+    },
+    "answer_tail": "TTG (Leucine). Mutating the third base to A results in TTA, which also encodes Leucine. Therefore, the newly encoded amino acid is Leucine, represented by the single-letter code L.  <answer>L</answer>"
+  },
+  {
+    "id": "6d2c1751-79c4-417a-ad07-752c28c8c8a2",
+    "type": "mutation_synonymous",
+    "ideal": "T",
+    "latency_s": 319.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "S"
+    },
+    "answer_tail": "The third base of codon 10 in the scpB gene is mutated from C to T, changing the codon from AGC to AGT. Both codons encode serine (Ser), so the amino acid remains serine.  <answer>S</answer>"
+  },
+  {
+    "id": "e24c61d6-11db-483c-975c-500a0f9aaa13",
+    "type": "mutation_synonymous",
+    "ideal": "E",
+    "latency_s": 211.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "R"
+    },
+    "answer_tail": "d base of codon 10 in the M. genitalium lepA gene is mutated to G. The original codon is AGT (encoding serine), and mutating the third base to G yields AGG, which encodes arginine.  <answer>R</answer>"
+  },
+  {
+    "id": "5296d34a-8e80-401e-8087-23b9e795a7c9",
+    "type": "mutation_synonymous",
+    "ideal": "F",
+    "latency_s": 868.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "N"
+    },
+    "answer_tail": " which codes for asparagine (N). Mutating the third base from C to T changes the codon to AAT, which also encodes asparagine. Thus, the newly encoded amino acid remains asparagine.  <answer>N</answer>"
+  },
+  {
+    "id": "5ccb71f0-0fb8-43f8-95e7-49b732d63cb1",
+    "type": "mutation_synonymous",
+    "ideal": "D",
+    "latency_s": 279.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "V"
+    },
+    "answer_tail": " adenine (A) in the wild-type codon GTA (valine). A mutation to cytosine (C) changes the codon to GTC, which also encodes valine. Therefore, the newly encoded amino acid is valine.  <answer>V</answer>"
+  },
+  {
+    "id": "20c3da4c-76cb-443d-9a1b-eddcada17e80",
+    "type": "mutation_synonymous",
+    "ideal": "Q",
+    "latency_s": 502.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "K"
+    },
+    "answer_tail": "eading frame and locating codon 10, the third base is T. A mutation to G changes the codon from AAT (asparagine) to AAG (lysine). Therefore, the newly encoded amino acid is lysine.  <answer>K</answer>"
+  },
+  {
+    "id": "0652e0eb-f6a0-4da9-8b68-54d857baae3f",
+    "type": "mutation_synonymous",
+    "ideal": "F",
+    "latency_s": 375.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "G"
+    },
+    "answer_tail": "The coding sequence starts with ATG at position 31. Codon 7 is GGT, which codes for glycine. Mutating the third base to C gives GGC, which also codes for glycine.  <answer>G</answer>"
+  },
+  {
+    "id": "5fbb6a79-de9b-436b-97aa-10b7c8a937fa",
+    "type": "mutation_synonymous",
+    "ideal": "Q",
+    "latency_s": 458.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "P"
+    },
+    "answer_tail": " is initially an adenine, encoding proline (CCA). Mutating it to guanine changes the codon to CCG, which also codes for proline. Thus, the newly encoded amino acid remains proline.  <answer>P</answer>"
+  },
+  {
+    "id": "1fd26ff1-139a-475b-a370-d44930ad558d",
+    "type": "mutation_synonymous",
+    "ideal": "K",
+    "latency_s": 130.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "M"
+    },
+    "answer_tail": "67) is the start codon. Codon 10 consists of positions 92–94, which are A, T, C (ATC), encoding isoleucine. Mutating the third base (C) to G yields ATG, which codes for methionine.  <answer>M</answer>"
+  },
+  {
+    "id": "22ff525e-3076-4704-ae3d-7cfaa938ece0",
+    "type": "mutation_synonymous",
+    "ideal": "D",
+    "latency_s": 1127.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "F"
+    },
+    "answer_tail": "ium aspS gene is adenine (A), which mutates to cytosine (C). The original codon TTA (leucine) becomes TTC (phenylalanine). The single-letter amino acid code for phenylalanine is F.  <answer>F</answer>"
+  },
+  {
+    "id": "ff8ed565-1f9d-465d-8275-9ef2460749c9",
+    "type": "mutation_synonymous",
+    "ideal": "G",
+    "latency_s": 1390.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "V"
+    },
+    "answer_tail": "lium is originally T, coding for valine. Mutating this base to C changes the codon from GTT to GTC, which still codes for valine. Therefore, the newly encoded amino acid is valine.  <answer>V</answer>"
+  },
+  {
+    "id": "8b84de64-d00c-4fe7-9370-d50c0ba78bfe",
+    "type": "mutation_synonymous",
+    "ideal": "L",
+    "latency_s": 160.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "K"
+    },
+    "answer_tail": "on 10 in the atpG gene of M. genitalium is mutated from T to G, changing the codon from AAT (asparagine) to AAG (lysine). The amino acid is represented by the single-letter code K.  <answer>K</answer>"
+  },
+  {
+    "id": "48fb8653-0a4c-4e71-94f1-147d46b78074",
+    "type": "mutation_synonymous",
+    "ideal": "L",
+    "latency_s": 699.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "K"
+    },
+    "answer_tail": "irst ATG (positions 53–55), and codon 7 corresponds to bases 71–73 (AAT), which encodes asparagine. Mutating the third base (T) to A changes the codon to AAA, which encodes lysine.  <answer>K</answer>"
+  },
+  {
+    "id": "43c5c9c1-742b-4b08-9720-9d814b499c70",
+    "type": "mutation_synonymous",
+    "ideal": "S",
+    "latency_s": 53.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "I"
+    },
+    "answer_tail": "The third base of codon 7 in the M. genitalium atpF gene (ATC) mutates to T, resulting in ATT, which also encodes isoleucine.  <answer>I</answer>"
+  },
+  {
+    "id": "a7c1b5a0-c4b8-44be-a07c-6132b3f99f08",
+    "type": "mutation_synonymous",
+    "ideal": "A",
+    "latency_s": 328.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "Q"
+    },
+    "answer_tail": "e coding strand, and codon 7 is CAG, encoding glutamine. Mutating its third base to A yields CAA, which also encodes glutamine. Thus, the newly encoded amino acid is glutamine (Q).  <answer>Q</answer>"
+  },
+  {
+    "id": "a87c6756-c4ff-48d5-a67b-531962c4cff9",
+    "type": "mutation_synonymous",
+    "ideal": "S",
+    "latency_s": 586.1,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": " last six are \"TGTAATT\" maybe? Actually let's get the exact end: line35: \"TGTATTTAATGGTTTTGTAAACAGTGTAATT\" - so the last six bases are \"GTAATT\"? Actually from the end: ...\"GTAAACAGTGTAATT\" - the last "
+  },
+  {
+    "id": "0f0a521b-d686-4907-9e5a-76c83e5025a4",
+    "type": "mutation_synonymous",
+    "ideal": "C",
+    "latency_s": 610.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "F"
+    },
+    "answer_tail": "ATG GAA AAC GTT TTA GTT TCC AAC AAA TAT TTT GAC TCT AAG TTT. Codon 15 is TTT, which encodes phenylalanine. Mutating its third base to C gives TTC, which also encodes phenylalanine.  <answer>F</answer>"
+  },
+  {
+    "id": "eda98dbd-b220-4c2e-9ec2-a87256517bd2",
+    "type": "mutation_restriction",
+    "ideal": "HindIII",
+    "latency_s": 148.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "3f9fd194-fd68-4ce3-9cba-e9f23e200dba",
+    "type": "mutation_restriction",
+    "ideal": "BamHI",
+    "latency_s": 168.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "e sequence around the mutated site shows no matches to the recognition sequences of HindIII, SphI, PstI, HincII, SalI, XbaI, BamHI, SmaI, XmaI, KpnI, AvaI, SacI, SstI, or EcoRI.  <answer>None</answer>"
+  },
+  {
+    "id": "fec8d128-148b-4ca5-ae2f-8dc057ed8cb7",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 951.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "f15afdf5-724b-4d0f-9d45-803e548073ed",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 846.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "eate any recognition site for the listed restriction enzymes in the coding strand. No 6-bp window that includes the mutated site matches any of the enzyme recognition sequences.  <answer>None</answer>"
+  },
+  {
+    "id": "1cb089dd-056a-4675-8849-6d27c2ca46c7",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 278.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "compassing the mutated nucleotides shows no matches to the recognition sequences of HindIII, SphI, PstI, HincII, SalI, XbaI, BamHI, SmaI, XmaI, KpnI, AvaI, SacI, SstI, or EcoRI.  <answer>None</answer>"
+  },
+  {
+    "id": "202ccc2b-213b-44bc-a6ba-a50dd7158479",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 183.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "I, XbaI, BamHI, SmaI, XmaI, KpnI, AvaI, SacI, SstI, EcoRI) were found in the hexamers overlapping the mutated site. Therefore, none of these enzymes cut across the mutated site.  <answer>None</answer>"
+  },
+  {
+    "id": "5903af1b-22dd-43d7-8f99-8a3f5268a0cb",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 231.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "9cccc4de-2cd1-423f-9bbd-8ecad1037c6a",
+    "type": "mutation_restriction",
+    "ideal": "HindIII",
+    "latency_s": 377.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "6-bp windows that include the mutated base, none match the recognition sequences of HindIII, SphI, PstI, HincII, SalI, XbaI, BamHI, SmaI, XmaI, KpnI, AvaI, SacI, SstI, or EcoRI.  <answer>None</answer>"
+  },
+  {
+    "id": "d1d219d8-90f2-41cb-8bd5-732acd4d6f61",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 938.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "ymes, as none of their recognition sequences contain three consecutive adenine bases (or thymine on the complementary strand). Therefore, no enzyme cuts across the mutated site.  <answer>None</answer>"
+  },
+  {
+    "id": "8bd278ea-c921-4b32-ba6a-3b661eb6c346",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 1422.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "HindIII"
+    },
+    "answer_tail": "on site (AAGCTT) in the phoU gene sequence, as the context of the surrounding nucleotides forms the recognition sequence. No other listed enzymes cut across the mutated site.  <answer>HindIII</answer>"
+  },
+  {
+    "id": "03ddab69-def7-460d-bb66-c3343184d8aa",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 84.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "windows that include the mutated base (base 28), no recognition sites for the listed restriction enzymes are present. Therefore, none of the enzymes cut across the mutated site.  <answer>None</answer>"
+  },
+  {
+    "id": "9129a036-af38-41ec-936c-eff210426368",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 709.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "BamHI"
+    },
+    "answer_tail": "se recognition sequence includes TCC as part of its core (GGATCC). Other enzymes either do not contain TCC or require additional context that is not present after the mutation.  <answer>BamHI</answer>"
+  },
+  {
+    "id": "b170a416-890d-47fd-b1c3-fc5ca8a6d0f9",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 804.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "tI, HincII, SalI, XbaI, BamHI, SmaI, XmaI, KpnI, AvaI, SacI, SstI, EcoRI). Analysis of the sequence around the mutated site shows no matches to the enzyme recognition sequences.  <answer>None</answer>"
+  },
+  {
+    "id": "965d2f2b-fcf5-4682-b379-fa6660b6bb85",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 339.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "ffd2b863-4ed1-46ff-85a6-76d430921177",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 1078.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "14760101-d1a4-4dac-8467-f81ebbc5228c",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 1037.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "ymes have a recognition site that includes the mutated AAA codon. The enzymes all require specific bases (G, C, T) that are absent in the AAA triplet, so no cut site is created.  <answer>None</answer>"
+  },
+  {
+    "id": "6924998d-c011-4539-beac-2743d866d7e3",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 370.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "01c953a0-9ab0-415f-bb5b-9fbfb25efb2a",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 156.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "HindIII"
+    },
+    "answer_tail": " the atpF gene from TCT to CTT creates a HindIII recognition site (AAGCTT) spanning codons 9 and 10. No other listed enzymes recognize sequences overlapping the mutated site.  <answer>HindIII</answer>"
+  },
+  {
+    "id": "89df5d3e-c5fd-4ca3-8f43-4c7e25710869",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 160.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "58f8f87a-40e0-4d99-b838-81362e5010a8",
+    "type": "mutation_restriction",
+    "ideal": "None",
+    "latency_s": 454.9,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "A T G A A G A G T. So \"ATG\" at positions 2-4? Actually 2=A,3=T,4=G -> ATG. So block29 has ATG at positions 2-4. - Block30: \"GCCATTTTTT\" no. - Block31: \"TTCTGAAATT\" no. - Block32: \"AATGCGTAAT\" has \"ATG"
+  },
+  {
+    "id": "12a7f522-1fdb-4f53-832b-3cc09f66adc2",
+    "type": "restriction_counts",
+    "ideal": "2",
+    "latency_s": 638.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "There are 2 BamHI sites in the M. genitalium rpoC gene.  <answer>2</answer>"
+  },
+  {
+    "id": "cffdcc56-6c0e-4e32-8954-6faacd74b86f",
+    "type": "restriction_counts",
+    "ideal": "3",
+    "latency_s": 150.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "which is palindromic. After scanning the forward strand sequence from 430580 to 434458, no occurrences of AAGCTT were found. Therefore, there are no HindIII sites in the rpoC gene.  <answer>0</answer>"
+  },
+  {
+    "id": "34162fb8-d5e8-4fa4-83d7-c18c5761bc4e",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 812.0,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "cag tttattggtc aaagaagtcg caaatttttc 86721 ttagtttttt atttgcttaa tggttaaaaa agcgttagtt tttaccttta tttaattaat 86781 aaacttcgcc acccccatca ccgattctaa ggctgatctg gttagtttgg cacaactaga 86841 tgattcctat ca"
+  },
+  {
+    "id": "3655166e-4f85-4df5-b2fe-49be45dc660d",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 542.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "822deffe-cca9-4bdc-b9b5-783014fca58d",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 838.8,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "ttgttgat ggtcttacac     89281 gtaaaggtaa ctttgatgaa ttggctaaaa acggtttatt agatggttct aacaagattt     89341 gaattggttt aaaccagtca gggatcttag gtaaaaaagt actgttaagt gatggtaagg     89401 actacactat taccttt"
+  },
+  {
+    "id": "2a6e5fb7-3461-44dd-8043-57a4417fc013",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 157.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "Mycoplasmoides genitalium strain G37 spans nucleotides 163591 to 165387. An analysis of the DNA sequence in this region reveals no occurrences of the EcoRI restriction site GAATTC.  <answer>0</answer>"
+  },
+  {
+    "id": "6bc463c6-62bb-48c2-b3b6-a3e2458a2d31",
+    "type": "restriction_counts",
+    "ideal": "3",
+    "latency_s": 511.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": " 470077 to 471234 (the forward strand) reveals no occurrences of the hexamer \"AAGCTT\" or its reverse complement. Therefore, there are no HindIII restriction sites within this gene.  <answer>0</answer>"
+  },
+  {
+    "id": "4fc69135-9b24-471a-8ad1-b5385b1e288c",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 233.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "he genome. Analysis of the DNA sequence in this region reveals no occurrences of the HindIII recognition site (AAGCTT). Therefore, there are zero HindIII sites within the tsf gene.  <answer>0</answer>"
+  },
+  {
+    "id": "23bd8143-2f61-41bd-82c7-d238eb73bd0d",
+    "type": "restriction_counts",
+    "ideal": "0",
+    "latency_s": 288.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "ile does not contain any BamHI recognition sites (GGATCC). After analyzing the gene's coding region (positions 192102 to 192959), no occurrences of the restriction site were found.  <answer>0</answer>"
+  },
+  {
+    "id": "975b5e77-af13-4b49-b393-04697e1a0332",
+    "type": "restriction_counts",
+    "ideal": "0",
+    "latency_s": 115.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "ion sequence GAATTC. After extracting the exact nucleotide sequence and scanning for the pattern, no matches were found either within the gene or at the junctions between segments.  <answer>0</answer>"
+  },
+  {
+    "id": "47acc2f2-1e39-4d1d-91d9-14ea1011d9f7",
+    "type": "restriction_counts",
+    "ideal": "3",
+    "latency_s": 468.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "d66d18ca-9f9e-4715-a5a0-383731eb70ae",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 591.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "6709b200-8c09-435f-b43a-e824e234c673",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 487.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "eb7fe77d-d696-4790-8d82-1dae12ed0429",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 557.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "b84dfbe0-8476-4101-bc1a-299894d708ba",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 191.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "8840592e-8133-4ec0-ab97-032810206695",
+    "type": "restriction_counts",
+    "ideal": "2",
+    "latency_s": 319.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "06145c95-a8bc-4c20-a537-1a6be306b924",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 194.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "The atpD gene in M. genitalium is located at complement(502828..504255). Analysis of the sequence in this region reveals no occurrences of the KpnI recognition site GGTACC.  <answer>0</answer>"
+  },
+  {
+    "id": "fd80f4c9-3094-48a0-a474-844cafac303e",
+    "type": "restriction_counts",
+    "ideal": "2",
+    "latency_s": 130.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "c9d1ab5b-4ba2-4050-b9f2-0912c5ee3b51",
+    "type": "restriction_counts",
+    "ideal": "1",
+    "latency_s": 175.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "df48a27d-4251-414c-b4fb-3de376380bf2",
+    "type": "restriction_counts",
+    "ideal": "0",
+    "latency_s": 144.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "44f27ccc-0f2b-4f87-97b3-b3a9db1d069b",
+    "type": "restriction_digest",
+    "ideal": "219,238,272,586",
+    "latency_s": 340.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "391,924"
+    },
+    "answer_tail": "vided sequence reveals a single occurrence at positions 923–927 (GCTGC), resulting in a cut between bases 924 and 925. This yields two fragments of lengths 924 bp and 391 bp.  <answer>391,924</answer>"
+  },
+  {
+    "id": "9f862011-8881-4014-b80d-283632c7121f",
+    "type": "restriction_digest",
+    "ideal": "409,1449",
+    "latency_s": 93.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "408,1449"
+    },
+    "answer_tail": "e (GCTAGC) occurs once in the sequence at positions 408–413. The cut after position 408 yields two fragments: bases 1–408 and 409–1857, giving lengths of 408 bp and 1449 bp.  <answer>408,1449</answer>"
+  },
+  {
+    "id": "f455f116-7a44-4081-a735-9a28f38b839b",
+    "type": "restriction_digest",
+    "ideal": "225,1792,2862",
+    "latency_s": 343.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2861,224,1794"
+    },
+    "answer_tail": "h recognizes the sequence GGATCC. Two cut sites were identified at positions 2861 and 3085 (1-indexed). The resulting fragments are 2861, 224, and 1794 base pairs long.  <answer>2861,224,1794</answer>"
+  },
+  {
+    "id": "f1305aa0-675d-4086-992b-34162e9b7bd0",
+    "type": "restriction_digest",
+    "ideal": "345,1498",
+    "latency_s": 213.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "344,1499"
+    },
+    "answer_tail": "The sequence of M. genitalium whiA contains one HindIII restriction site (AAGCTT) at position 344. Digestion yields two fragments of lengths 344 bp and 1499 bp.  <answer>344,1499</answer>"
+  },
+  {
+    "id": "f93dba62-a2aa-465c-969c-de18d011e81f",
+    "type": "restriction_digest",
+    "ideal": "747,931",
+    "latency_s": 179.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "748,930"
+    },
+    "answer_tail": "<answer>748,930</answer>"
+  },
+  {
+    "id": "49d4bf78-b4fb-4d12-bf0c-7436127bf580",
+    "type": "restriction_digest",
+    "ideal": "647,977",
+    "latency_s": 71.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "976,648"
+    },
+    "answer_tail": "<answer>976,648</answer>"
+  },
+  {
+    "id": "c14a40df-4e51-4e73-8d9e-aa99bb85ba63",
+    "type": "restriction_digest",
+    "ideal": "824,1973",
+    "latency_s": 126.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "823,1974"
+    },
+    "answer_tail": "s at position 823 (the first base of the recognition site). Digestion yields two fragments: one from the start to the cut (823 bp) and one from the cut to the end (1974 bp).  <answer>823,1974</answer>"
+  },
+  {
+    "id": "51f065f4-326f-4eb4-ace3-16985537d4bc",
+    "type": "restriction_digest",
+    "ideal": "221,347,429,551,610",
+    "latency_s": 115.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "346,221,551,429,611"
+    },
+    "answer_tail": "<answer>346,221,551,429,611</answer>"
+  },
+  {
+    "id": "9f51892e-c67f-4dbf-bf82-cb969fbb82bf",
+    "type": "restriction_digest",
+    "ideal": "146,236,1161",
+    "latency_s": 98.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "145,1161,237"
+    },
+    "answer_tail": ": from the start to the first cut (1-145), between cuts (146-1306), and from the last cut to the end (1307-1543). The fragment lengths are 145, 1161, and 237 base pairs.  <answer>145,1161,237</answer>"
+  },
+  {
+    "id": "a167eefe-92fe-433d-8902-a61b00c45137",
+    "type": "restriction_digest",
+    "ideal": "85,148,169,318,1177",
+    "latency_s": 219.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "317,170,84,1177,148"
+    },
+    "answer_tail": "our HindIII recognition sites (AAGCTT), resulting in five fragments after digestion. The fragment lengths in base pairs are calculated based on the cut positions.  <answer>317,170,84,1177,148</answer>"
+  },
+  {
+    "id": "5605449a-ae57-4ba2-978e-fec37ecc3e4d",
+    "type": "restriction_digest",
+    "ideal": "226,305,973,1599",
+    "latency_s": 216.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "226,304,1599,974"
+    },
+    "answer_tail": "ic site AAGCTT. Three recognition sites were found at positions 226, 530, and 2129 (1‑based). The resulting fragment lengths are 226 bp, 304 bp, 1599 bp, and 974 bp.  <answer>226,304,1599,974</answer>"
+  },
+  {
+    "id": "5403819f-8d41-4665-b28b-10dd8d929daf",
+    "type": "restriction_digest",
+    "ideal": "193,750",
+    "latency_s": 114.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "192,751"
+    },
+    "answer_tail": "The sequence contains a single HindIII recognition site (AAGCTT) at position 192, resulting in two fragments of lengths 192 and 751 base pairs.  <answer>192,751</answer>"
+  },
+  {
+    "id": "bf28dcb0-652e-4074-abbe-479870829fa3",
+    "type": "restriction_digest",
+    "ideal": "556,1458",
+    "latency_s": 147.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1457,557"
+    },
+    "answer_tail": "<answer>1457,557</answer>"
+  },
+  {
+    "id": "caefa544-4531-4d9a-ab17-87e4cf3d00b2",
+    "type": "restriction_digest",
+    "ideal": "12,451,1308",
+    "latency_s": 305.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1307,451,13"
+    },
+    "answer_tail": "resulting in three fragments: from the start to the first cut, between cuts, and from the second cut to the end. The fragment lengths in base pairs are 1307, 451, and 13.  <answer>1307,451,13</answer>"
+  },
+  {
+    "id": "e810fdcc-39ea-44c6-9af7-c9589aea6ae1",
+    "type": "restriction_digest",
+    "ideal": "445,1626",
+    "latency_s": 221.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1625,446"
+    },
+    "answer_tail": "The sequence contains a single EcoRI recognition site (GAATTC) at position 1625. Digestion yields two fragments of lengths 1625 bp and 446 bp.  <answer>1625,446</answer>"
+  },
+  {
+    "id": "b93db1ff-7867-4b3e-a30b-9a45aa43ffd2",
+    "type": "restriction_digest",
+    "ideal": "429,474,1054",
+    "latency_s": 162.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "428,474,1055"
+    },
+    "answer_tail": "genitalium atpA sequence contains two HindIII recognition sites (AAGCTT) at positions 428 and 902, resulting in three fragments of lengths 428, 474, and 1055 base pairs.  <answer>428,474,1055</answer>"
+  },
+  {
+    "id": "af77556b-3175-47a9-91e9-40debc1964bc",
+    "type": "restriction_digest",
+    "ideal": "448,1380",
+    "latency_s": 262.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "449,1379"
+    },
+    "answer_tail": "ition 1379), resulting in two fragments: one from position 1 to 1379 (1379 bp) and one from position 1380 to 1828 (449 bp). The fragment lengths are 449 and 1379 base pairs.  <answer>449,1379</answer>"
+  },
+  {
+    "id": "43f83686-9ba8-43dc-9b5f-2a99fee3967a",
+    "type": "restriction_digest",
+    "ideal": "236,344,447",
+    "latency_s": 163.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "446,344,236"
+    },
+    "answer_tail": "95. Digestion with HindIII produces three fragments: from the start to the first cut (446 bp), between the two cuts (344 bp), and from the second cut to the end (236 bp).  <answer>446,344,236</answer>"
+  },
+  {
+    "id": "0532c650-cb9b-4060-a1f0-618f42a166b9",
+    "type": "restriction_digest",
+    "ideal": "331,909",
+    "latency_s": 113.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "330,910"
+    },
+    "answer_tail": "gments: one from the start to position 330, and the other from position 331 to the end. The total length is 1240 base pairs, resulting in fragments of 330 and 910 base pairs.  <answer>330,910</answer>"
+  },
+  {
+    "id": "762d5042-e751-4843-8f47-314d7ca48635",
+    "type": "restriction_digest",
+    "ideal": "931",
+    "latency_s": 121.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "931"
+    },
+    "answer_tail": "talium atpH was analyzed for the BamHI recognition site (GGATCC). No occurrences were found, so digestion with BamHI yields a single fragment equal to the full length of the DNA.  <answer>931</answer>"
+  },
+  {
+    "id": "7b9689fb-35de-48a8-93b4-109172c3b870",
+    "type": "gc_content",
+    "ideal": "33.99",
+    "latency_s": 256.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "34.0"
+    },
+    "answer_tail": "d as the percentage of guanine and cytosine bases among the total bases. After counting all G and C bases (447) and total bases (1314), the GC content is 447/1314 × 100 ≈ 34.0%.  <answer>34.0</answer>"
+  },
+  {
+    "id": "ddfac96a-6a37-4f6b-a44d-f6cdbb1ed319",
+    "type": "gc_content",
+    "ideal": "37.67",
+    "latency_s": 237.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "37.62"
+    },
+    "answer_tail": "rcentage of guanine (G) and cytosine (C) bases among the total bases. The sequence has 699 G+C bases out of 1858 total bases, resulting in a GC content of approximately 37.62%.  <answer>37.62</answer>"
+  },
+  {
+    "id": "76429887-eef5-4fa3-aded-57c22b14dfc7",
+    "type": "gc_content",
+    "ideal": "35.85",
+    "latency_s": 834.8,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": " list: 6,9,14,20,23,26,29,31,35,39,44,49,56,59 = 14 C's. Thus line60 GC = 5+14=19.  Line61: TTTAACCTGCTAAATTCCAAGTTAAGATCGATTTTATTAAGCAATTCCAAAATTGCTTCA Sequence: T T T A A C C T G C T A A A T T C C A"
+  },
+  {
+    "id": "e67c6ae8-0cf2-46ad-a8b7-326a4a8ecb18",
+    "type": "gc_content",
+    "ideal": "30.98",
+    "latency_s": 521.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "30.77"
+    },
+    "answer_tail": "uanine (G) and cytosine (C) bases out of the total number of bases. The total sequence length is 1843 bases, with 567 G and C bases combined. This gives a GC content of 30.77%.  <answer>30.77</answer>"
+  },
+  {
+    "id": "ca36ed4d-dc1d-4ca2-85d0-5759d945fcbb",
+    "type": "gc_content",
+    "ideal": "28.55",
+    "latency_s": 160.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "28.43"
+    },
+    "answer_tail": "sine (C) bases by the total number of bases, then multiplying by 100. The sequence has 477 G+C bases out of 1678 total bases, resulting in a GC content of approximately 28.43%.  <answer>28.43</answer>"
+  },
+  {
+    "id": "7dde76e3-a939-49f5-872d-4e207e466083",
+    "type": "gc_content",
+    "ideal": "34.30",
+    "latency_s": 168.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "33.87"
+    },
+    "answer_tail": "d as the number of G and C bases divided by the total number of bases, multiplied by 100. The sequence has 550 G+C out of 1624 total bases, resulting in a GC content of 33.87%.  <answer>33.87</answer>"
+  },
+  {
+    "id": "c7ec52f1-0e14-4c84-a68b-9fefbf7699eb",
+    "type": "gc_content",
+    "ideal": "32.75",
+    "latency_s": 347.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "32.75"
+    },
+    "answer_tail": "ided sequence and dividing by the total number of bases. The sequence contains 916 G or C bases out of a total of 2797 bases, resulting in a GC content of approximately 32.75%.  <answer>32.75</answer>"
+  },
+  {
+    "id": "d9f28266-d300-44a6-9092-db1d21f7469b",
+    "type": "gc_content",
+    "ideal": "28.36",
+    "latency_s": 165.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "28.27"
+    },
+    "answer_tail": "The GC content of the given sequence is calculated by dividing the total number of G and C bases (610) by the total number of bases (2158), resulting in approximately 28.27%.  <answer>28.27</answer>"
+  },
+  {
+    "id": "d26c6432-06e5-416d-bb52-8b7ee727b2d1",
+    "type": "gc_content",
+    "ideal": "36.94",
+    "latency_s": 148.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "36.2"
+    },
+    "answer_tail": "The GC content of the M. genitalium rplE sequence is 36.2%.  <answer>36.2</answer>"
+  },
+  {
+    "id": "202343d6-81b8-4d8b-8843-5c6b92b3a39e",
+    "type": "gc_content",
+    "ideal": "27.94",
+    "latency_s": 253.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "27.9"
+    },
+    "answer_tail": "of guanine (G) and cytosine (C) bases out of the total number of bases. The sequence has 529 G+C bases out of 1896 total bases, resulting in a GC content of approximately 27.9%.  <answer>27.9</answer>"
+  },
+  {
+    "id": "d2f3f56e-f0d0-4478-8efa-3e9fcf3805fc",
+    "type": "gc_content",
+    "ideal": "27.88",
+    "latency_s": 1026.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "27.78"
+    },
+    "answer_tail": "(G) and cytosine (C) bases out of the total number of bases. The sequence contains 862 G and C bases out of 3103 total bases, resulting in a GC content of approximately 27.78%.  <answer>27.78</answer>"
+  },
+  {
+    "id": "2beb85de-06f5-416a-98f6-928b430e5337",
+    "type": "gc_content",
+    "ideal": "33.51",
+    "latency_s": 163.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "33.51"
+    },
+    "answer_tail": "es divided by the total number of bases, multiplied by 100. The sequence is 943 bases long, with 151 G and 165 C, giving a total of 316 G+C. The resulting percentage is 33.51%.  <answer>33.51</answer>"
+  },
+  {
+    "id": "8b3cd95d-791f-4798-a5d3-89d0d7e3a9f6",
+    "type": "gc_content",
+    "ideal": "27.90",
+    "latency_s": 137.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "27.85"
+    },
+    "answer_tail": "<answer>27.85</answer>"
+  },
+  {
+    "id": "6af04edb-fc8f-4a89-a9c9-1207895189d8",
+    "type": "gc_content",
+    "ideal": "31.90",
+    "latency_s": 182.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "31.96"
+    },
+    "answer_tail": "<answer>31.96</answer>"
+  },
+  {
+    "id": "b5628657-ae0a-4005-a953-8b80dc5f9b52",
+    "type": "gc_content",
+    "ideal": "30.23",
+    "latency_s": 216.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "30.18"
+    },
+    "answer_tail": "bases by the total number of bases and multiplying by 100. The sequence has 2071 bases, with 343 G and 282 C, totaling 625 G+C. This gives a GC content of approximately 30.18%.  <answer>30.18</answer>"
+  },
+  {
+    "id": "bf5be1a6-e398-42b3-a740-039b4c9e6d01",
+    "type": "gc_content",
+    "ideal": "31.43",
+    "latency_s": 242.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "31.44"
+    },
+    "answer_tail": "<answer>31.44</answer>"
+  },
+  {
+    "id": "e70f375c-b7fe-4c75-bc65-76742cc03a66",
+    "type": "gc_content",
+    "ideal": "33.97",
+    "latency_s": 134.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "33.97"
+    },
+    "answer_tail": " guanine (G) and cytosine (C) bases out of the total number of bases. The sequence has 621 G+C bases out of 1828 total bases, resulting in a GC content of approximately 33.97%.  <answer>33.97</answer>"
+  },
+  {
+    "id": "90269f03-fae2-46c6-9565-69f4dbcae061",
+    "type": "gc_content",
+    "ideal": "29.21",
+    "latency_s": 118.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "29.1"
+    },
+    "answer_tail": "<answer>29.1</answer>"
+  },
+  {
+    "id": "6747cc52-2aa4-46c4-8260-680a2cff3d4f",
+    "type": "gc_content",
+    "ideal": "29.11",
+    "latency_s": 242.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "29.03"
+    },
+    "answer_tail": "<answer>29.03</answer>"
+  },
+  {
+    "id": "8afafe75-9a22-49cf-8ede-c0d43131b6ab",
+    "type": "gc_content",
+    "ideal": "27.07",
+    "latency_s": 140.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "26.96"
+    },
+    "answer_tail": "percentage of guanine (G) and cytosine (C) bases in the sequence. The total sequence length is 931 bases, with 251 G+C bases, resulting in a GC content of approximately 26.96%.  <answer>26.96</answer>"
+  },
+  {
+    "id": "610f7342-ad5a-4b30-9b6d-3dbaf99ea4f0",
+    "type": "molecular_weight",
+    "ideal": "950",
+    "latency_s": 22.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1130.5"
+    },
+    "answer_tail": "by summing the average residue masses of the amino acids and adding the mass of a water molecule for the terminal ends. Using standard average masses, the result is 1130.5 Da.  <answer>1130.5</answer>"
+  },
+  {
+    "id": "6be2d787-bca9-41c0-99da-af5db544ea92",
+    "type": "molecular_weight",
+    "ideal": "3707",
+    "latency_s": 109.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3725.38"
+    },
+    "answer_tail": "<answer>3725.38</answer>"
+  },
+  {
+    "id": "17d65f30-dddb-402d-8452-15932b4aedba",
+    "type": "molecular_weight",
+    "ideal": "3857",
+    "latency_s": 65.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3875.3"
+    },
+    "answer_tail": "summing the residue weights of each nucleotide (A: 329.2, U: 306.2, C: 305.2, G: 345.2) and adding 18.015 for the terminal groups. With 3 of each base, the total is 3875.3 Da.  <answer>3875.3</answer>"
+  },
+  {
+    "id": "7f0b5940-f7af-4a9d-88ba-562f3066b374",
+    "type": "molecular_weight",
+    "ideal": "499",
+    "latency_s": 18.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "607.73"
+    },
+    "answer_tail": "<answer>607.73</answer>"
+  },
+  {
+    "id": "32b7e8d1-8bb9-4fe0-a3c3-42f4cc6b8f2c",
+    "type": "molecular_weight",
+    "ideal": "3707",
+    "latency_s": 54.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3725.41"
+    },
+    "answer_tail": "atoms. Using average atomic masses, the molecular formula is C₁₁₇H₁₄₉N₄₅O₇₃P₁₂, yielding a molecular weight of 3725.409 Da. Rounded to two decimal places, this is 3725.41 Da.  <answer>3725.41</answer>"
+  },
+  {
+    "id": "3cef9eb5-ba08-461d-b8f0-ce4518ed968b",
+    "type": "molecular_weight",
+    "ideal": "1378",
+    "latency_s": 23.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1649.14"
+    },
+    "answer_tail": "<answer>1649.14</answer>"
+  },
+  {
+    "id": "daa94ce6-73b6-4266-afb2-8da0ce43f882",
+    "type": "molecular_weight",
+    "ideal": "3857",
+    "latency_s": 11.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3659.4"
+    },
+    "answer_tail": "<answer>3659.4</answer>"
+  },
+  {
+    "id": "b6bd8b4d-b218-4fb4-948e-08c481c954d9",
+    "type": "molecular_weight",
+    "ideal": "947",
+    "latency_s": 30.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1109.92"
+    },
+    "answer_tail": "<answer>1109.92</answer>"
+  },
+  {
+    "id": "3355618d-1490-49f8-be2d-eb5d87802c06",
+    "type": "molecular_weight",
+    "ideal": "1853",
+    "latency_s": 197.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1871.2"
+    },
+    "answer_tail": ") is calculated as the sum of the deoxyribonucleotide monophosphate masses minus water for each phosphodiester bond. Using standard atomic masses, the value is 1871.2 daltons.  <answer>1871.2</answer>"
+  },
+  {
+    "id": "35e0e192-21b8-43f8-b2f7-36397b2668db",
+    "type": "molecular_weight",
+    "ideal": "3888",
+    "latency_s": 129.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3906.4"
+    },
+    "answer_tail": "<answer>3906.4</answer>"
+  },
+  {
+    "id": "a46b6c85-e1df-42fa-bea8-60fd49e4ec48",
+    "type": "molecular_weight",
+    "ideal": "1365",
+    "latency_s": 45.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1636.13"
+    },
+    "answer_tail": "The molecular weight of the protein sequence MKLLILTCLVAVATF is calculated by summing the average residue masses and adding the mass of water. The result is 1636.13 Da.  <answer>1636.13</answer>"
+  },
+  {
+    "id": "9e2797a5-c529-44f0-aea2-9574c4ed9b12",
+    "type": "molecular_weight",
+    "ideal": "4943",
+    "latency_s": 36.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4961.2"
+    },
+    "answer_tail": "t is calculated using standard residue weights (dA: 313.21, dT: 304.20, dG: 329.21, dC: 289.18) plus an additional 18.015 Da for the terminal groups, resulting in 4961.215 Da.  <answer>4961.2</answer>"
+  },
+  {
+    "id": "a2534761-4c56-46bb-8fed-715daaf956ba",
+    "type": "molecular_weight",
+    "ideal": "4501",
+    "latency_s": 49.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4518.8"
+    },
+    "answer_tail": "<answer>4518.8</answer>"
+  },
+  {
+    "id": "b2e7f723-798e-4601-808a-9faba0edb63a",
+    "type": "molecular_weight",
+    "ideal": "1417",
+    "latency_s": 25.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1652.23"
+    },
+    "answer_tail": " mass of a water molecule (18.01528 Da) for the terminal ends. The sum of residue masses is 1634.2142 Da, and adding water gives 1652.22948 Da, rounded to two decimal places.  <answer>1652.23</answer>"
+  },
+  {
+    "id": "c398ec8f-c219-4f86-9aa8-ea8a948ba971",
+    "type": "molecular_weight",
+    "ideal": "3708",
+    "latency_s": 106.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3726.4"
+    },
+    "answer_tail": "<answer>3726.4</answer>"
+  },
+  {
+    "id": "000cf6ab-d761-4455-845f-4b0f52322ef7",
+    "type": "molecular_weight",
+    "ideal": "5203",
+    "latency_s": 90.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "5221.14"
+    },
+    "answer_tail": "<answer>5221.14</answer>"
+  },
+  {
+    "id": "5f97a4ab-a060-4d0c-9486-7b722b26849a",
+    "type": "molecular_weight",
+    "ideal": "811",
+    "latency_s": 21.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "956.06"
+    },
+    "answer_tail": "molecular weight of the protein sequence HDHCCGWV is calculated using average residue masses plus the mass of water for the termini, resulting in approximately 956.06 daltons.  <answer>956.06</answer>"
+  },
+  {
+    "id": "98e50009-eb80-4c91-aeae-0113191c2b28",
+    "type": "molecular_weight",
+    "ideal": "6138",
+    "latency_s": 24.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "6156"
+    },
+    "answer_tail": "<answer>6156</answer>"
+  },
+  {
+    "id": "2baacdbb-6cfa-4869-8609-0316d6be51ca",
+    "type": "molecular_weight",
+    "ideal": "7482",
+    "latency_s": 55.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "7499.6"
+    },
+    "answer_tail": "g the residue weights of each nucleotide (A=329.2, U=306.2, G=345.2, C=305.2) and adding 18.0 for the terminal water. With 9 A, 6 U, 6 G, and 2 C, the total is 7499.6 daltons.  <answer>7499.6</answer>"
+  },
+  {
+    "id": "1197342a-552c-4e9b-9384-c5ce3aa96258",
+    "type": "molecular_weight",
+    "ideal": "1863",
+    "latency_s": 24.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2224.75"
+    },
+    "answer_tail": "<answer>2224.75</answer>"
+  },
+  {
+    "id": "f46ab5a5-5559-4829-a12c-0051fa54a967",
+    "type": "tm_calculations",
+    "ideal": "24.0",
+    "latency_s": 3.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "24.0"
+    },
+    "answer_tail": "<answer>24.0</answer>"
+  },
+  {
+    "id": "3a0cd1eb-50b8-4e38-8533-dd77beedfad8",
+    "type": "tm_calculations",
+    "ideal": "32.0",
+    "latency_s": 2.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "32.0"
+    },
+    "answer_tail": "<answer>32.0</answer>"
+  },
+  {
+    "id": "6a583df4-712c-4fe9-a720-67903c5de8ca",
+    "type": "tm_calculations",
+    "ideal": "20.0",
+    "latency_s": 2.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "20.0"
+    },
+    "answer_tail": "<answer>20.0</answer>"
+  },
+  {
+    "id": "d916145c-8b5b-40d4-aeae-32dae5edfb66",
+    "type": "tm_calculations",
+    "ideal": "40.0",
+    "latency_s": 2.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "40.0"
+    },
+    "answer_tail": "<answer>40.0</answer>"
+  },
+  {
+    "id": "79287cf5-49bf-4562-9d07-edb4c5599717",
+    "type": "tm_calculations",
+    "ideal": "36.0",
+    "latency_s": 2.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "36.0"
+    },
+    "answer_tail": "<answer>36.0</answer>"
+  },
+  {
+    "id": "e384a50e-e6b0-4b36-8347-b8fd62100ee4",
+    "type": "tm_calculations",
+    "ideal": "24.2",
+    "latency_s": 26.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "30.4"
+    },
+    "answer_tail": "<answer>30.4</answer>"
+  },
+  {
+    "id": "fe658474-7925-4a51-b0d0-25d05a63197d",
+    "type": "tm_calculations",
+    "ideal": "3.7",
+    "latency_s": 46.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "24.0"
+    },
+    "answer_tail": "<answer>24.0</answer>"
+  },
+  {
+    "id": "b1f40315-cfb3-4dbb-8a80-e4fb36b223f2",
+    "type": "tm_calculations",
+    "ideal": "31.4",
+    "latency_s": 61.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "53.0"
+    },
+    "answer_tail": "+C) = 2×8 + 4×8 = 48°C at a reference salt concentration of 50 mM. The salt adjustment factor is 16.6 × log₁₀([Na⁺]/0.05) = 16.6 × log₁₀(2) ≈ 5.0°C, resulting in a Tm of 53.0°C.  <answer>53.0</answer>"
+  },
+  {
+    "id": "c5260e96-2124-477e-a29e-3fc54d1c017c",
+    "type": "tm_calculations",
+    "ideal": "47.4",
+    "latency_s": 55.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "69.0"
+    },
+    "answer_tail": "t 50 mM salt, Tm = 2×0 + 4×16 = 64°C. For 100 mM salt, the adjustment is ΔTm = 16.6 × log₁₀([Na⁺]/0.05) = 16.6 × log₁₀(2) ≈ 5.0°C. Thus, the salt-adjusted Tm is 64 + 5 = 69.0°C.  <answer>69.0</answer>"
+  },
+  {
+    "id": "cacd246a-2bc5-49ae-8da4-b93e0ad187a4",
+    "type": "tm_calculations",
+    "ideal": "24.0",
+    "latency_s": 2.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "24.0"
+    },
+    "answer_tail": "<answer>24.0</answer>"
+  },
+  {
+    "id": "9d9c8e71-ef96-4a2a-b582-6ff3b91eb914",
+    "type": "tm_calculations",
+    "ideal": "24.0",
+    "latency_s": 2.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "24.0"
+    },
+    "answer_tail": "<answer>24.0</answer>"
+  },
+  {
+    "id": "0ee66199-5993-4b48-b581-d0d2e890756c",
+    "type": "tm_calculations",
+    "ideal": "16.0",
+    "latency_s": 4.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "16.0"
+    },
+    "answer_tail": "ace formula: Tm = 2 × (A + T) + 4 × (G + C). For the sequence \"AATTAATT\", there are 4 adenines, 4 thymines, and no guanines or cytosines, giving a Tm of 2 × 8 + 4 × 0 = 16.0 °C.  <answer>16.0</answer>"
+  },
+  {
+    "id": "234730c7-c88d-48f7-acd6-ba57dd27ed3e",
+    "type": "tm_calculations",
+    "ideal": "42.4",
+    "latency_s": 2.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "64.0"
+    },
+    "answer_tail": "<answer>64.0</answer>"
+  },
+  {
+    "id": "b8738d12-9568-44a0-841f-c1661180fb8a",
+    "type": "tm_calculations",
+    "ideal": "23.4",
+    "latency_s": 29.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "28.8"
+    },
+    "answer_tail": "<answer>28.8</answer>"
+  },
+  {
+    "id": "bf76ac99-ae6c-48a3-a917-636b1a3e9196",
+    "type": "tm_calculations",
+    "ideal": "12.4",
+    "latency_s": 84.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "27.9"
+    },
+    "answer_tail": "<answer>27.9</answer>"
+  },
+  {
+    "id": "462136c0-7b90-4414-a0da-e94f1904966a",
+    "type": "tm_calculations",
+    "ideal": "34.3",
+    "latency_s": 55.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "55.9"
+    },
+    "answer_tail": " 4(G+C) = 2×8 + 4×8 = 48°C at 50 mM salt. The salt adjustment for 150 mM salt is ΔTm = 16.6 × log10(150/50) = 16.6 × log10(3) ≈ 7.92°C. Thus, the final Tm is 48 + 7.92 = 55.9°C.  <answer>55.9</answer>"
+  },
+  {
+    "id": "a9cbdc8d-fd6d-4cfc-b589-b686bfe3fac9",
+    "type": "tm_calculations",
+    "ideal": "36.0",
+    "latency_s": 3.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "36.0"
+    },
+    "answer_tail": "<answer>36.0</answer>"
+  },
+  {
+    "id": "a6ff88ff-b3f4-4b65-9642-a12b1f854cf8",
+    "type": "tm_calculations",
+    "ideal": "24.2",
+    "latency_s": 183.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "36.0"
+    },
+    "answer_tail": "is calculated using the Wallace rule (Tm = 2(A+T) + 4(G+C)), which is appropriate for short oligonucleotides under these salt conditions. With 6 A+T and 6 G+C, the Tm is 36.0°C.  <answer>36.0</answer>"
+  },
+  {
+    "id": "833216c7-ef5c-4635-81a8-9a2238b16abf",
+    "type": "tm_calculations",
+    "ideal": "32.0",
+    "latency_s": 2.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "32.0"
+    },
+    "answer_tail": "<answer>32.0</answer>"
+  },
+  {
+    "id": "579d9625-7cd7-470a-a4d4-294d66e08bea",
+    "type": "tm_calculations",
+    "ideal": "26.4",
+    "latency_s": 53.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "59.2"
+    },
+    "answer_tail": "₁₀(0.05) ≈ –1.30103, so 16.6 × (–1.30103) ≈ –21.597; 0.41 × 100 = 41; 500/12 ≈ 41.667.   Thus, Tm = 81.5 – 21.597 + 41 – 41.667 = 59.236°C, rounded to one decimal place: 59.2°C.  <answer>59.2</answer>"
+  },
+  {
+    "id": "7cd0f6bc-42fa-4c97-b152-9ad3d48eb3d9",
+    "type": "sequence_complexity",
+    "ideal": "2.000",
+    "latency_s": 2.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "f2bff67f-346c-4153-a058-0bfc919f9333",
+    "type": "sequence_complexity",
+    "ideal": "0.000",
+    "latency_s": 2.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "The DNA sequence consists entirely of adenine (A), so the probability of A is 1, and the entropy is zero.  <answer>0</answer>"
+  },
+  {
+    "id": "19c2c52a-3360-4b1d-a3c0-8836d5eea1b3",
+    "type": "sequence_complexity",
+    "ideal": "2.000",
+    "latency_s": 3.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "e4fd5229-485d-4679-970b-3642e03ae20f",
+    "type": "sequence_complexity",
+    "ideal": "1.000",
+    "latency_s": 2.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "<answer>1</answer>"
+  },
+  {
+    "id": "5d54df0b-00db-4450-bf7f-9a0a25f09131",
+    "type": "sequence_complexity",
+    "ideal": "4",
+    "latency_s": 7.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4"
+    },
+    "answer_tail": "The sequence \"ATGCATGCATGCATGC\" contains the dinucleotides AT, TG, GC, and CA, each appearing multiple times. The number of distinct dinucleotides is 4.  <answer>4</answer>"
+  },
+  {
+    "id": "4edb9a4b-092d-421f-9283-e9d6aeebba32",
+    "type": "sequence_complexity",
+    "ideal": "1.906",
+    "latency_s": 9.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.9056"
+    },
+    "answer_tail": "<answer>1.9056</answer>"
+  },
+  {
+    "id": "8317a3dd-62da-4436-8a08-bc413fcd0003",
+    "type": "sequence_complexity",
+    "ideal": "15.14",
+    "latency_s": 69.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.1514"
+    },
+    "answer_tail": "The GC content for each overlapping 4-bp window was calculated, and the standard deviation (population) of these values is 0.1514.  <answer>0.1514</answer>"
+  },
+  {
+    "id": "8b211294-a1ce-4c58-938b-1521eac2ccaa",
+    "type": "sequence_complexity",
+    "ideal": "1.918",
+    "latency_s": 8.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.9183"
+    },
+    "answer_tail": "total bases. The probabilities are 1/6, 1/3, 1/3, and 1/6. The entropy in bits is \\( H = -\\sum p_i \\log_2(p_i) = \\frac{1}{3}\\log_2(6) + \\frac{2}{3}\\log_2(3) \\approx 1.9183 \\).  <answer>1.9183</answer>"
+  },
+  {
+    "id": "f5efdbe5-b70f-4b1c-bf8b-31bf36f28bb1",
+    "type": "sequence_complexity",
+    "ideal": "100.0",
+    "latency_s": 6.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "nsists of tandem repeats of the dinucleotides AC and GT, covering all 16 bases. Therefore, the repeat density, defined as the proportion of bases part of repetitive elements, is 1.  <answer>1</answer>"
+  },
+  {
+    "id": "a8733a0a-0a48-485c-b14d-9a57c17dc7c5",
+    "type": "sequence_complexity",
+    "ideal": "1.953",
+    "latency_s": 13.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.952724"
+    },
+    "answer_tail": "ies of the DNA sequence. The sequence has 20 bases: A=6, T=6, C=5, G=3. Probabilities: p_A=0.3, p_T=0.3, p_C=0.25, p_G=0.15. The entropy H = -Σ p_i log₂ p_i ≈ 1.952724 bits.  <answer>1.952724</answer>"
+  },
+  {
+    "id": "bc3bc7e9-b86c-4b09-abe5-98bb8875fb5e",
+    "type": "sequence_complexity",
+    "ideal": "42.1",
+    "latency_s": 11.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2.375"
+    },
+    "answer_tail": "<answer>2.375</answer>"
+  },
+  {
+    "id": "7fe5f35f-b505-43e0-bf39-e3c74d4d91c6",
+    "type": "sequence_complexity",
+    "ideal": "4",
+    "latency_s": 8.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4"
+    },
+    "answer_tail": "<answer>4</answer>"
+  },
+  {
+    "id": "5fd525f2-6d3d-4301-9f43-d447c588774e",
+    "type": "sequence_complexity",
+    "ideal": "1.000",
+    "latency_s": 5.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "<answer>1</answer>"
+  },
+  {
+    "id": "4a8d1cc8-37d4-45cb-b33e-0277b65f2ffb",
+    "type": "sequence_complexity",
+    "ideal": "17.3",
+    "latency_s": 17.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.1666666667"
+    },
+    "answer_tail": "CG\" is either 1/3 or 2/3, with seven windows of each. The mean is 0.5, and the variance is 1/36, giving a standard deviation of 1/6, which is approximately 0.1666666667.  <answer>0.1666666667</answer>"
+  },
+  {
+    "id": "f395c104-6014-4b2c-9c77-14a8e33167ea",
+    "type": "sequence_complexity",
+    "ideal": "1.000",
+    "latency_s": 4.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "tide. The sequence \"ATTAATTAATTAATTA\" contains 16 bases, with 8 As and 8 Ts, giving probabilities of 0.5 each. The entropy in bits is \\( - (0.5 \\log_2 0.5 + 0.5 \\log_2 0.5) = 1 \\).  <answer>1</answer>"
+  },
+  {
+    "id": "718614f1-082d-4043-98d1-a02aa6e17005",
+    "type": "sequence_complexity",
+    "ideal": "100.0",
+    "latency_s": 4.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "<answer>1</answer>"
+  },
+  {
+    "id": "391db991-5385-49a0-a08d-63566edc2b9d",
+    "type": "sequence_complexity",
+    "ideal": "2.000",
+    "latency_s": 4.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "362cde08-5da0-41a6-ae6c-617a1a900af9",
+    "type": "sequence_complexity",
+    "ideal": "8",
+    "latency_s": 4.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "8"
+    },
+    "answer_tail": "<answer>8</answer>"
+  },
+  {
+    "id": "edb7c469-94d1-452d-8c9f-b2910fc783b8",
+    "type": "sequence_complexity",
+    "ideal": "100.0",
+    "latency_s": 21.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4"
+    },
+    "answer_tail": "<answer>4</answer>"
+  },
+  {
+    "id": "000d3d26-6c6a-48e9-838b-8b8d69e5d3ca",
+    "type": "sequence_complexity",
+    "ideal": "1.977",
+    "latency_s": 10.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.9772"
+    },
+    "answer_tail": "T=3 in a total of 16 bases. The probabilities are p_A=0.25, p_C=0.25, p_G=0.3125, p_T=0.1875. Using the formula H = -∑ p_i log₂(p_i), the entropy is approximately 1.9772 bits.  <answer>1.9772</answer>"
+  },
+  {
+    "id": "77e20f69-2c5a-4cc7-b4b2-2396a6eca36b",
+    "type": "protein_hydrophobicity",
+    "ideal": "2.020",
+    "latency_s": 4.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2.020"
+    },
+    "answer_tail": "<answer>2.020</answer>"
+  },
+  {
+    "id": "cd4d7ad2-dd6d-42c6-a5ce-069c3d539c14",
+    "type": "protein_hydrophobicity",
+    "ideal": "0.371",
+    "latency_s": 22.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.371"
+    },
+    "answer_tail": "The average hydrophobicity of the provided sequence using the Kyte-Doolittle scale is 0.371.  <answer>0.371</answer>"
+  },
+  {
+    "id": "f972d256-7c94-404e-b294-f1c3a7d62b1e",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.183",
+    "latency_s": 8.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3.183"
+    },
+    "answer_tail": "<answer>3.183</answer>"
+  },
+  {
+    "id": "09844de6-bdf0-4ef7-b439-e62277afb45d",
+    "type": "protein_hydrophobicity",
+    "ideal": "4.040",
+    "latency_s": 40.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4.040"
+    },
+    "answer_tail": "The maximum hydrophobicity score (average Kyte-Doolittle hydropathy) for any 5-residue segment in the sequence \"AVGCCKLLVVV\" is 4.040.  <answer>4.040</answer>"
+  },
+  {
+    "id": "0612b4a6-ee30-4c11-9536-68625d67f733",
+    "type": "protein_hydrophobicity",
+    "ideal": "-3.000",
+    "latency_s": 7.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "-3.000"
+    },
+    "answer_tail": "he sequence length. The sequence contains 5 aspartic acids (D, -3.5), 9 glutamic acids (E, -3.5), and 5 prolines (P, -1.6), giving a total sum of -57.0 and an average of -3.0.  <answer>-3.000</answer>"
+  },
+  {
+    "id": "407eb37f-3cac-4b4f-862b-d05b7fe8b624",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.663",
+    "latency_s": 50.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3.360"
+    },
+    "answer_tail": "e-Doolittle scale for the last 5 residues (V, V, F, F, F). The values are: V = 4.2, F = 2.8. The sum is 4.2 + 4.2 + 2.8 + 2.8 + 2.8 = 16.8, and the average is 16.8 / 5 = 3.360.  <answer>3.360</answer>"
+  },
+  {
+    "id": "cfa69a8b-3247-452b-9329-9ef59cfa06c7",
+    "type": "protein_hydrophobicity",
+    "ideal": "2.240",
+    "latency_s": 5.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2.240"
+    },
+    "answer_tail": "<answer>2.240</answer>"
+  },
+  {
+    "id": "92a0ef7c-5610-4daf-9b29-8f98319ef9bf",
+    "type": "protein_hydrophobicity",
+    "ideal": "-3.900",
+    "latency_s": 44.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "-15.600"
+    },
+    "answer_tail": "<answer>-15.600</answer>"
+  },
+  {
+    "id": "3bb26f20-a570-472b-9b6c-14cb3438e74c",
+    "type": "protein_hydrophobicity",
+    "ideal": "0.557",
+    "latency_s": 6.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.557"
+    },
+    "answer_tail": "<answer>0.557</answer>"
+  },
+  {
+    "id": "1ab2b1a6-c8f9-47c8-a796-8d309cd7ddac",
+    "type": "protein_hydrophobicity",
+    "ideal": "1.620",
+    "latency_s": 8.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.620"
+    },
+    "answer_tail": "The hydrophobicity is calculated using the Kyte-Doolittle scale for residues T, L, Y, A, and I. The average is 1.620.  <answer>1.620</answer>"
+  },
+  {
+    "id": "197980ce-fa81-4937-829d-d3e2b1416e9b",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.133",
+    "latency_s": 27.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "18.800"
+    },
+    "answer_tail": "The maximum hydrophobicity score for any 6-residue segment in the sequence, calculated using the Kyte-Doolittle scale, is 18.800.  <answer>18.800</answer>"
+  },
+  {
+    "id": "920dcb46-c5d9-410d-a89b-f6ce2be0bbf1",
+    "type": "protein_hydrophobicity",
+    "ideal": "-0.115",
+    "latency_s": 6.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "-0.115"
+    },
+    "answer_tail": "<answer>-0.115</answer>"
+  },
+  {
+    "id": "11bc99ad-f1b3-45df-81f7-6ddba370cb83",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.640",
+    "latency_s": 20.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3.446"
+    },
+    "answer_tail": "The hydrophobicity of the N-terminal region was computed as the average Kyte-Doolittle hydropathy score over the entire sequence (13 residues), resulting in a value of 3.446.  <answer>3.446</answer>"
+  },
+  {
+    "id": "039393c2-6cd1-4be2-8528-405dac2e8eda",
+    "type": "protein_hydrophobicity",
+    "ideal": "-1.433",
+    "latency_s": 3.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "-1.433"
+    },
+    "answer_tail": "cines and 3 aspartic acids, giving a total sum of 6*(-0.4) + 3*(-3.5) = -2.4 - 10.5 = -12.9. The average is -12.9 / 9 = -1.43333..., rounded to three decimal places is -1.433.  <answer>-1.433</answer>"
+  },
+  {
+    "id": "a6adb33b-a737-491b-9cbf-9d602223d991",
+    "type": "protein_hydrophobicity",
+    "ideal": "1.800",
+    "latency_s": 12.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.800"
+    },
+    "answer_tail": "city score for any 3-residue segment in the sequence FFFAAAMMMLLLIII is 1.800, based on the Kyte-Doolittle scale, where the average hydrophobicity of the AAA segment is lowest.  <answer>1.800</answer>"
+  },
+  {
+    "id": "61d9bab1-fe38-4233-8d56-b02de5cb0d5f",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.420",
+    "latency_s": 4.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3.420"
+    },
+    "answer_tail": "<answer>3.420</answer>"
+  },
+  {
+    "id": "aaf01866-ff31-4d36-bf75-11a47c29d307",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.143",
+    "latency_s": 9.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3.843"
+    },
+    "answer_tail": "acids 6-12 is calculated as the average Kyte-Doolittle hydropathy index for the residues V, V, L, V, V, I, A. The sum is 26.9, and the average is 3.843 to three decimal places.  <answer>3.843</answer>"
+  },
+  {
+    "id": "4e9546b6-a837-49e5-8684-3e83e1f75f10",
+    "type": "protein_hydrophobicity",
+    "ideal": "3.829",
+    "latency_s": 14.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "26.800"
+    },
+    "answer_tail": "The maximum hydrophobicity score for any 7-residue segment in the sequence, calculated using the Kyte-Doolittle scale, is 26.800.  <answer>26.800</answer>"
+  },
+  {
+    "id": "eb555aff-a532-4245-afbb-1f218153062c",
+    "type": "protein_hydrophobicity",
+    "ideal": "-0.250",
+    "latency_s": 4.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "-0.250"
+    },
+    "answer_tail": "<answer>-0.250</answer>"
+  },
+  {
+    "id": "641cdf6c-5c4b-4438-a9e9-e5228cded044",
+    "type": "protein_hydrophobicity",
+    "ideal": "2.038",
+    "latency_s": 7.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2.038"
+    },
+    "answer_tail": "<answer>2.038</answer>"
+  },
+  {
+    "id": "95e0925e-e3eb-4c9e-bfb6-900c115c6cba",
+    "type": "pairwise_distances",
+    "ideal": "0",
+    "latency_s": 1.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "74748486-8eaf-4777-8889-6da488556cc0",
+    "type": "pairwise_distances",
+    "ideal": "1",
+    "latency_s": 1.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "<answer>1</answer>"
+  },
+  {
+    "id": "5c096e78-84b8-4099-ab77-7ca06b19af16",
+    "type": "pairwise_distances",
+    "ideal": "0.125",
+    "latency_s": 2.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.125"
+    },
+    "answer_tail": "two sequences. Comparing sequence_A (ATCGATCG) and sequence_B (ATCGATCC), there is one difference at the last position out of 8 total sites, giving a p-distance of 1/8 = 0.125.  <answer>0.125</answer>"
+  },
+  {
+    "id": "a81d535e-07f8-4fe2-97dc-c688e45560d2",
+    "type": "pairwise_distances",
+    "ideal": "1",
+    "latency_s": 1.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "<answer>1</answer>"
+  },
+  {
+    "id": "9172d843-778c-4cec-9418-c24cb8012a72",
+    "type": "pairwise_distances",
+    "ideal": "0.125",
+    "latency_s": 2.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.125"
+    },
+    "answer_tail": "<answer>0.125</answer>"
+  },
+  {
+    "id": "49db7ccd-8a4a-45c6-89ba-188e73952771",
+    "type": "pairwise_distances",
+    "ideal": "0.1367",
+    "latency_s": 7.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.136741"
+    },
+    "answer_tail": "<answer>0.136741</answer>"
+  },
+  {
+    "id": "0bb445d6-f04e-4cef-ba48-d3ee0d3174a4",
+    "type": "pairwise_distances",
+    "ideal": "2",
+    "latency_s": 2.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "The Hamming distance between the two sequences is 2, as they differ at positions 2 and 10.  <answer>2</answer>"
+  },
+  {
+    "id": "033045e7-d1f1-4e86-8c6a-af25c28d0912",
+    "type": "pairwise_distances",
+    "ideal": "0.167",
+    "latency_s": 6.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.1666666667"
+    },
+    "answer_tail": "<answer>0.1666666667</answer>"
+  },
+  {
+    "id": "81a5bed5-f81a-4dee-8dc7-32ac756155cb",
+    "type": "pairwise_distances",
+    "ideal": "0.1885",
+    "latency_s": 11.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.1885"
+    },
+    "answer_tail": " the proportion of differing sites. For the given sequences, there are 2 differences out of 12 sites, so \\( p = \\frac{2}{12} = 0.1667 \\). Substituting yields \\( d = 0.1885 \\).  <answer>0.1885</answer>"
+  },
+  {
+    "id": "ebc59638-6014-4a16-b57a-54c5fa4c3413",
+    "type": "pairwise_distances",
+    "ideal": "7",
+    "latency_s": 1.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "7"
+    },
+    "answer_tail": "<answer>7</answer>"
+  },
+  {
+    "id": "2dda3696-bbe6-4053-871c-0561b9cfad3e",
+    "type": "pairwise_distances",
+    "ideal": "1.000",
+    "latency_s": 1.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "<answer>1.0</answer>"
+  },
+  {
+    "id": "2edd1d16-f0d4-4c1d-9b3c-d2ded38adc5c",
+    "type": "pairwise_distances",
+    "ideal": "0",
+    "latency_s": 1.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "369e3985-129d-40d7-8484-3f09d85342bc",
+    "type": "pairwise_distances",
+    "ideal": "0.0",
+    "latency_s": 1.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "4c74c617-7340-416c-816e-bae384db82ad",
+    "type": "pairwise_distances",
+    "ideal": "8",
+    "latency_s": 1.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "8"
+    },
+    "answer_tail": "<answer>8</answer>"
+  },
+  {
+    "id": "b7526ac3-3aae-445b-ae42-6f92ef459822",
+    "type": "pairwise_distances",
+    "ideal": "1.000",
+    "latency_s": 3.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "<answer>1.0</answer>"
+  },
+  {
+    "id": "26e35d9c-a87b-4303-b8ca-9454768ad47f",
+    "type": "pairwise_distances",
+    "ideal": "undefined",
+    "latency_s": 34.5,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "tance formula \\( d = -\\frac{3}{4} \\ln\\left(1 - \\frac{4}{3}p\\right) \\) yields a negative argument in the logarithm, meaning the distance is infinite (saturated substitution).  <answer>Infinity</answer>"
+  },
+  {
+    "id": "8712b0f8-4d8b-415d-8d64-97444fdb021f",
+    "type": "pairwise_distances",
+    "ideal": "16",
+    "latency_s": 2.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "16"
+    },
+    "answer_tail": "The Hamming distance is the number of positions where the two sequences differ. Comparing each character of the 16-base sequences shows all positions are different.  <answer>16</answer>"
+  },
+  {
+    "id": "b923c3af-1844-46cc-8df7-808bd9288578",
+    "type": "pairwise_distances",
+    "ideal": "1.000",
+    "latency_s": 3.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "tance is the proportion of differing sites between the two sequences. Both sequences are 16 nucleotides long, and they differ at every position, resulting in a p-distance of 1.0.  <answer>1.0</answer>"
+  },
+  {
+    "id": "d814fe9f-060f-47d1-bccf-2aeee8cf71ca",
+    "type": "pairwise_distances",
+    "ideal": "undefined",
+    "latency_s": 23.6,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "1 - \\frac{4}{3}p\\right)\\) becomes undefined because the argument of the logarithm is negative. This indicates that the sequences are saturated, and the distance is infinite.  <answer>Infinity</answer>"
+  },
+  {
+    "id": "57bb763e-c25f-4c81-bb93-4f6b1095b232",
+    "type": "pairwise_distances",
+    "ideal": "0.050",
+    "latency_s": 7.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.05"
+    },
+    "answer_tail": "The p-distance is the proportion of differing sites between the two aligned sequences. Only one position differs out of 20, giving a value of 0.05.  <answer>0.05</answer>"
+  },
+  {
+    "id": "474c1805-3562-4de0-8471-30ee84a79ff9",
+    "type": "msa_scoring",
+    "ideal": "0.000",
+    "latency_s": 6.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "The Shannon entropy for column 0 is 0 because all sequences have the same amino acid 'A', resulting in no uncertainty.  <answer>0</answer>"
+  },
+  {
+    "id": "08879b46-71f2-4662-b2f4-9ef66bd5cf8f",
+    "type": "msa_scoring",
+    "ideal": "2.000",
+    "latency_s": 12.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": " calculated based on the frequencies of the amino acids in that column. The sequences are: A, G, H, L, each appearing once. With four equally likely symbols, the entropy is 2 bits.  <answer>2</answer>"
+  },
+  {
+    "id": "3e0cb3a9-b50d-4162-ae79-36c484e622c0",
+    "type": "msa_scoring",
+    "ideal": "0.000",
+    "latency_s": 12.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "456f9b96-3c52-4e20-a133-0e30fa10819c",
+    "type": "msa_scoring",
+    "ideal": "2.000",
+    "latency_s": 3.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "eaf25896-d6ce-4f56-aca4-4d5e92edbcc8",
+    "type": "msa_scoring",
+    "ideal": "1.000",
+    "latency_s": 3.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "<answer>1</answer>"
+  },
+  {
+    "id": "d6377888-a351-473e-8117-60d323891f4e",
+    "type": "msa_scoring",
+    "ideal": "0.537",
+    "latency_s": 29.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "nterpretation (e.g., normalized entropy) yields 0. Given the alignment where all other columns are fully conserved, column 0 is completely variable, so the conservation score is 0.  <answer>0</answer>"
+  },
+  {
+    "id": "9988db7f-7f66-493c-8c21-f6b676fedd93",
+    "type": "msa_scoring",
+    "ideal": "0.000",
+    "latency_s": 4.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "The Shannon entropy at column 4 is 0 because all sequences have the same residue (D) at that position, resulting in a probability of 1 and zero uncertainty.  <answer>0</answer>"
+  },
+  {
+    "id": "c5da9cb3-191c-492c-95e2-54970adeeada",
+    "type": "msa_scoring",
+    "ideal": "50.000",
+    "latency_s": 3.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "The gap percentage at column 4 is 0% because all sequences have an amino acid (D) at that position, with no gaps.  <answer>0</answer>"
+  },
+  {
+    "id": "bcf4b79c-585d-43d8-930a-3f6d23238611",
+    "type": "msa_scoring",
+    "ideal": "1.000",
+    "latency_s": 5.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "<answer>1.0</answer>"
+  },
+  {
+    "id": "ac1ecff4-3aff-4ac6-8bd5-a0999c5032a7",
+    "type": "msa_scoring",
+    "ideal": "1.500",
+    "latency_s": 6.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "b4b62f51-dd53-4b88-a107-07ed1838ecdd",
+    "type": "msa_scoring",
+    "ideal": "1.000",
+    "latency_s": 6.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "<answer>1.0</answer>"
+  },
+  {
+    "id": "87786bd3-2dd7-4c4b-b656-7beebf18f6d7",
+    "type": "msa_scoring",
+    "ideal": "0.500",
+    "latency_s": 15.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.5"
+    },
+    "answer_tail": "The alignment at column 2 contains two A's and two T's. The conservation score, often defined as the frequency of the most common residue, is 2/4 = 0.5.  <answer>0.5</answer>"
+  },
+  {
+    "id": "323c8265-a04a-4c21-b67f-20e42bb01b84",
+    "type": "msa_scoring",
+    "ideal": "1.000",
+    "latency_s": 4.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "The conservation score at column 0 is 1.0 because all three sequences have the same amino acid (A), indicating perfect conservation.  <answer>1.0</answer>"
+  },
+  {
+    "id": "b302ec9e-5cab-445a-8a33-c307fc619166",
+    "type": "msa_scoring",
+    "ideal": "1.585",
+    "latency_s": 5.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.585"
+    },
+    "answer_tail": "<answer>1.585</answer>"
+  },
+  {
+    "id": "2a1a05db-3444-4dec-ac04-b1ae09a31ee3",
+    "type": "msa_scoring",
+    "ideal": "100.000",
+    "latency_s": 6.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "100"
+    },
+    "answer_tail": "<answer>100</answer>"
+  },
+  {
+    "id": "a5595a1a-f918-4370-a8b8-99700012aafa",
+    "type": "msa_scoring",
+    "ideal": "1.922",
+    "latency_s": 9.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "The Shannon entropy at column 7 is 0 because all sequences have the same amino acid (N) at that position, resulting in no uncertainty.  <answer>0</answer>"
+  },
+  {
+    "id": "ed712ec1-cd0d-43ad-bd12-543495c520dd",
+    "type": "msa_scoring",
+    "ideal": "50.000",
+    "latency_s": 15.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0"
+    },
+    "answer_tail": "<answer>0</answer>"
+  },
+  {
+    "id": "66980aff-595b-4f0e-9666-f1a2882b3400",
+    "type": "msa_scoring",
+    "ideal": "0.000",
+    "latency_s": 15.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "<answer>1.0</answer>"
+  },
+  {
+    "id": "8aaf71a1-31ad-4b7b-ada4-74d3db393e3a",
+    "type": "msa_scoring",
+    "ideal": "1.000",
+    "latency_s": 14.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1"
+    },
+    "answer_tail": "The alignment shows all sequences have phenylalanine (F) at every position, including column 3. Therefore, the column is fully conserved, and the conservation score is 1.  <answer>1</answer>"
+  },
+  {
+    "id": "bf316789-e2f2-4d12-84de-84cdace3926b",
+    "type": "msa_scoring",
+    "ideal": "2.000",
+    "latency_s": 13.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "ies of the amino acids in that column. The sequences have C, L, V, and G, each appearing once out of four sequences, giving a uniform distribution. The entropy is log2(4) = 2 bits.  <answer>2</answer>"
+  },
+  {
+    "id": "a3a939e4-686c-4f4e-8881-8dc9fbe9facd",
+    "type": "amplicon_gc",
+    "ideal": "TGGTAAACTCAGTTTTACTCCC,TGCTTGTTCAAACTCAGCTTC",
+    "latency_s": 247.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CCGGGTCTTCTTGTTTGGTAAAC",
+      "reverse": "TCAGCAGTTACTTGTAAAGCATAG"
+    },
+    "answer_tail": "<answer>CCGGGTCTTCTTGTTTGGTAAAC,TCAGCAGTTACTTGTAAAGCATAG</answer>"
+  },
+  {
+    "id": "12477fdd-15d3-4431-aec1-22de06f5bd35",
+    "type": "amplicon_gc",
+    "ideal": "GGAACGACTTAAATAGGCTA,CCAGGGTATTTAGTGCCATT",
+    "latency_s": 267.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CAAAAACTCTTGTTTGTGAT",
+      "reverse": "TACTTTGGTTTTAGTAGCTT"
+    },
+    "answer_tail": "<answer>CAAAAACTCTTGTTTGTGAT,TACTTTGGTTTTAGTAGCTT</answer>"
+  },
+  {
+    "id": "be77c03c-453b-4705-a459-1a67cd98ece9",
+    "type": "amplicon_gc",
+    "ideal": "GACATCTGAACGGGAGCAGG,CATTGCTTCAGTCACTGGTG",
+    "latency_s": 424.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CAGCAACTGTTTTGCTACCT",
+      "reverse": "GGAAAGATGCCTGTTATTGC"
+    },
+    "answer_tail": "<answer>CAGCAACTGTTTTGCTACCT,GGAAAGATGCCTGTTATTGC</answer>"
+  },
+  {
+    "id": "0db44466-245d-4eca-bb89-d041cce5ac3c",
+    "type": "amplicon_gc",
+    "ideal": "GGAGGTAATTCTGCAATACAGG,AAGCTTAAGATCTAAAACTGGCTT",
+    "latency_s": 158.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TATTTGTGATGCGGCTCTTT",
+      "reverse": "GGAAAGAGACAATCAATTGC"
+    },
+    "answer_tail": "<answer>TATTTGTGATGCGGCTCTTT,GGAAAGAGACAATCAATTGC</answer>"
+  },
+  {
+    "id": "d6448fc9-8a4c-4cd8-bb76-d020f62bc237",
+    "type": "amplicon_gc",
+    "ideal": "GTTCTGGTTATACTAATGCTGTTG,AAATTTGATGTGGCAATAACCGTT",
+    "latency_s": 198.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GTGGCAATTGAGTCTAAAGC",
+      "reverse": "GGCATAAGAGCACATGGTAT"
+    },
+    "answer_tail": "<answer>GTGGCAATTGAGTCTAAAGC,GGCATAAGAGCACATGGTAT</answer>"
+  },
+  {
+    "id": "a1ca1f96-41e9-4f65-b3b1-6a89fda65c6d",
+    "type": "amplicon_gc",
+    "ideal": "GCTATCAAAAACAAACAAAAGCGAGC,TTGGTGGTGTGATAAATTGCTTCAAC",
+    "latency_s": 350.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GGCGCGAAAGGGATCACTTT",
+      "reverse": "TGGGTCTGGTGCAAGGTTGG"
+    },
+    "answer_tail": "<answer>GGCGCGAAAGGGATCACTTT,TGGGTCTGGTGCAAGGTTGG</answer>"
+  },
+  {
+    "id": "fbcbbb22-e0fb-4692-9a2d-8b4ef3f060a9",
+    "type": "amplicon_gc",
+    "ideal": "TTCTTTCAAACCGCAAACCATC,GGTAGGTTGCTAATCTTCCCAAA",
+    "latency_s": 287.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GATCCCCCCACCAAAAGGAG",
+      "reverse": "CCCTGCTGAAAACCAACCAA"
+    },
+    "answer_tail": "<answer>GATCCCCCCACCAAAAGGAG,CCCTGCTGAAAACCAACCAA</answer>"
+  },
+  {
+    "id": "4e095968-8c8b-4b82-8577-d93157e0eae4",
+    "type": "amplicon_gc",
+    "ideal": "CGAACTATAAATGTATCTGGTGTTG,GTGGTAAAGCTTTAGTCTTACTTTC",
+    "latency_s": 132.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GATGCAACTTGTCCCAAAAC",
+      "reverse": "CACTTGTAATGCAACGTGGT"
+    },
+    "answer_tail": "<answer>GATGCAACTTGTCCCAAAAC,CACTTGTAATGCAACGTGGT</answer>"
+  },
+  {
+    "id": "8067faaf-7462-4bc6-9e98-566abeccfa07",
+    "type": "amplicon_gc",
+    "ideal": "GCGATTGTTGAGGGGATCAA,TAAATGGCATTATTAGTCTTCTTAAAG",
+    "latency_s": 338.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TCACTATTGTCACTTCCACC",
+      "reverse": "GGAAACACAACCTACACACA"
+    },
+    "answer_tail": "<answer>TCACTATTGTCACTTCCACC,GGAAACACAACCTACACACA</answer>"
+  },
+  {
+    "id": "f7f56c5a-3b11-4e43-9cbb-c525d9779d7b",
+    "type": "amplicon_gc",
+    "ideal": "CAAGGAAAACTCAACGAAGATGATG,TTGTTTGATTTGTGCATTTACTTCAC",
+    "latency_s": 302.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AAATTCAAATTAATAATGATGAAAA",
+      "reverse": "CATGTTTAATTAACATCACTTTGAT"
+    },
+    "answer_tail": "<answer>AAATTCAAATTAATAATGATGAAAA,CATGTTTAATTAACATCACTTTGAT</answer>"
+  },
+  {
+    "id": "26559952-31a3-4273-a1ba-e8e69868eba7",
+    "type": "amplicon_gc",
+    "ideal": "TAGTGTATTGGCAATTGCTG,GTTACCCCTCAAAAGCTTAATG",
+    "latency_s": 241.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AAAAGACCAATTACCTTAGCA",
+      "reverse": "CGAAACATACGGTTTTCCTG"
+    },
+    "answer_tail": "<answer>AAAAGACCAATTACCTTAGCA,CGAAACATACGGTTTTCCTG</answer>"
+  },
+  {
+    "id": "47320e49-b453-454f-b45d-ce510d0a14bc",
+    "type": "amplicon_gc",
+    "ideal": "CCCCTCGCTTCAGGACATAC,TCCCGTTTGAGCTTAAAACA",
+    "latency_s": 207.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AAGCGCTTGATTGCTTGATC",
+      "reverse": "TGCTATTGTTGGTTTATTTGATGTT"
+    },
+    "answer_tail": "<answer>AAGCGCTTGATTGCTTGATC,TGCTATTGTTGGTTTATTTGATGTT</answer>"
+  },
+  {
+    "id": "bb8c509d-fca0-4afc-b39e-ed49c8cfb201",
+    "type": "amplicon_gc",
+    "ideal": "TGCTCAATAAAAGCAGGATCTGC,ATGGAAACAGGCGAATTGCACTT",
+    "latency_s": 189.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATGGATCCTTCCGGTAGGA",
+      "reverse": "GCATTAGCGCTTTAAAGCTT"
+    },
+    "answer_tail": "<answer>AATGGATCCTTCCGGTAGGA,GCATTAGCGCTTTAAAGCTT</answer>"
+  },
+  {
+    "id": "d5eba2b5-5c11-4355-b3cf-5726bfb84539",
+    "type": "amplicon_gc",
+    "ideal": "CACGCAATCTTTGAATACTTCTTT,TTAGTTCATCACTAGCATTTTCCA",
+    "latency_s": 322.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CCTACTTTCAGAGCTGAAAA",
+      "reverse": "AGAATCGCTAATGCTTTGCT"
+    },
+    "answer_tail": "<answer>CCTACTTTCAGAGCTGAAAA,AGAATCGCTAATGCTTTGCT</answer>"
+  },
+  {
+    "id": "3db1184e-6802-47f8-b944-3119f45d858a",
+    "type": "amplicon_gc",
+    "ideal": "GATCTGAGAAGACGTTTGATGC,ATAGATTTGTGGACTTTGAAC",
+    "latency_s": 261.0,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CCTCGCTTTTTCAAGATCAT",
+      "reverse": "TAAAGCAGTTCATGCCTTCT"
+    },
+    "answer_tail": "<answer>CCTCGCTTTTTCAAGATCAT,TAAAGCAGTTCATGCCTTCT</answer>"
+  },
+  {
+    "id": "9ff8f947-f41d-4016-9805-4655ece64ac6",
+    "type": "amplicon_gc",
+    "ideal": "CCATGGAATCAGAGTCACTAGC,AAAGATGTTTATTGTGTTTA",
+    "latency_s": 292.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TTAAGTTCCTCAATACTACC",
+      "reverse": "ACCTTACTCTCAAGTCCATG"
+    },
+    "answer_tail": "<answer>TTAAGTTCCTCAATACTACC,ACCTTACTCTCAAGTCCATG</answer>"
+  },
+  {
+    "id": "ad5294ab-3db7-4e0e-9e4f-3f8d7c5900bc",
+    "type": "amplicon_gc",
+    "ideal": "ATCAATCACCCCACCTTGAA,GTTCGTTGCATTGCATTAGG",
+    "latency_s": 279.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AAATGTTGTTGCAGGTGCTG",
+      "reverse": "GAATGTGCTGTTATTCATTG"
+    },
+    "answer_tail": "<answer>AAATGTTGTTGCAGGTGCTG,GAATGTGCTGTTATTCATTG</answer>"
+  },
+  {
+    "id": "b5010644-71b6-4951-b082-eddbd846a251",
+    "type": "amplicon_gc",
+    "ideal": "GTTCTTGTGCAGCCAACATA,CTTGAAGAATCTAATCAAAGGCA",
+    "latency_s": 377.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GAGTTGGTTTTCAAAACAAG",
+      "reverse": "AGCTTAAGGATGGTAAAGGC"
+    },
+    "answer_tail": "<answer>GAGTTGGTTTTCAAAACAAG,AGCTTAAGGATGGTAAAGGC</answer>"
+  },
+  {
+    "id": "f702e5f5-6259-4a53-8f69-46382e42e3ed",
+    "type": "amplicon_gc",
+    "ideal": "GCTGATTCACATAACTTAGTTTCAACAA,CCAGATCAAGCCACGATAATTAATTTAAT",
+    "latency_s": 364.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CCACCATACAGAGCCACATC",
+      "reverse": "TTGATATCCAAGATCGTGAT"
+    },
+    "answer_tail": "<answer>CCACCATACAGAGCCACATC,TTGATATCCAAGATCGTGAT</answer>"
+  },
+  {
+    "id": "d29fcf56-8167-48da-8df7-78a6bc1e3186",
+    "type": "amplicon_gc",
+    "ideal": "TGACTTGACCAATTTCACTG,TTACTTTAGTTGAACAGGCA",
+    "latency_s": 258.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GCCATAACTTCTCAATTAAC",
+      "reverse": "TTTACTTTAGTTGAACAGGC"
+    },
+    "answer_tail": "<answer>GCCATAACTTCTCAATTAAC,TTTACTTTAGTTGAACAGGC</answer>"
+  },
+  {
+    "id": "d7b3cad5-62aa-4aa6-a71a-b4f854ecb77e",
+    "type": "amplicon_length",
+    "ideal": "GAGGAAAGTGATGATTAATAAA,CTAATTTAGCAACATCTTGCTTC",
+    "latency_s": 341.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAATAAAGAACAAGATTTAAATC",
+      "reverse": "TTATTTAATAAATGGCACTAA"
+    },
+    "answer_tail": "<answer>ATGAATAAAGAACAAGATTTAAATC,TTATTTAATAAATGGCACTAA</answer>"
+  },
+  {
+    "id": "4bee4c44-6f97-4914-8b25-5576ea731057",
+    "type": "amplicon_length",
+    "ideal": "GAAACAAAGGATCAATAATGGC,CGCCCTTTTTACTACTTCTTGACA",
+    "latency_s": 169.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGCAATTAAAAAGATTATC",
+      "reverse": "TTAGTATTGTTCTCCTTTTT"
+    },
+    "answer_tail": "<answer>ATGGCAATTAAAAAGATTATC,TTAGTATTGTTCTCCTTTTT</answer>"
+  },
+  {
+    "id": "f0f9da00-eb86-4010-9021-150b0b047760",
+    "type": "amplicon_length",
+    "ideal": "AGGGTTTGGGGAAGTGAATG,TGCAAAGTGATGGGGAACAA",
+    "latency_s": 129.0,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>5'-ATGACGACAACAAGGAGAAAC-3',5'-TTAATACTCTTCTGCAACAGT-3'</answer>"
+  },
+  {
+    "id": "ea42f38a-3e95-4c3b-8f19-8606e943e7e0",
+    "type": "amplicon_length",
+    "ideal": "GCTGTTTTAAAGGTTAGGGATGAC,TGCATTGCTTGTGAACTAATTTT",
+    "latency_s": 304.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGACTTTTTCTACTCAAAT",
+      "reverse": "TTACTGGCATAGTTTTTTTA"
+    },
+    "answer_tail": "<answer>ATGACTTTTTCTACTCAAAT,TTACTGGCATAGTTTTTTTA</answer>"
+  },
+  {
+    "id": "0dd3be1a-5da7-4924-9275-fc85f27cf1b0",
+    "type": "amplicon_length",
+    "ideal": "GCCACATCAAATTTGACTAATTAA,GGGAAAAATTAGCTATGGAAAACA",
+    "latency_s": 253.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGAAAATATTAATTATCAA",
+      "reverse": "TTAAAAATTTCTGGATTTTT"
+    },
+    "answer_tail": "<answer>ATGGAAAATATTAATTATCAA,TTAAAAATTTCTGGATTTTT</answer>"
+  },
+  {
+    "id": "826f68a0-7258-4739-90e5-c3a9e81d2ea6",
+    "type": "amplicon_length",
+    "ideal": "ATGAAAACAACAATTAATATTGCC,TGTAAATTATATAAGGTTATTCATC",
+    "latency_s": 136.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAAAACAACAATTAATATC",
+      "reverse": "TTATTCATCACCATAGCGGT"
+    },
+    "answer_tail": "<answer>ATGAAAACAACAATTAATATC,TTATTCATCACCATAGCGGT</answer>"
+  },
+  {
+    "id": "e77be6d9-e7d5-4560-842a-0a05653b98fe",
+    "type": "amplicon_length",
+    "ideal": "GCCCAACAACTGTTAAGTTAATG,CAATACAAAAGAATAACAAATTATAAAATG",
+    "latency_s": 282.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGAACAAAAAAACATTA",
+      "reverse": "TTAATCTTCATCTTTCAGCA"
+    },
+    "answer_tail": "<answer>ATGGAACAAAAAAACATTA,TTAATCTTCATCTTTCAGCA</answer>"
+  },
+  {
+    "id": "575b76f4-7a64-47ad-a997-16c6303cf07d",
+    "type": "amplicon_length",
+    "ideal": "TGGATCGATACTAATCATTGC,CTGGTAAAAGTCCTAAACTAACAG",
+    "latency_s": 312.3,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGAACTTAATTCTGAAGA",
+      "reverse": "TTAATCATTAATACAATTCA"
+    },
+    "answer_tail": " the reverse primer is the reverse complement of the region including the stop codon. The sequences are based on the actual genome sequence.  <answer>ATGGAACTTAATTCTGAAGA,TTAATCATTAATACAATTCA</answer>"
+  },
+  {
+    "id": "e221cd2c-ad3e-488e-849b-9f1d3668859b",
+    "type": "amplicon_length",
+    "ideal": "ATGAATAACCTTGAAAAAACCT,AGCCATATCTATTCTTTTACAAACG",
+    "latency_s": 235.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAATAATCTTGAAAAAACCTATA",
+      "reverse": "TTATCTTTTACAAACGGCATCTTTAGT"
+    },
+    "answer_tail": "<answer>ATGAATAATCTTGAAAAAACCTATA,TTATCTTTTACAAACGGCATCTTTAGT</answer>"
+  },
+  {
+    "id": "36ab9b24-e075-4d7e-b312-e3758210d603",
+    "type": "amplicon_length",
+    "ideal": "ATGGCAACGAAAATAGAGCTAAT,TGATTATTCTTTGGCGGATT",
+    "latency_s": 147.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGCAACAAAAATAGAACT",
+      "reverse": "TTATTTGATTTGTGCATTTAC"
+    },
+    "answer_tail": "<answer>ATGGCAACAAAAATAGAACT,TTATTTGATTTGTGCATTTAC</answer>"
+  },
+  {
+    "id": "d26ec3a1-477d-4644-8399-c72dbdc220c6",
+    "type": "amplicon_length",
+    "ideal": "GCTGTACCTATTTTTTTCAAGCC,GGTAAATTGCATTTAAAATTAAGCA",
+    "latency_s": 154.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAACTGGACAACAGATAA",
+      "reverse": "TTATTTATTTTGAAATAATTC"
+    },
+    "answer_tail": "<answer>ATGAACTGGACAACAGATAA,TTATTTATTTTGAAATAATTC</answer>"
+  },
+  {
+    "id": "3aba9563-3ef1-4ffd-8a7e-7fee4c3d25de",
+    "type": "amplicon_length",
+    "ideal": "ATTAAGCTTTTGCTAGTAATGTAAT,GTTAATTGCAGGAATTAACAGTTTT",
+    "latency_s": 291.3,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "rt and stop codons. The forward primer corresponds to the 5' end of the coding strand, and the reverse primer is complementary to the 3' end.  <answer>ATGGATCAAAACTTTAAACT, TTAATAATGTAGTAATAA</answer>"
+  },
+  {
+    "id": "69c4a961-6345-429e-afe2-589b0002bbec",
+    "type": "amplicon_length",
+    "ideal": "TATATGCGTGAAGAATTTACATTTG,CTGTTATGATAAAAGACATTTTGC",
+    "latency_s": 185.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGTTTTTTATAATCAATGATTTAAA",
+      "reverse": "TTACATTTGTTGTGGTGGAGGTTTT"
+    },
+    "answer_tail": "<answer>ATGTTTTTTATAATCAATGATTTAAA,TTACATTTGTTGTGGTGGAGGTTTT</answer>"
+  },
+  {
+    "id": "2931b960-fb7f-4538-8f92-c9b592dd6e51",
+    "type": "amplicon_length",
+    "ideal": "ATGAAATCAGTTACAGTCAAGC,GCAGCGAATTTAGAAGTT",
+    "latency_s": 192.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAAATCAGTTACAGTTAA",
+      "reverse": "TTAGAAGTTAATGGTACCAT"
+    },
+    "answer_tail": "inning of the CDS, including the start codon, and the reverse primer binds to the complementary strand at the end, including the stop codon.  <answer>ATGAAATCAGTTACAGTTAA,TTAGAAGTTAATGGTACCAT</answer>"
+  },
+  {
+    "id": "63f2342d-cc7a-461a-a7aa-a998bbee197b",
+    "type": "amplicon_length",
+    "ideal": "CACTTGAAATGAACTTGGAG,CATCACAAGCCAAAAGATTC",
+    "latency_s": 220.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAATTTAGAAAATGAAATGTG",
+      "reverse": "TTACTTTACAAGCTCTTTGAT"
+    },
+    "answer_tail": "<answer>ATGAATTTAGAAAATGAAATGTG,TTACTTTACAAGCTCTTTGAT</answer>"
+  },
+  {
+    "id": "ee768506-9c3e-4a47-a3da-57a1f3e2d2e0",
+    "type": "amplicon_length",
+    "ideal": "TAAAAGCCATTAATTAAGTTCCTC,GTTAATTGAGAAGTTATGGCAGA",
+    "latency_s": 141.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGCTGATAAATTAAATGAATACGTG",
+      "reverse": "TTACTCAATTTCCTCTTCGATACTT"
+    },
+    "answer_tail": "<answer>ATGGCTGATAAATTAAATGAATACGTG,TTACTCAATTTCCTCTTCGATACTT</answer>"
+  },
+  {
+    "id": "608adf05-5f4d-4188-b310-a4acbf32e06e",
+    "type": "amplicon_length",
+    "ideal": "GGACTAAGTACCAAAAAGCGC,GTTATAGTAGGTATGAATTAAATTG",
+    "latency_s": 175.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAAAAAAGAAAATTTAACT",
+      "reverse": "TTATTTTGTTTTATCAAATTC"
+    },
+    "answer_tail": "<answer>ATGAAAAAAGAAAATTTAACT,TTATTTTGTTTTATCAAATTC</answer>"
+  },
+  {
+    "id": "b79c712a-d9fa-451a-a57d-7f9a1d169db5",
+    "type": "amplicon_length",
+    "ideal": "TGCAGTTCCAAATGCTTGTGCA,TTTGTAGCAGGAGCTTAAGG",
+    "latency_s": 247.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGAAACTTAGATTTAAATGGTCTTTG",
+      "reverse": "TTATTCATTTTCAATCAGAAATCCT"
+    },
+    "answer_tail": "<answer>ATGAAACTTAGATTTAAATGGTCTTTG,TTATTCATTTTCAATCAGAAATCCT</answer>"
+  },
+  {
+    "id": "80efe7ba-c257-4913-a82a-0127bac11bfe",
+    "type": "amplicon_length",
+    "ideal": "ATCAATTTAATTCATACCTCCTA,ATTTGGTAGTATTGAGGAACTT",
+    "latency_s": 153.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGGCTTTTATTCAAGAAATC",
+      "reverse": "TTAATTCATTCCTCCAATTAC"
+    },
+    "answer_tail": "<answer>ATGGCTTTTATTCAAGAAATC,TTAATTCATTCCTCCAATTAC</answer>"
+  },
+  {
+    "id": "a882e359-c52f-43d4-9281-28222d13b9e7",
+    "type": "amplicon_length",
+    "ideal": "CTTGGCAATTCCATCAGCAAC,TTAGAAGCTAACGAAACAGAAG",
+    "latency_s": 164.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "ATGATAAATGCTCAGGCTTT",
+      "reverse": "TTAAATAAAATGAGCCATA"
+    },
+    "answer_tail": "<answer>ATGATAAATGCTCAGGCTTT,TTAAATAAAATGAGCCATA</answer>"
+  },
+  {
+    "id": "792ebbe7-c49b-4447-b186-0ccf64e31188",
+    "type": "primer_design",
+    "ideal": "GCGAATTCATGATTAATAAAGAACAG,GCAAGCTTTTAATCTTTAATAAATGG",
+    "latency_s": 884.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GGAATTCATGATTAATAAAGAACAAGAT",
+      "reverse": "GGAAGCTTTTAATCTTTGATAAATGGTAC"
+    },
+    "answer_tail": "<answer>GGAATTCATGATTAATAAAGAACAAGAT,GGAAGCTTTTAATCTTTGATAAATGGTAC</answer>"
+  },
+  {
+    "id": "1ee75559-34de-49d0-8fb2-34bf244a3e00",
+    "type": "primer_design",
+    "ideal": "GCGCGAATTCATGGCAATTAAAAAGATTATTAGTC,GCGCAAGCTTTTAGTATTGTTCTCCTTTTCTGTTT",
+    "latency_s": 130.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GCGAATTCATGGCAATAAAAAAAATAATT",
+      "reverse": "CGAAGCTTTTAATATTGTTCTCCCTTT"
+    },
+    "answer_tail": "<answer>GCGAATTCATGGCAATAAAAAAAATAATT,CGAAGCTTTTAATATTGTTCTCCCTTT</answer>"
+  },
+  {
+    "id": "07b4593e-d099-400d-b2f6-6cf7813b4729",
+    "type": "primer_design",
+    "ideal": "AAAGAATTCATGACAACAACAAGACGTAATAAAA,AAACTGCAGTTAATACTCTTCAGCAACTGTTTTG",
+    "latency_s": 115.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GAATTCATGACAACAACAAGAAGAAATAAAAG",
+      "reverse": "AAGCTTTTAATATTCTTCTGCTACTGTTTTTGA"
+    },
+    "answer_tail": "<answer>GAATTCATGACAACAACAAGAAGAAATAAAAG,AAGCTTTTAATATTCTTCTGCTACTGTTTTTGA</answer>"
+  },
+  {
+    "id": "4794cc2b-ec83-4961-ad15-f7163726f439",
+    "type": "primer_design",
+    "ideal": "GAAGGAATTCATGACATTTAGTACACAGATT,GAAGAAGCTTCTACTGGCATAGTTTTTTTAG",
+    "latency_s": 182.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GAATTCATGACTTTTTCAACTCAAAT",
+      "reverse": "AAGCTTTCATTGGACAATTTTTTTTA"
+    },
+    "answer_tail": "<answer>GAATTCATGACTTTTTCAACTCAAAT,AAGCTTTCATTGGACAATTTTTTTTA</answer>"
+  },
+  {
+    "id": "d7d3568b-c948-4ecb-bbce-4930c26d7927",
+    "type": "primer_design",
+    "ideal": "GCGAATTCATGGAAAACATTAATTACCA,GCGGATCCCTAATTAAATATTTCAGGAT",
+    "latency_s": 309.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GCGAATTCATGGAAAATATCAACTATCAAATC",
+      "reverse": "GCAAGCTTTTAATTAAAAATTTCTGG"
+    },
+    "answer_tail": "<answer>GCGAATTCATGGAAAATATCAACTATCAAATC,GCAAGCTTTTAATTAAAAATTTCTGG</answer>"
+  },
+  {
+    "id": "d12de389-da52-419f-9afd-2a0084a40967",
+    "type": "primer_design",
+    "ideal": "GGAATTCATGAAAACAACAATTAATAT,GGGATCCTTATTCATCACCATAGCGGT",
+    "latency_s": 188.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CGCGAATTCATGAAAACAACAATTAATATTGC",
+      "reverse": "CGCAAGCTTTTATTCATCACCATAGCGGTTG"
+    },
+    "answer_tail": "<answer>CGCGAATTCATGAAAACAACAATTAATATTGC,CGCAAGCTTTTATTCATCACCATAGCGGTTG</answer>"
+  },
+  {
+    "id": "df06d27f-fc51-4d3d-8d72-6b4428c86dc2",
+    "type": "primer_design",
+    "ideal": "GGGGGGATCCATGGAACAAAAAAACATTAGAAATTTTT,GGGGAAGCTTTTAATCTTCATCTTTCAGCAAATGACTA",
+    "latency_s": 194.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CGGAATTCATGGAACAAAAAAACATTAGA",
+      "reverse": "CGCAAGCTTTTAATCTTCGTCCTT"
+    },
+    "answer_tail": "<answer>CGGAATTCATGGAACAAAAAAACATTAGA,CGCAAGCTTTTAATCTTCGTCCTT</answer>"
+  },
+  {
+    "id": "1e4d48b4-e1bc-4dd4-813c-04e3190a2072",
+    "type": "primer_design",
+    "ideal": "GAATTCATGGAATTGAATAGTGAAGATGT,CTGCAGCTAATCATTGCTTAATTCACTTA",
+    "latency_s": 388.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CGGAATTCATGGAATTAAATTCTGAAGATGTTTTAGTTGC",
+      "reverse": "CCCAAGCTTTTAATCATTAGATAATTCAGATACACCTTCT"
+    },
+    "answer_tail": "<answer>CGGAATTCATGGAATTAAATTCTGAAGATGTTTTAGTTGC,CCCAAGCTTTTAATCATTAGATAATTCAGATACACCTTCT</answer>"
+  },
+  {
+    "id": "d97ee97b-e2d2-4cfb-a326-c2f80accb78d",
+    "type": "primer_design",
+    "ideal": "GGGGAATTCATGAATAACCTTGAAAAAACCTATAAAACTGAGTT,CCCAAGCTTCTATTCTTTTACAAACGGCATCTTTAGTGCTCTCA",
+    "latency_s": 207.6,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>GCGAATTCATGAATAACTTAGAAAAAACATACAAAACTGAA, CGCGCATGCTTATTCTTTTACAAAAGGCATTTT</answer>"
+  },
+  {
+    "id": "fc48a3dd-c43b-4c96-9966-907bc144c630",
+    "type": "primer_design",
+    "ideal": "GGAATTCATGGCAACGAAAATAGAGCT,GGGATCCTTATTGTTTGATTTGTGCAT",
+    "latency_s": 232.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GAATTCATGGCAACTAAAATAGAATTA",
+      "reverse": "AAGCTTTTATTGTTTTATTTGAGCATT"
+    },
+    "answer_tail": "<answer>GAATTCATGGCAACTAAAATAGAATTA,AAGCTTTTATTGTTTTATTTGAGCATT</answer>"
+  },
+  {
+    "id": "13bcfcd9-31ad-4a31-82ba-3c512ae7d24c",
+    "type": "primer_design",
+    "ideal": "GAATTCATGAATTGAACAACTGATAA,CTGCAGCTATTTATTTTGAAACAATT",
+    "score": 0.0,
+    "reason": "run_error:HTTPStatusError:Client error '429 Too Many Requests' for url 'https://tokenhub.tencentmaas.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+    "extracted": null
+  },
+  {
+    "id": "97c2fb93-0cf7-4953-b43f-922a284c77a1",
+    "type": "primer_design",
+    "ideal": "GAATTCATGGATCAAAACTTTAAGTT,GGATCCCTAGTAATGTAATAAAATCT",
+    "latency_s": 111.8,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GCGAATTCATGGATCAAAATTTTAAATT",
+      "reverse": "GCAAGCTTTTAATAGTGTAATAAAATTTT"
+    },
+    "answer_tail": "<answer>GCGAATTCATGGATCAAAATTTTAAATT,GCAAGCTTTTAATAGTGTAATAAAATTTT</answer>"
+  },
+  {
+    "id": "3bb4e7c1-6259-4343-b7c3-5be764384126",
+    "type": "primer_design",
+    "ideal": "GCGAATTCATGTTTTTTATCATCAATGA,GCTCTAGATTACATTTGTTGTGGTGTTG",
+    "latency_s": 174.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GGAATTCATGTTTTTTATCATTAATGATTTAAAAGAATGT",
+      "reverse": "CCAAGCTTTTACATTTGTTGAGGAGTTGAAATTTT"
+    },
+    "answer_tail": "<answer>GGAATTCATGTTTTTTATCATTAATGATTTAAAAGAATGT,CCAAGCTTTTACATTTGTTGAGGAGTTGAAATTTT</answer>"
+  },
+  {
+    "id": "95000ee4-8a44-4781-8158-f517e8c632b5",
+    "type": "primer_design",
+    "ideal": "GGAATTCATGAAATCAGTTACAGTCAA,GGGATCCTTAGAAGTTAATGGTGCCAT",
+    "latency_s": 270.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GGAATTCATGAAATCAGTTACAGTCAAG",
+      "reverse": "CCAAGCTTTTAAAAATTAATAGTACCATG"
+    },
+    "answer_tail": "<answer>GGAATTCATGAAATCAGTTACAGTCAAG,CCAAGCTTTTAAAAATTAATAGTACCATG</answer>"
+  },
+  {
+    "id": "382319ff-4180-4dc2-987d-eef43b36f7ba",
+    "type": "primer_design",
+    "ideal": "GGGGGGATCCATGAACTTGGAGAACGAAAT,GGGGGTCGACCTATTTCACTAGTTCTTTTA",
+    "latency_s": 275.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GAATTCATGAATTTAGAAAATGAAATG",
+      "reverse": "AAGCTTTTATTTTACAAGCTCTTTAAT"
+    },
+    "answer_tail": "<answer>GAATTCATGAATTTAGAAAATGAAATG,AAGCTTTTATTTTACAAGCTCTTTAAT</answer>"
+  },
+  {
+    "id": "71b4ffd9-bbd8-4131-8657-67d323164ffa",
+    "type": "primer_design",
+    "ideal": "",
+    "latency_s": 297.6,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>AA GAATTC ATG TTT AAA ATT GTT TTT GGT, AA AAGCTT TTA AAA GCA TTT ACC AAC AAA</answer>"
+  },
+  {
+    "id": "fb650780-e0ce-48c7-a6b9-0040599037e7",
+    "type": "primer_design",
+    "ideal": "GGGAATTCATAAAAAAAGAAAACCTAAC,GGGAAGCTTCTATTTAGTTTTATCAAACT",
+    "latency_s": 327.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GGAATTCATGAAAAAAGAAAACTTAACATATGG",
+      "reverse": "CCAAGCTTTTATTTAGTTTTATCAAATTCTTG"
+    },
+    "answer_tail": "<answer>GGAATTCATGAAAAAAGAAAACTTAACATATGG,CCAAGCTTTTATTTAGTTTTATCAAATTCTTG</answer>"
+  },
+  {
+    "id": "811dcfa7-a8fc-4d02-a0c1-8767ee55ccf0",
+    "type": "primer_design",
+    "ideal": "GGGGGAATTCATGGTAAAGGCAAAAAAACTTGTCT,GGGGCTGCAGTTAATCATCTTCTGTTTCGTTAGCT",
+    "latency_s": 229.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GCGCGAATTCATGGTAAAAGCAAAAAAATTAGTA",
+      "reverse": "GCGCAAGCTTTTAATCATCTTCTGTTTCATTTGCTTC"
+    },
+    "answer_tail": "<answer>GCGCGAATTCATGGTAAAAGCAAAAAAATTAGTA,GCGCAAGCTTTTAATCATCTTCTGTTTCATTTGCTTC</answer>"
+  },
+  {
+    "id": "b8c1470e-bbca-471a-bc70-668d5012b80a",
+    "type": "primer_design",
+    "ideal": "GAATTCATGGCTTTTATACAAGAAAT,AAGCTTTTAATTCATACCTCCTATAA",
+    "latency_s": 146.6,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "o include the stop in reverse primer. That's fine.  Now, we need to provide the answer in XML tags.  Thus, final answer.</answer>GCGAATTCATGGCGTTCATTCAAGAAATT,GCAAGCTTTTAATTCATACCACCAATGACTTC</answer>"
+  },
+  {
+    "id": "ee68deda-23c0-4e5a-8b23-ad227e6faa35",
+    "type": "primer_design",
+    "ideal": "GAATTCATGATTAATGCACAAGCATTTGGA,AAGCTTTTAAATAAAATGGGCCATTATGCG",
+    "latency_s": 118.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GGAATTCATGACAATTAATGCACAAGCG",
+      "reverse": "CCCAAGCTTTCAATCATGGCTCACTTCAT"
+    },
+    "answer_tail": "<answer>GGAATTCATGACAATTAATGCACAAGCG,CCCAAGCTTTCAATCATGGCTCACTTCAT</answer>"
+  },
+  {
+    "id": "fbf7bc19-e357-4214-817b-bca44f88bf3a",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGATTAATAAAGAACAGGA,GTCGACTCTAGAGGATCCCCTTAATCTTTAATAAATGGCA",
+    "latency_s": 768.2,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "atgaacgcg tttatgagtt     88461 catttattat tcctgttgat gcaaataata ctgcttcagg ttataacatc ctttattgga     88521 aagcagtacc tcagtcagca attgcttcta ctttaggatt aaattcactt tcaacttcag     88581 tttttggtgg gattat"
+  },
+  {
+    "id": "71ad3242-c168-4a80-9a15-875f528a2425",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGCAATTAAAAAGATTAT,GTCGACTCTAGAGGATCCCCTTAGTATTGTTCTCCTTTTC",
+    "latency_s": 308.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCCATGGCAATTAAAAAGATTAT",
+      "reverse": "TCGACTCTAGAGGATCCCCCTTAATATTGTTCACCTTTTC"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCCATGGCAATTAAAAAGATTAT,TCGACTCTAGAGGATCCCCCTTAATATTGTTCACCTTTTC</answer>"
+  },
+  {
+    "id": "dd4a8137-f8ed-47ba-a6d9-d3dd6faa70d7",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGACAACAACAAGACGTAATAAAA,GTCGACTCTAGAGGATCCCCTTAATACTCTTCAGCAACTGTTTTG",
+    "latency_s": 324.5,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>5'-TGAATTCGAGCTCGGTACCCATGACAACAACAAGAAGAA-3',5'-GGGGATCCTCTAGAGTCGACTTAATATTCTTCAGCAACAG-3'</answer>"
+  },
+  {
+    "id": "4e40a82c-8e47-4249-8797-2b2336d8fb18",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGACATTTAGTACACAGAT,GTCGACTCTAGAGGATCCCCCTACTGGCATAGTTTTTTTA",
+    "latency_s": 336.9,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>5'-TGAATTCGAGCTCGGTACCCATGACATTTTCAACACAAAT-3',5'-GTCGACTCTAGAGGATCCCCCTACTGGCATAGTTTTTTTA-3'</answer>"
+  },
+  {
+    "id": "b3446af0-27b8-4e06-bba3-9e6e0b38c1c6",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGAAAACATTAATTACCA,GTCGACTCTAGAGGATCCCCCTAATTAAATATTTCAGGAT",
+    "latency_s": 361.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCATGGAAAATATTAATTATCA",
+      "reverse": "TCGACTCTAGAGGATCCCCCTTAATTAAAAATTTCTGGAT"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCATGGAAAATATTAATTATCA,TCGACTCTAGAGGATCCCCCTTAATTAAAAATTTCTGGAT</answer>"
+  },
+  {
+    "id": "75c9147a-0e10-45e7-8822-dc1881f95200",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGAAAACAACAATTAATAT,GTCGACTCTAGAGGATCCCCTTATTCATCACCATAGCGGT",
+    "latency_s": 226.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGAAAACAACAATTAATAT",
+      "reverse": "GGTCGACTCTAGAGGATCCCTTATTCATCACCATAGCGAT"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGAAAACAACAATTAATAT,GGTCGACTCTAGAGGATCCCTTATTCATCACCATAGCGAT</answer>"
+  },
+  {
+    "id": "2d88d375-ae38-4e69-b019-18b9db679464",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGAACAAAAAAACATTAG,GTCGACTCTAGAGGATCCCCTTAATCTTCATCTTTCAGCA",
+    "latency_s": 283.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGGAACAAAAAAACATTAG",
+      "reverse": "GTCGACTCTAGAGGATCCCTTAATCTTCATCTTTCAGCA"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGGAACAAAAAAACATTAG,GTCGACTCTAGAGGATCCCTTAATCTTCATCTTTCAGCA</answer>"
+  },
+  {
+    "id": "44a58813-bc26-4289-8447-19dcf9d77a6d",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGAATTGAATAGTGAAGA,GTCGACTCTAGAGGATCCCCCTAATCATTGCTTAATTCAC",
+    "latency_s": 374.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCCATGGAATTAAATTCTGAAGA",
+      "reverse": "GTCGACTCTAGAGGATCCCTTTAATCATTAGATAATTCAG"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCCATGGAATTAAATTCTGAAGA,GTCGACTCTAGAGGATCCCTTTAATCATTAGATAATTCAG</answer>"
+  },
+  {
+    "id": "a3572d67-30be-44a2-b8cc-ae74095fad49",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGAATAACCTTGAAAAAAC,GTCGACTCTAGAGGATCCCCCTATTCTTTTACAAACGGCA",
+    "latency_s": 279.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCCATGAATAACCTTGAAAAAAC",
+      "reverse": "GGGGATCCTCTAGAGTCGACCTATTCTTTTACAAACGGC"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCCATGAATAACCTTGAAAAAAC,GGGGATCCTCTAGAGTCGACCTATTCTTTTACAAACGGC</answer>"
+  },
+  {
+    "id": "c3929547-d351-4185-a05c-5ba36d00ec3d",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGCAACGAAAATAGAGCT,GTCGACTCTAGAGGATCCCCTTATTGTTTGATTTGTGCAT",
+    "latency_s": 336.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCCATGGCAACAAAAATAGAATT",
+      "reverse": "TCGACTCTAGAGGATCCCCCTTATTGTTTGATTTGTGCAT"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCCATGGCAACAAAAATAGAATT,TCGACTCTAGAGGATCCCCCTTATTGTTTGATTTGTGCAT</answer>"
+  },
+  {
+    "id": "b95a5a5f-858d-4800-8b7c-24fde47269e2",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGAATTGAACAACTGATAA,GTCGACTCTAGAGGATCCCCCTATTTATTTTGAAACAATT",
+    "latency_s": 377.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GTGAATTCGAGCTCGGTACCCATGAATTGGACAACAGATAA",
+      "reverse": "GGTCGACTCTAGAGGATCCCTTATTTATTTTGAAATAATT"
+    },
+    "answer_tail": "<answer>GTGAATTCGAGCTCGGTACCCATGAATTGGACAACAGATAA,GGTCGACTCTAGAGGATCCCTTATTTATTTTGAAATAATT</answer>"
+  },
+  {
+    "id": "0af64d1d-7cda-451f-b58e-db1ec0864a52",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGATCAAAACTTTAAGTTGCTTG,GTCGACTCTAGAGGATCCCCCTAGTAATGTAATAAAATCTTGCTA",
+    "latency_s": 514.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCCATGGATCAAAATTTTAAACT",
+      "reverse": "GTCGACTCTAGAGGATCCCCTTAGTAATGCAGTAAAATTT"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCCATGGATCAAAATTTTAAACT,GTCGACTCTAGAGGATCCCCTTAGTAATGCAGTAAAATTT</answer>"
+  },
+  {
+    "id": "6502dde4-f745-483e-98dc-412a63f6f39e",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGTTTTTTATCATCAATGA,GTCGACTCTAGAGGATCCCCTTACATTTGTTGTGGTGTTG",
+    "latency_s": 402.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGTTTTTTATTATCAATGA",
+      "reverse": "GGTCGACTCTAGAGGATCCCTTACATTTGTTGAGGAGTAC"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGTTTTTTATTATCAATGA,GGTCGACTCTAGAGGATCCCTTACATTTGTTGAGGAGTAC</answer>"
+  },
+  {
+    "id": "4c4279d7-91d1-4289-8329-a3289f71a727",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGAAATCAGTTACAGTCAA,GTCGACTCTAGAGGATCCCCTTAGAAGTTAATGGTGCCAT",
+    "latency_s": 404.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGAAATCAGTTACAGTTAA",
+      "reverse": "AGGTCGACTCTAGAGGATCCCTTAAAAATTAATAGTACCAT"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGAAATCAGTTACAGTTAA,AGGTCGACTCTAGAGGATCCCTTAAAAATTAATAGTACCAT</answer>"
+  },
+  {
+    "id": "fdccaf67-2fa8-4782-af0f-56779bb164b1",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGAACTTGGAGAACGAAAT,GTCGACTCTAGAGGATCCCCCTATTTCACTAGTTCTTTTA",
+    "latency_s": 257.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "GAATTCGAGCTCGGTACCCCATGAATTTAGAAAATGAAAT",
+      "reverse": "GGTCGACTCTAGAGGATCCCTTATTTAACTAATTCTTTTTA"
+    },
+    "answer_tail": "<answer>GAATTCGAGCTCGGTACCCCATGAATTTAGAAAATGAAAT,GGTCGACTCTAGAGGATCCCTTATTTAACTAATTCTTTTTA</answer>"
+  },
+  {
+    "id": "f8dcd44c-da27-4a55-a2d5-6bb2426e1dd6",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGTTAAGTGCAGGGATAGT,GTCGACTCTAGAGGATCCCCTTAAGTGACGTTAAATTTAA",
+    "latency_s": 306.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGGCAGATAAATTAAATGAA",
+      "reverse": "GGTCGACTCTAGAGGATCCCTTAATTTATTCTTCAATAGA"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGGCAGATAAATTAAATGAA,GGTCGACTCTAGAGGATCCCTTAATTTATTCTTCAATAGA</answer>"
+  },
+  {
+    "id": "140c6e01-baaf-488e-ba43-9faacebf4feb",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATAAAAAAAGAAAACCTAAC,GTCGACTCTAGAGGATCCCCCTATTTAGTTTTATCAAACT",
+    "latency_s": 357.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGAAGAAAGAAAATTTAAC",
+      "reverse": "GTCGACTCTAGAGGATCCCCTTATTTAGTTTTATCAAATT"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGAAGAAAGAAAATTTAAC,GTCGACTCTAGAGGATCCCCTTATTTAGTTTTATCAAATT</answer>"
+  },
+  {
+    "id": "604e089e-8a8f-4985-92e5-c1f14f3e4377",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGTAAAGGCAAAAAAACTTG,GTCGACTCTAGAGGATCCCCTTAATCATCTTCTGTTTCGTTA",
+    "latency_s": 243.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "CCCCCATGGCTCAGCTTAAATGGTAAAAGCAAAAAAATT",
+      "reverse": "GTCGACTCTAGAGGATCCCCTTATTAATCATCTTCAGTTT"
+    },
+    "answer_tail": "<answer>CCCCCATGGCTCAGCTTAAATGGTAAAAGCAAAAAAATT,GTCGACTCTAGAGGATCCCCTTATTAATCATCTTCAGTTT</answer>"
+  },
+  {
+    "id": "c06714b7-879d-4cac-b087-3757dd7f7464",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGGCTTTTATACAAGAAAT,GTCGACTCTAGAGGATCCCCTTAATTCATACCTCCTATAA",
+    "latency_s": 335.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "AATTCGAGCTCGGTACCCCCTTAGTTCATACCACCAATTA",
+      "reverse": "GTCGACTCTAGAGGATCCCATGGCTTTTATTCAGGAAAT"
+    },
+    "answer_tail": "<answer>AATTCGAGCTCGGTACCCCCTTAGTTCATACCACCAATTA,GTCGACTCTAGAGGATCCCATGGCTTTTATTCAGGAAAT</answer>"
+  },
+  {
+    "id": "2c218d9a-6282-44b7-bd75-af3fe1c4ed7f",
+    "type": "gibson_primers",
+    "ideal": "TGAATTCGAGCTCGGTACCCATGATTAATGCACAAGCATTTGGAA,GTCGACTCTAGAGGATCCCCTTAAATAAAATGGGCCATTATGCGTTTTAATTC",
+    "latency_s": 338.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "forward": "TGAATTCGAGCTCGGTACCCATGATAAATGCACAAGCATT",
+      "reverse": "GTCGACTCTAGAGGATCCCCTTAAATAAAGTGAGCCATT"
+    },
+    "answer_tail": "<answer>TGAATTCGAGCTCGGTACCCATGATAAATGCACAAGCATT,GTCGACTCTAGAGGATCCCCTTAAATAAAGTGAGCCATT</answer>"
+  },
+  {
+    "id": "a5c1ca48-43b2-493b-a96f-04a9891e5818",
+    "type": "oligo_design",
+    "ideal": "GAGCATTAGCTACATGACGTTGGTGCAT",
+    "latency_s": 98.9,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TTAAATCCTGTTCTTTATTTATCAT"
+    },
+    "answer_tail": "<answer>TTAAATCCTGTTCTTTATTTATCAT</answer>"
+  },
+  {
+    "id": "f7b53df9-74b3-40d0-ad1d-3c8a9e5711b0",
+    "type": "oligo_design",
+    "ideal": "GAACAGTGATCTTGCCCTGG",
+    "latency_s": 146.4,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ACGACCTTCACCACCACC"
+    },
+    "answer_tail": "<answer>ACGACCTTCACCACCACC</answer>"
+  },
+  {
+    "id": "4adec3b4-f69c-4604-837a-5bae8160e59f",
+    "type": "oligo_design",
+    "ideal": "TTATTACGTCTTGTTGTTGTCAT",
+    "latency_s": 313.8,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ACCATGCCTAGGATGAGCAA"
+    },
+    "answer_tail": "<answer>ACCATGCCTAGGATGAGCAA</answer>"
+  },
+  {
+    "id": "b17f12b6-d5c1-4e35-be92-0510018a214b",
+    "type": "oligo_design",
+    "ideal": "TTCCTTTAATGCTTCAGATTGCACTT",
+    "latency_s": 147.7,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "GGATTCCACTGCGGCTAATC"
+    },
+    "answer_tail": "<answer>GGATTCCACTGCGGCTAATC</answer>"
+  },
+  {
+    "id": "2cf0fb75-9e2b-4735-a06a-125f30f0a3c1",
+    "type": "oligo_design",
+    "ideal": "ATTGAGCGCACTTTGATGCA",
+    "latency_s": 188.4,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "AGATGTGATGCTAAAGGACT"
+    },
+    "answer_tail": "<answer>AGATGTGATGCTAAAGGACT</answer>"
+  },
+  {
+    "id": "e90fa7dd-6d32-4c55-b5f9-29a566312c28",
+    "type": "oligo_design",
+    "ideal": "GCAAGGTTGGTTGTAAGCAATGATAGCCA",
+    "latency_s": 181.6,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "AAAGTGATACCCTTAGCACC"
+    },
+    "answer_tail": "<answer>AAAGTGATACCCTTAGCACC</answer>"
+  },
+  {
+    "id": "843a25e9-55de-4405-9074-6f6b7d7f2fd2",
+    "type": "oligo_design",
+    "ideal": "GCTCTTGGGGTAATTGAACACTCCCAAC",
+    "latency_s": 98.8,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "AAATTTCTAATGTTTTTTGTTCCAT"
+    },
+    "answer_tail": "<answer>AAATTTCTAATGTTTTTTGTTCCAT</answer>"
+  },
+  {
+    "id": "28510762-417e-47c9-a8b2-90411d8608fb",
+    "type": "oligo_design",
+    "ideal": "TGATAGCCCAGTTGCAGCTTCACTTGTAA",
+    "latency_s": 480.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TGCAACTAAAACATCTTCTGAATTTAATTCCAT"
+    },
+    "answer_tail": "<answer>TGCAACTAAAACATCTTCTGAATTTAATTCCAT</answer>"
+  },
+  {
+    "id": "aa143cfb-56a8-40f1-bf11-7e798293c24d",
+    "type": "oligo_design",
+    "ideal": "TGGTGGAAGTGACAATAGTGA",
+    "latency_s": 93.5,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TATAGGTTTTTTCAAGATTATTCAT"
+    },
+    "answer_tail": "<answer>TATAGGTTTTTTCAAGATTATTCAT</answer>"
+  },
+  {
+    "id": "75433354-0211-4e14-aa5a-15b3b619d813",
+    "type": "oligo_design",
+    "ideal": "CCTTTATAATCCCCTCTCCCACTTCATACC",
+    "latency_s": 1087.9,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TTAGCTCTATTTTCGTTGCCAT"
+    },
+    "answer_tail": "<answer>TTAGCTCTATTTTCGTTGCCAT</answer>"
+  },
+  {
+    "id": "d99f0190-098e-4d7e-ab2e-6a18abe188c8",
+    "type": "oligo_design",
+    "ideal": "GTTTGCCTTACTTTATCAGTTGTTCAA",
+    "latency_s": 200.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TAACTTTATCAGTTGTCCAATTCAT"
+    },
+    "answer_tail": "<answer>TAACTTTATCAGTTGTCCAATTCAT</answer>"
+  },
+  {
+    "id": "130ee7f2-41fd-4093-8cfd-588b27bec2ff",
+    "type": "oligo_design",
+    "ideal": "AGCTAGCACTAATTAATTGCCCTGGGAG",
+    "latency_s": 247.4,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>5'-TAAAAGTTTAAAATTTTGATCCAT-3'</answer>"
+  },
+  {
+    "id": "177b7e37-3153-4b3d-8451-38ded6b30876",
+    "type": "oligo_design",
+    "ideal": "TGTGGTGTTGAAATCTTCAAAACATCAAGG",
+    "latency_s": 322.7,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TTCTTTTAAATCATTAAATAAAAAACAT"
+    },
+    "answer_tail": "<answer>TTCTTTTAAATCATTAAATAAAAAACAT</answer>"
+  },
+  {
+    "id": "48925343-64fc-4a7c-9e51-5bc02b635532",
+    "type": "oligo_design",
+    "ideal": "ATCAGACTCTGCTTGTGCTAA",
+    "latency_s": 136.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "GCAACAGCAGAAGCGCATTC"
+    },
+    "answer_tail": "<answer>GCAACAGCAGAAGCGCATTC</answer>"
+  },
+  {
+    "id": "89644656-f2da-4fa3-9fa8-a7972de76cd3",
+    "type": "oligo_design",
+    "ideal": "TAATAACTATTGTTTTAT",
+    "latency_s": 416.6,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "CACCATGAACAGGAGCTCC"
+    },
+    "answer_tail": "<answer>CACCATGAACAGGAGCTCC</answer>"
+  },
+  {
+    "id": "b17ec9ca-9489-4650-8bcb-cf5e7ac215f5",
+    "type": "oligo_design",
+    "ideal": "ATAACAGAAGAATTTAATGGTTCCCATCCT",
+    "latency_s": 166.4,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "GGCGATGGCAGTTTTACC"
+    },
+    "answer_tail": "<answer>GGCGATGGCAGTTTTACC</answer>"
+  },
+  {
+    "id": "8a9fd8d9-504e-4198-b200-874b4774d0de",
+    "type": "oligo_design",
+    "ideal": "TTTACCATATGTTAGGTTTTCTTTTTTTAT",
+    "latency_s": 129.8,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TTTTTCCAACTCCTGCACCTCC"
+    },
+    "answer_tail": "<answer>TTTTTCCAACTCCTGCACCTCC</answer>"
+  },
+  {
+    "id": "44b64836-1574-45d4-9c00-4768ca7a2d3c",
+    "type": "oligo_design",
+    "ideal": "AGCCAACATAGCCAATTCCACACTCTCT",
+    "latency_s": 226.3,
+    "score": 0.0,
+    "reason": "no_answer_extracted",
+    "extracted": null,
+    "answer_tail": "<answer>GCT AGG CAA GAA ATA GAA AAA GAA</answer>"
+  },
+  {
+    "id": "17102584-3f72-4da6-b05c-d5ee7414a0de",
+    "type": "oligo_design",
+    "ideal": "CTTAGTTTCAACAAGGCCACCA",
+    "latency_s": 163.9,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TCATTACCTTCCTATAACTTCAAT"
+    },
+    "answer_tail": "<answer>TCATTACCTTCCTATAACTTCAAT</answer>"
+  },
+  {
+    "id": "438f5d8f-17ab-4b54-82b9-92fca25c5c6a",
+    "type": "oligo_design",
+    "ideal": "TTTAAAACGTTTTTCCATTATT",
+    "latency_s": 259.9,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:cds_oligo_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "TTGTTGCTATTGACGGAATGTT"
+    },
+    "answer_tail": "<answer>TTGTTGCTATTGACGGAATGTT</answer>"
+  },
+  {
+    "id": "65d9d8c7-0fa8-4b51-9b93-2517fd36f3a1",
+    "type": "codon_optimization",
+    "ideal": "ATGAAAACGCTGCTGCTGACGCTGGTGGTGGTGACGATTGTGTGCCTGGACCTGGGCTACACGACGGGCGACATGTGGAAACGCCCGAACATTGACATCAAAAAAACGGGCAAAGTGAAACTGGGCGAC",
+    "latency_s": 21.3,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGAAAACCCTGCTGCTGACCCTGGTGGTGGTGACCATTGTGTGCCTGGACCTGGGCTACACCACCGGCGACATGTGGAAACGTCCGAACATTGACATTAAAAAAACCGGCAAAGTGAAACTGGGCGACTAA"
+    },
+    "answer_tail": "<answer>ATGAAAACCCTGCTGCTGACCCTGGTGGTGGTGACCATTGTGTGCCTGGACCTGGGCTACACCACCGGCGACATGTGGAAACGTCCGAACATTGACATTAAAAAAACCGGCAAAGTGAAACTGGGCGACTAA</answer>"
+  },
+  {
+    "id": "1ec88f47-ab0b-465b-bbd8-4f1e60133913",
+    "type": "codon_optimization",
+    "ideal": "ATGGTTTCTAAGGGTGAAGAAGATAATATGGCTTCTTTGCCTGCTACTCATGAATTGCATATTTTTGGTTCTATTAATGGTTTGGATTGTGGTTGTAATGATTCTTATTATTCTGGTACTGATGGTTATACTTTGAATTCTACTTTGTCTATTGATTCTGATGAAGGTAAGGCTGGTGTTAAGGATTATTTGAATTCTACTTTGAATGTTAATTCTGTTAAG",
+    "latency_s": 60.6,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGTTTCTAAGGGTGAAGAAGATAACATGGCTTCTTTGCCAGCTACTCACGAATTGCACATTTTCGGTTCTATTAACGGTTTGGATTGTGGTTGTAACGATTCTTACTACTCTGGTACTGATGGTTACACTTTGAACTCTACTTTGTCTATTGATTCTGATGAAGGTAAGGCTGGTGTTAAGGATTACTTGAACTCTACTTTGAACGTTAACTCTGTTAAGTAA"
+    },
+    "answer_tail": "CTTTGCCAGCTACTCACGAATTGCACATTTTCGGTTCTATTAACGGTTTGGATTGTGGTTGTAACGATTCTTACTACTCTGGTACTGATGGTTACACTTTGAACTCTACTTTGTCTATTGATTCTGATGAAGGTAAGGCTGGTGTTAAGGATTACTTGAACTCTACTTTGAACGTTAACTCTGTTAAGTAA</answer>"
+  },
+  {
+    "id": "c337fa42-dcf9-4a63-98db-5e3b1256812d",
+    "type": "codon_optimization",
+    "ideal": "ATGGGCCTGAGCGACGGCGAGTGGCAACTGGTGCTGCACGTGTGGGCCAAGGTGGAGGCCGACGTGGCCGGCCACGGCCAGGACATCCTGATCCGCCTGTTCAAGAGCCACCCCGAGACCCTGGAGAAGTTCGACCGCTTCAAGCACCTGAAGAGCGAGGACGAGATGAAGGCCAGCGAGGACCTGAAGAAGCACGGCGTGACCGTGCTGACCGCCCTGGGCGCCATCCTGAAGAAGAAGGGCCACCACGAGGCCGAGCTGAAGCCCCTGGCCCAGAGCCACGCCACCAAGCACAAATGA",
+    "latency_s": 69.0,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGGCCTGAGCGACGGCGAGTGGCAGCTGGTGCTGCACGTGTGGGCCAAGGTGGAGGCCGACGTGGCCGGCCACGGCCAGGACATCCTGATCCGGCTGTTCAAGAGCCACCCCGAGACCCTGGAGAAGTTCGACCGGTTCAAGCACCTGAAGAGCGAGGACGAGATGAAGGCCAGCGAGGACCTGAAGAAGCACGGCGTGACCGTGCTGACCGCCCTGGGCGCCATCCTGAAGAAGAAGGGCCACCACGAGGCCGAGCTGAAGCCCCTGGCCCAGAGCCACGCCACCAAGCACAAG"
+    },
+    "answer_tail": "GCCACCCCGAGACCCTGGAGAAGTTCGACCGGTTCAAGCACCTGAAGAGCGAGGACGAGATGAAGGCCAGCGAGGACCTGAAGAAGCACGGCGTGACCGTGCTGACCGCCCTGGGCGCCATCCTGAAGAAGAAGGGCCACCACGAGGCCGAGCTGAAGCCCCTGGCCCAGAGCCACGCCACCAAGCACAAG</answer>"
+  },
+  {
+    "id": "2955f0e3-ab4c-4fd8-ba71-d05d72154dd1",
+    "type": "codon_optimization",
+    "ideal": "ATGAAACTGCTGAACGTGATCAACTTCGTGTTTCTGATGTTTGTGTCC",
+    "latency_s": 9.6,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGAAACTGCTGAACGTGATCAACTTCGTGCTGTTCATGTTCGTGAGC"
+    },
+    "answer_tail": "<answer>ATGAAACTGCTGAACGTGATCAACTTCGTGCTGTTCATGTTCGTGAGC</answer>"
+  },
+  {
+    "id": "a94693a7-5c21-4ec7-8df3-98b55d2bc031",
+    "type": "codon_optimization",
+    "ideal": "ATGTTGGAAAAAATTGAAGATGTTTTTCATAAATTGAGTAATAAAAAATTGGAAAGTATTATGGGAAAACCTGGAACTGATACATTGGGATCTGGAGATTCTGAAATTCCAGTTACATTGGGACATGGATGA",
+    "latency_s": 20.0,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGTTGGAAAAGATCGAAGATGTTTTCCACAAGTTGTCTAACAAGAAGTTGGAATCTATCATGGGTAAGCCAGGTACTGATACTTTGGGTTCTGGTGATTCTGAAATCCCAGTTACTTTGGGTCACGGTTAA"
+    },
+    "answer_tail": "<answer>ATGTTGGAAAAGATCGAAGATGTTTTCCACAAGTTGTCTAACAAGAAGTTGGAATCTATCATGGGTAAGCCAGGTACTGATACTTTGGGTTCTGGTGATTCTGAAATCCCAGTTACTTTGGGTCACGGTTAA</answer>"
+  },
+  {
+    "id": "2a35cfc4-d4f0-4c54-b6f2-9285117d6d7f",
+    "type": "codon_optimization",
+    "ideal": "ATGAGCGTGATCACCGTGTTCAAGGACGTGTTCGTGCACTTCACCGCCATCGACAAGGACGAGCCCAAGAGCCTGCGCAGCATCTTCGTGAGCAACCCCCCCACCAACGAGTACGTGGCCTACTGGAAGCTG",
+    "latency_s": 92.3,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGTCTGTGATCACCGTGTTCAAGGACGTGTTCGTGCACTTCACCGCCATCGACAAGGACGAGCCTAAGTCCCTGAGGAGTATCTTCGTGTCTAATCCTCCAACTAACGAGTACGTGGCCTACTGGAAGCTG"
+    },
+    "answer_tail": "<answer>ATGTCTGTGATCACCGTGTTCAAGGACGTGTTCGTGCACTTCACCGCCATCGACAAGGACGAGCCTAAGTCCCTGAGGAGTATCTTCGTGTCTAATCCTCCAACTAACGAGTACGTGGCCTACTGGAAGCTG</answer>"
+  },
+  {
+    "id": "6cbe4fd3-0304-49b8-a658-e4aafdcd559f",
+    "type": "codon_optimization",
+    "ideal": "ATGAAATTTACCACCCTGGTTCTGAGCATTCTGTTTATTCTGCTGGCGGGCAACTTTGCGCAGATGGGCATTTTTGGCTATTTTGGCAAAATTGTTCATATTGATCAGGAAACCATTCTGAAAATGCCG",
+    "latency_s": 37.3,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGAAATTCACCACCCTGGTGCTGAGCATCCTGTTCATCCTGCTGGCGGGTAACTTCGCGCAGATGGGTATCTTCGGTTACTTCGGTAAAATCGTGCACATCGACCAGGAAACCATCCTGAAAATGCCG"
+    },
+    "answer_tail": "<answer>ATGAAATTCACCACCCTGGTGCTGAGCATCCTGTTCATCCTGCTGGCGGGTAACTTCGCGCAGATGGGTATCTTCGGTTACTTCGGTAAAATCGTGCACATCGACCAGGAAACCATCCTGAAAATGCCG</answer>"
+  },
+  {
+    "id": "194a5e89-c683-4bd0-ac2d-a5dbd5251e06",
+    "type": "codon_optimization",
+    "ideal": "ATGGGTAAACCTAAATCTCAAAATGGTTTTGGTTGTAAACTTCAAGAATTTAAAGAAGGTATTGGTAAAACCGATTTTGCTGATCATGGTCATGTAAAAAAAGATGTTCCAGTTAACTTAGGTCCAGTTAAACTTGGTATTTCTTGGGGTTTATCT",
+    "latency_s": 28.7,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGGTAAACCAAAATCTCAAAATGGTTTCGGTTGTAAATTGCAAGAATTCAAAGAAGGTATTGGTAAAACTGATTTCGCTGATCATGGTCATGTTAAAAAAGATGTTCCAGTTAATTTGGGTCCAGTTAAATTGGGTATTTCTTGGGGTTTGTCTTAA"
+    },
+    "answer_tail": "<answer>ATGGGTAAACCAAAATCTCAAAATGGTTTCGGTTGTAAATTGCAAGAATTCAAAGAAGGTATTGGTAAAACTGATTTCGCTGATCATGGTCATGTTAAAAAAGATGTTCCAGTTAATTTGGGTCCAGTTAAATTGGGTATTTCTTGGGGTTTGTCTTAA</answer>"
+  },
+  {
+    "id": "49f3c46e-863d-47fc-bde3-3344569b830e",
+    "type": "codon_optimization",
+    "ideal": "ATGAGCACCGTGAAGCAGATGGTGGCCAAGCTGCATTACACGCTGGACCTGCACGGCCACGAGCAGCAGTTTGCCGACGGCGTGTTCTCCAAGGAGCTGCTGCGCAACTACGACCATTACCCCATCTTCTACGACAAGCAC",
+    "latency_s": 60.0,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGTCCACCGTGAAGCAGATGGTGGCCAAGCTGCACTACACCCTGGACCTGCACGGCCACGAGCAGCAGTTCGCCGACGGCGTGTTCTCCAAGGAGCTGCTGCGCAACTACGACCACTACCCCATCTTCTACGACAAGCACTGA"
+    },
+    "answer_tail": "<answer>ATGTCCACCGTGAAGCAGATGGTGGCCAAGCTGCACTACACCCTGGACCTGCACGGCCACGAGCAGCAGTTCGCCGACGGCGTGTTCTCCAAGGAGCTGCTGCGCAACTACGACCACTACCCCATCTTCTACGACAAGCACTGA</answer>"
+  },
+  {
+    "id": "0d23f0cc-db47-4576-847f-86c5079ae9f2",
+    "type": "codon_optimization",
+    "ideal": "ATGAAAGTGACCGCGGTGCTGGTGCTGGTGCTGCTGTTCGGCAGCCACGCGCTGGCGTTCAGCCAGGGCAAACAGCCGTTCGTGCTGTTCACCCTGCGTATCAGCCTGAGCCCGAACGTGCTGTTC",
+    "latency_s": 28.7,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGAAAGTGACCGCGGTGCTGGTGCTGGTGCTGCTGTTTGGTAGCCACGCGCTGGCGTTTAGCCAGGGTAAACAGCCGTTTGTGCTGTTTACCCTGCGTATCAGCCTGAGCCCGAACGTGCTGTTTTAA"
+    },
+    "answer_tail": "<answer>ATGAAAGTGACCGCGGTGCTGGTGCTGGTGCTGCTGTTTGGTAGCCACGCGCTGGCGTTTAGCCAGGGTAAACAGCCGTTTGTGCTGTTTACCCTGCGTATCAGCCTGAGCCCGAACGTGCTGTTTTAA</answer>"
+  },
+  {
+    "id": "f9bf8a2b-e8be-4dcb-8c3f-e6d7c8bcbe11",
+    "type": "codon_optimization",
+    "ideal": "ATGGCTATCAAAGTTCTGACTCTGAAACATGGTAAGACTTTTCTGATTGATACCGATCCACCTCCATTTCTGCATCCAGATGCTACTGTTGGTTTGAAAACCTATCTGGGTGATCAACTGATTGTTTCTACTACTATG",
+    "latency_s": 22.2,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGCTATTAAGGTTTTGACTTTGAAGCACGGTAAGACTTTCTTGATTGATACTGATCCACCACCATTCTTGCACCCAGATGCTACTGTTGGTTTGAAGACTTATTTGGGTGATCAATTGATTGTTTCTACTACTATG"
+    },
+    "answer_tail": "<answer>ATGGCTATTAAGGTTTTGACTTTGAAGCACGGTAAGACTTTCTTGATTGATACTGATCCACCACCATTCTTGCACCCAGATGCTACTGTTGGTTTGAAGACTTATTTGGGTGATCAATTGATTGTTTCTACTACTATG</answer>"
+  },
+  {
+    "id": "83a60e72-3d56-4e68-93d9-274fb9335eee",
+    "type": "codon_optimization",
+    "ideal": "ATGTTCGAGGTGCACAACCCCAAGCACATCAAGTTCCAGATGCACAAGGGCCTGCTGGGCCTGGGCCACAAGCTGCTGGTGAACCTGGGCACCAAGAGGATCAAGCTGGACCAGGGCGGCTTCATCACCAAGCTGTTCGTGCACAACGGC",
+    "latency_s": 22.0,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGTTCGAGGTGCACAACCCCAAGCACATCAAGTTCCAGATGCACAAGGGCCTGCTGGGCCTGGGCCACAAGCTGCTGGTGAACCTGGGCACCAAGCGCATCAAGCTGGACCAGGGCGGCTTCATCACCAAGCTGTTCGTGCACAACGGC"
+    },
+    "answer_tail": "<answer>ATGTTCGAGGTGCACAACCCCAAGCACATCAAGTTCCAGATGCACAAGGGCCTGCTGGGCCTGGGCCACAAGCTGCTGGTGAACCTGGGCACCAAGCGCATCAAGCTGGACCAGGGCGGCTTCATCACCAAGCTGTTCGTGCACAACGGC</answer>"
+  },
+  {
+    "id": "92800fec-57d0-4758-b271-9f8c07de8c34",
+    "type": "codon_optimization",
+    "ideal": "ATGAAAAGAACCTTCCAGGATGTTGCTAAACTGGGTCAAAAAGATTCTCCGCTGGTGGAAAAAGTTGCTGGTTATCATTATGGTTCTCTGTTTATGAGAAGACATGTTCCTCATGGTATTTCTATCCTGGTTAAGGATCTGACCGGT",
+    "latency_s": 35.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGAAACGTACCTTTCAGGATGTGGCGAAACTGGGCCAGAAAGATAGCCCGCTGGTGGAAAAAGTGGCGGGCTATCATTATGGCAGCCTGTTTATGCGTCGTCATGTGCCGCATGGCATTAGCATTCTGGTGAAAGATCTGACCGGC"
+    },
+    "answer_tail": "<answer>ATGAAACGTACCTTTCAGGATGTGGCGAAACTGGGCCAGAAAGATAGCCCGCTGGTGGAAAAAGTGGCGGGCTATCATTATGGCAGCCTGTTTATGCGTCGTCATGTGCCGCATGGCATTAGCATTCTGGTGAAAGATCTGACCGGC</answer>"
+  },
+  {
+    "id": "7d8fffec-f84c-485d-9787-a7e3b3ec4596",
+    "type": "codon_optimization",
+    "ideal": "ATGGGTGATAAAATCAAACCTGGTGTATTTCAAATCCTTGTTGATAGTGGTAAAGATGAATTTGATCTTCAAGAAGCTATTGCTTGGAAGAAAAAATTTAGTGGTCCAGTATTTCTTATTCCAGATTATTATAAACATCTTGTTAGT",
+    "latency_s": 56.0,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGGTGACAAGATTAAGCCAGGTGTTTTCCAAATTTTGGTTGACTCTGGTAAGGACGAATTCGACTTGCAAGAAGCTATTGCTTGGAAGAAGAAGTTCTCTGGTCCAGTTTTCTTGATTCCAGACTACTACAAGCACTTGGTTTCT"
+    },
+    "answer_tail": "<answer>ATGGGTGACAAGATTAAGCCAGGTGTTTTCCAAATTTTGGTTGACTCTGGTAAGGACGAATTCGACTTGCAAGAAGCTATTGCTTGGAAGAAGAAGTTCTCTGGTCCAGTTTTCTTGATTCCAGACTACTACAAGCACTTGGTTTCT</answer>"
+  },
+  {
+    "id": "946759dd-43d6-4923-83e2-3076991ca7eb",
+    "type": "codon_optimization",
+    "ideal": "ATGGTGGACATCCAGCTGACCCAGAGCCCCAGCGCCATGAGCGCCAGCGTGGGCGACCGCGTGACCATCAACTGCCGCGCCAGCAGCAGCGTGTACATGCATTGGTACCAGCAGAAGCCCGGCAAGGCCCCCAAGCTGCTGATCTACTGATAA",
+    "latency_s": 20.8,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGTGGACATCCAGCTGACCCAGAGCCCCAGCGCCATGAGCGCCAGCGTGGGCGACCGGGTGACCATCAACTGCCGGGCCAGCAGCAGCGTGTACATGCACTGGTACCAGCAGAAGCCCGGCAAAGCCCCCAAGCTGCTGATCTACTGA"
+    },
+    "answer_tail": "<answer>ATGGTGGACATCCAGCTGACCCAGAGCCCCAGCGCCATGAGCGCCAGCGTGGGCGACCGGGTGACCATCAACTGCCGGGCCAGCAGCAGCGTGTACATGCACTGGTACCAGCAGAAGCCCGGCAAAGCCCCCAAGCTGCTGATCTACTGA</answer>"
+  },
+  {
+    "id": "ca2dcb19-adab-4502-bc48-5a5c69da06c3",
+    "type": "codon_optimization",
+    "ideal": "ATGGGTGATAAAATTGTTATTCTGGGTCCGAAAGGTGTTGGTAAAACCAACTTTCATCAATTGGCTAAAGAACTGGGTATTCCGACCTATGAAAAAGGTCAAGTTTCTCCGAAAGGTGGTAAATTTGAAAAAGCTCTGAAAGAA",
+    "latency_s": 26.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGGCGATAAAATTGTGATTCTGGGCCCGAAAGGCGTGGGCAAAACCAACTTTCATCAGCTGGCGAAAGAACTGGGCATTCCGACCTATGAAAAAGGCCAGGTGTCTCCGAAAGGCGGCAAATTTGAAAAAGCGCTGAAAGAA"
+    },
+    "answer_tail": "<answer>ATGGGCGATAAAATTGTGATTCTGGGCCCGAAAGGCGTGGGCAAAACCAACTTTCATCAGCTGGCGAAAGAACTGGGCATTCCGACCTATGAAAAAGGCCAGGTGTCTCCGAAAGGCGGCAAATTTGAAAAAGCGCTGAAAGAA</answer>"
+  },
+  {
+    "id": "256572b0-3c45-4ff3-b430-9d7df73e8119",
+    "type": "codon_optimization",
+    "ideal": "ATGGCTTTGGATGGTACTGGTGATCATGATGTTGCTATTTTGTCTGGTAAGGGTAAGAAGGATAATCCTGTTTTTGTTGTTGGTTCTATGTCTCCTGATGGTTCTCCTTTGAAGAAGACTAAGATTTGGGAATATTTGGATCCT",
+    "latency_s": 57.9,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGCTTTGGATGGTACTGGTGATCATGATGTTGCTATTTTGTCTGGTAAAGGTAAAAAAGATAATCCAGTTTTCGTTGTTGGTTCTATGTCTCCAGATGGTTCTCCATTGAAAAAAACTAAAATTTGGGAATATTTGGATCCATAA"
+    },
+    "answer_tail": "<answer>ATGGCTTTGGATGGTACTGGTGATCATGATGTTGCTATTTTGTCTGGTAAAGGTAAAAAAGATAATCCAGTTTTCGTTGTTGGTTCTATGTCTCCAGATGGTTCTCCATTGAAAAAAACTAAAATTTGGGAATATTTGGATCCATAA</answer>"
+  },
+  {
+    "id": "dee6494b-22d2-490f-8625-d439d31dd618",
+    "type": "codon_optimization",
+    "ideal": "ATGGTGAAAAAATTTTGGAGCAACCTGCCGGCGCCGAGCAAATTTGATAACCTGAAAGATCTGAAACCGAACGGCAACGATGATCAGGTGCTGTATCAGAAACTGAAAACCTTTCATAGCTTTTGCGATACCGTGATGAAACCG",
+    "latency_s": 30.2,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGTGAAAAAATTTTGGAGCAACCTGCCGGCGCCGAGCAAATTTGATAACCTGAAAGATCTGAAACCGAACGGTAACGATGATCAGGTGCTGTATCAGAAACTGAAAACCTTTCATAGCTTTTGCGATACCGTGATGAAACCGTAA"
+    },
+    "answer_tail": "<answer>ATGGTGAAAAAATTTTGGAGCAACCTGCCGGCGCCGAGCAAATTTGATAACCTGAAAGATCTGAAACCGAACGGTAACGATGATCAGGTGCTGTATCAGAAACTGAAAACCTTTCATAGCTTTTGCGATACCGTGATGAAACCGTAA</answer>"
+  },
+  {
+    "id": "58afd3ac-06a3-42c9-865a-8825e4dd2dba",
+    "type": "codon_optimization",
+    "ideal": "ATGGCTCTGATTTCTCCGAAGAATGGTGAAACCAAGAAAACCTTTACCAAAGAATTTTGGGATCTGTTTGAACAGCATCCGATTTATTCTGAATTTAAAGATTTTTCTAAATTTGGTACCCCGGCTGATGGTAGAAAAATTTAT",
+    "latency_s": 27.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGCTTTGATTTCTCCAAAGAACGGTGAAACCAAGAAGACCTTCACCAAGGAATTCTGGGACTTGTTCGAACAACACCCAATTTACTCTGAATTCAAGGACTTCTCTAAGTTCGGTACCCCAGCTGACGGTAGAAAGATTTAC"
+    },
+    "answer_tail": "<answer>ATGGCTTTGATTTCTCCAAAGAACGGTGAAACCAAGAAGACCTTCACCAAGGAATTCTGGGACTTGTTCGAACAACACCCAATTTACTCTGAATTCAAGGACTTCTCTAAGTTCGGTACCCCAGCTGACGGTAGAAAGATTTAC</answer>"
+  },
+  {
+    "id": "4958b9df-9dd2-46d1-a9ba-413f168b956e",
+    "type": "codon_optimization",
+    "ideal": "ATGGGGCAGCCCAACCACTCCCTGAAGGAGGGGAAGCTGTTCAAGGAGGTGGGGCAGGTGCGGCTGCCGCAGAAGTTCTCCAACACCGACAAGCTGATCGTGGACGGGAAGTGGCCGGAGATCCAGCAGCACATCCGGCAG",
+    "latency_s": 26.1,
+    "score": 0.0,
+    "reason": "validator_error:TypeError:codon_optimization_reward() got an unexpected keyword argument 'answer'",
+    "extracted": {
+      "answer": "ATGGGCCAGCCCAACCACAGCCTGAAGGAGGGCAAGCTGTTCAAAGAGGTGGGCCAGGTGCGGCTGCCCCAGAAGTTCAGCAACACCGACAAGCTGATCGTGGACGGCAAGTGGCCCGAGATCCAGCAGCACATCCGGCAG"
+    },
+    "answer_tail": "<answer>ATGGGCCAGCCCAACCACAGCCTGAAGGAGGGCAAGCTGTTCAAAGAGGTGGGCCAGGTGCGGCTGCCCCAGAAGTTCAGCAACACCGACAAGCTGATCGTGGACGGCAAGTGGCCCGAGATCCAGCAGCACATCCGGCAG</answer>"
+  },
+  {
+    "id": "c1350482-e2dd-4621-a899-7b07b8a5943a",
+    "type": "primer_interactions",
+    "ideal": "None",
+    "latency_s": 261.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "b03a68f6-13e7-4197-a582-f04aac45e53e",
+    "type": "primer_interactions",
+    "ideal": "rplB_R,rplB_panel1,rplB_panel10,rplB_panel4,rplB_panel9",
+    "latency_s": 167.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "39c07d79-808d-4fdb-80c8-b5793b0417ec",
+    "type": "primer_interactions",
+    "ideal": "rpoC_altF,rpoC_panel10,rpoC_panel11,rpoC_panel12",
+    "latency_s": 258.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "rpoC_panel11"
+    },
+    "answer_tail": "<answer>rpoC_panel11</answer>"
+  },
+  {
+    "id": "07825098-b3c7-4402-a8c8-d2f8f4f0d0fa",
+    "type": "primer_interactions",
+    "ideal": "whiA_panel6",
+    "latency_s": 179.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "77072180-06b6-4965-9fd0-499e0ead89e5",
+    "type": "primer_interactions",
+    "ideal": "phoU_panel2",
+    "latency_s": 107.2,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "350476f7-8a73-40de-8312-755054d4864c",
+    "type": "primer_interactions",
+    "ideal": "scpB_R,scpB_altF,scpB_panel12",
+    "latency_s": 18.4,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "c68b4ef0-c603-441f-ac05-f1438907edad",
+    "type": "primer_interactions",
+    "ideal": "None",
+    "latency_s": 202.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "03dfba77-d601-4f53-8f04-eb0c81a789ab",
+    "type": "primer_interactions",
+    "ideal": "thiI_panel1",
+    "latency_s": 183.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "45°C. The sequences lack long inverted repeats or significant complementary regions between different primers that would result in stable secondary structures at this threshold.  <answer>None</answer>"
+  },
+  {
+    "id": "97635664-a79f-40b2-9ea1-5e773f0dc503",
+    "type": "primer_interactions",
+    "ideal": "rplE_panel12,rplE_panel3,rplE_panel8",
+    "latency_s": 144.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "2468f605-951f-42fd-8de2-b0d6fd7a899d",
+    "type": "primer_interactions",
+    "ideal": "tsf_R,tsf_altR,tsf_panel3",
+    "latency_s": 206.1,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "tsf_altR"
+    },
+    "answer_tail": "<answer>tsf_altR</answer>"
+  },
+  {
+    "id": "312750ea-671f-4c10-96fd-de102d5ba6e7",
+    "type": "primer_interactions",
+    "ideal": "None",
+    "latency_s": 164.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "3ad2fab9-58cb-41e1-988e-c746b2771fea",
+    "type": "primer_interactions",
+    "ideal": "alaS_panel8",
+    "latency_s": 197.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "alaS_panel8"
+    },
+    "answer_tail": "<answer>alaS_panel8</answer>"
+  },
+  {
+    "id": "cf8409bf-fc0d-428f-b9d9-a77180f11e90",
+    "type": "primer_interactions",
+    "ideal": "apt_F,apt_R,apt_panel13,apt_panel4",
+    "latency_s": 30.5,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "e133bf0e-f011-4bbf-9b28-a5a0c962daea",
+    "type": "primer_interactions",
+    "ideal": "argS_panel13,argS_panel7,argS_panel9",
+    "latency_s": 80.0,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "b05a7fac-0493-475a-bafd-76e7997acdbb",
+    "type": "primer_interactions",
+    "ideal": "asnS_panel10,asnS_panel3,asnS_panel4",
+    "latency_s": 114.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "95303a12-7009-4a80-b347-dc9c492bc57d",
+    "type": "primer_interactions",
+    "ideal": "None",
+    "latency_s": 179.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "b36dca13-1e59-4765-a9aa-96713dc98de3",
+    "type": "primer_interactions",
+    "ideal": "atpA_panel2",
+    "latency_s": 222.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "ing in melting temperatures well below the threshold. Similarly, no significant complementary stretches were found between any primer pairs that would yield stable heterodimers.  <answer>None</answer>"
+  },
+  {
+    "id": "3b946577-78ec-4c34-aa76-ccde70d8d080",
+    "type": "primer_interactions",
+    "ideal": "atpD_panel10,atpD_panel8",
+    "latency_s": 161.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "s form heterodimers with a melting temperature of 45°C or higher. The sequences lack long complementary stretches or stable secondary structures required to reach the threshold.  <answer>None</answer>"
+  },
+  {
+    "id": "b8c452b6-cae3-4429-aed4-73b095c3ff6c",
+    "type": "primer_interactions",
+    "ideal": "atpF_panel13,atpF_panel8",
+    "latency_s": 240.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "ry stretches are short (3–6 base pairs) and have low GC content, resulting in calculated Tm values well below the threshold. Therefore, no primers exceed the specified criteria.  <answer>None</answer>"
+  },
+  {
+    "id": "f4b27d73-6083-4267-bba9-f4ca54be5256",
+    "type": "primer_interactions",
+    "ideal": "atpG_panel5,atpG_panel7",
+    "latency_s": 239.6,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "None"
+    },
+    "answer_tail": "<answer>None</answer>"
+  },
+  {
+    "id": "27889fe3-6f3c-4272-8e7f-88e3c58c2cd6",
+    "type": "enzyme_kinetics",
+    "ideal": "0.701",
+    "latency_s": 174.9,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.576"
+    },
+    "answer_tail": "constant \\(K_m\\) was determined using a Lineweaver-Burk linear regression of the reciprocal data. From the slope and intercept, \\(K_m\\) is calculated as approximately 0.576 mM.  <answer>0.576</answer>"
+  },
+  {
+    "id": "4c863139-290e-4764-ab01-d8a0d8254599",
+    "type": "enzyme_kinetics",
+    "ideal": "80.317",
+    "latency_s": 133.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "80.0"
+    },
+    "answer_tail": "h indicating a value around 80 μM/min. The highest observed velocity (71 μM/min at 5 mM substrate) and the consistent fit to the Michaelis-Menten equation support this estimate.  <answer>80.0</answer>"
+  },
+  {
+    "id": "9c0932b4-58dd-42b7-9b0e-6ed2bdb29c4f",
+    "type": "enzyme_kinetics",
+    "ideal": "24.554",
+    "latency_s": 174.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "23.0"
+    },
+    "answer_tail": "The Km for the enzyme is approximately 23.0 μM, determined using the direct linear plot method, which provides a robust estimate from the given kinetic data.  <answer>23.0</answer>"
+  },
+  {
+    "id": "e15822da-2d4b-4167-be3e-fa26e14a842b",
+    "type": "enzyme_kinetics",
+    "ideal": "251.177",
+    "latency_s": 44.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "253"
+    },
+    "answer_tail": "<answer>253</answer>"
+  },
+  {
+    "id": "dd2375ea-6d76-4a34-83f5-83a2436660e4",
+    "type": "enzyme_kinetics",
+    "ideal": "8.189",
+    "latency_s": 176.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "8.1"
+    },
+    "answer_tail": "The Km value for the enzyme is approximately 8.1 nM, obtained from a direct nonlinear least squares fit of the Michaelis-Menten equation to the kinetic data.  <answer>8.1</answer>"
+  },
+  {
+    "id": "2f1c75a1-6453-4db1-a114-722cc515dc51",
+    "type": "enzyme_kinetics",
+    "ideal": "62.907",
+    "latency_s": 115.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "66"
+    },
+    "answer_tail": "ten model with Vmax = 66 and Km = 10. This value is consistent with the saturation behavior observed and is supported by pairwise calculations using the direct linear plot method.  <answer>66</answer>"
+  },
+  {
+    "id": "ff5d7fe5-7e0d-463b-8eba-261eb3f091b1",
+    "type": "enzyme_kinetics",
+    "ideal": "0.192",
+    "latency_s": 124.8,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "0.195"
+    },
+    "answer_tail": "<answer>0.195</answer>"
+  },
+  {
+    "id": "464a629a-13c1-45d8-8b0d-e2714bf03395",
+    "type": "enzyme_kinetics",
+    "ideal": "107.172",
+    "latency_s": 139.3,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "107.9"
+    },
+    "answer_tail": "The Vmax was determined using the direct linear plot (Eisenthal-Cornish-Bowden) on the enzyme kinetic data, yielding a robust estimate of 107.9 units/mL.  <answer>107.9</answer>"
+  },
+  {
+    "id": "59067d38-3a8e-48d0-b4ae-062d8c454bf8",
+    "type": "enzyme_kinetics",
+    "ideal": "2.5",
+    "latency_s": 2.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2.5"
+    },
+    "answer_tail": "<answer>2.5</answer>"
+  },
+  {
+    "id": "f4b24eff-29ee-4caa-b3c3-fd2a7e9c3ad8",
+    "type": "enzyme_kinetics",
+    "ideal": "4.0",
+    "latency_s": 2.5,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "4"
+    },
+    "answer_tail": "lculated as Vmax divided by the enzyme concentration. Vmax is 480 nM/min and enzyme concentration is 2.0 nM, so kcat = 480/2 = 240 min⁻¹. Converting to s⁻¹: 240 min⁻¹ / 60 = 4 s⁻¹.  <answer>4</answer>"
+  },
+  {
+    "id": "77152b60-7541-478d-bbc7-79b33bdb3fe1",
+    "type": "enzyme_kinetics",
+    "ideal": "3125",
+    "latency_s": 1.6,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3125"
+    },
+    "answer_tail": "<answer>3125</answer>"
+  },
+  {
+    "id": "9342b39a-fe1b-4116-aac1-e966e9522e29",
+    "type": "enzyme_kinetics",
+    "ideal": "80000",
+    "latency_s": 1.7,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "80000"
+    },
+    "answer_tail": "<answer>80000</answer>"
+  },
+  {
+    "id": "da04bad4-310c-4d81-9435-6d4d3c3e7250",
+    "type": "enzyme_kinetics",
+    "ideal": "12.528",
+    "latency_s": 57.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "12.5"
+    },
+    "answer_tail": "<answer>12.5</answer>"
+  },
+  {
+    "id": "095911ea-6f8f-44fe-84b4-1bc8d50375f7",
+    "type": "enzyme_kinetics",
+    "ideal": "105.036",
+    "latency_s": 150.1,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "105.2"
+    },
+    "answer_tail": "pproach for enzyme kinetic data. By computing all pairwise estimates of Vmax from the Michaelis-Menten equation and taking the median, a value of 105.2 μmol/min·mg is obtained.  <answer>105.2</answer>"
+  },
+  {
+    "id": "deed4e6f-bf15-435f-9356-dbeac3a1d1a9",
+    "type": "enzyme_kinetics",
+    "ideal": "1.0",
+    "latency_s": 138.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "1.0"
+    },
+    "answer_tail": "ar regression analysis of the provided data, is approximately 1.0 mM. This value minimizes the sum of squared errors and provides the best overall fit to the observed velocities.  <answer>1.0</answer>"
+  },
+  {
+    "id": "90d7f760-2cf1-4857-a1de-24ed16283636",
+    "type": "enzyme_kinetics",
+    "ideal": "163.813",
+    "latency_s": 28.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "156.8"
+    },
+    "answer_tail": "<answer>156.8</answer>"
+  },
+  {
+    "id": "8329206f-f9eb-4480-b6a9-a078f6111089",
+    "type": "enzyme_kinetics",
+    "ideal": "2.0",
+    "latency_s": 1.9,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "1fbcac36-9034-4389-aca5-a440e4810ccb",
+    "type": "enzyme_kinetics",
+    "ideal": "2.0",
+    "latency_s": 2.2,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "2"
+    },
+    "answer_tail": "<answer>2</answer>"
+  },
+  {
+    "id": "9cdb037d-a516-43a9-8e73-323b8ae9b696",
+    "type": "enzyme_kinetics",
+    "ideal": "400000",
+    "latency_s": 3.4,
+    "score": 1.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "400000"
+    },
+    "answer_tail": "<answer>400000</answer>"
+  },
+  {
+    "id": "798359df-ef1e-4c22-b898-ebeb4356018c",
+    "type": "enzyme_kinetics",
+    "ideal": "3200000",
+    "latency_s": 1.7,
+    "score": 0.0,
+    "reason": "ok",
+    "extracted": {
+      "answer": "3200"
+    },
+    "answer_tail": "<answer>3200</answer>"
+  }
+]

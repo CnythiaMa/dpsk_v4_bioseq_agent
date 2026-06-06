@@ -1,0 +1,156 @@
+[
+  {
+    "idx": 1,
+    "id": "fb8fc27d-592a-40e8-a65f-9e1a60b7a708",
+    "type": "gibson",
+    "score": 0.0,
+    "reason": "Format invalid: no protocol tags found",
+    "category": "tool_assisted_llm",
+    "task": "gibson_design",
+    "n_tool_calls": 14,
+    "latency_s": 137.8
+  },
+  {
+    "idx": 2,
+    "id": "dff28bd4-89ea-401e-a3c1-ce8733512b79",
+    "type": "gibson",
+    "score": 0.0,
+    "reason": "Execution failed: protocol did not produce output. Details: PCR simulation ran successfully, but no amplicon was observe",
+    "category": "tool_assisted_llm",
+    "task": "gibson_design",
+    "n_tool_calls": 14,
+    "latency_s": 179.2
+  },
+  {
+    "idx": 3,
+    "id": "61e4b666-1ee5-4046-b304-d57e183c8593",
+    "type": "gibson",
+    "score": 0.0,
+    "reason": "Format invalid: no protocol tags found",
+    "category": "tool_assisted_llm",
+    "task": "gibson_design",
+    "n_tool_calls": 14,
+    "latency_s": 122.1
+  },
+  {
+    "idx": 4,
+    "id": "ae62bcdb-197b-4815-991f-cb7a9c151ff6",
+    "type": "restriction-ligation",
+    "score": 1.0,
+    "reason": "Cloning validation passed",
+    "category": "tool_assisted_llm",
+    "task": "restriction_assembly_design",
+    "n_tool_calls": 14,
+    "latency_s": 157.7
+  },
+  {
+    "idx": 5,
+    "id": "ad7daee9-2b65-43dc-906b-42ecb07f58b1",
+    "type": "restriction-ligation",
+    "score": 1.0,
+    "reason": "Cloning validation passed",
+    "category": "tool_assisted_llm",
+    "task": "restriction_cloning_design",
+    "n_tool_calls": 15,
+    "latency_s": 320.7
+  },
+  {
+    "idx": 6,
+    "id": "5e7bf2b5-5d04-48c6-83d4-38d97ea8542c",
+    "type": "restriction-ligation",
+    "score": 1.0,
+    "reason": "Cloning validation passed",
+    "category": "tool_assisted_llm",
+    "task": "restriction_cloning_design",
+    "n_tool_calls": 14,
+    "latency_s": 159.4
+  },
+  {
+    "idx": 7,
+    "id": "21e4def0-1c9f-4628-8724-81db65cdb7f8",
+    "type": "golden-gate",
+    "score": 0.0,
+    "reason": "Accuracy failed: output does not match reference (threshold: 0.95)",
+    "category": "tool_assisted_llm",
+    "task": "golden_gate_design",
+    "n_tool_calls": 14,
+    "latency_s": 169.7
+  },
+  {
+    "idx": 8,
+    "id": "31d22b22-0d48-41a4-88ed-b46ff451be52",
+    "type": "golden-gate",
+    "score": 0.0,
+    "reason": "Execution failed: protocol did not produce output. Details: PCR simulation ran successfully, but no amplicon was observe",
+    "category": "tool_assisted_llm",
+    "task": "golden_gate_design",
+    "n_tool_calls": 14,
+    "latency_s": 101.1
+  },
+  {
+    "idx": 9,
+    "id": "3a6704ab-70b0-4b2d-a039-5fab5a1a33cc",
+    "type": "golden-gate",
+    "score": 0.0,
+    "reason": "Accuracy failed: output does not match reference (threshold: 0.95)",
+    "category": "tool_assisted_llm",
+    "task": "golden_gate_design",
+    "n_tool_calls": 14,
+    "latency_s": 959.4
+  },
+  {
+    "idx": 10,
+    "id": "0a4f4de7-0821-40d0-9bbb-2ea22670186e",
+    "type": "gibson",
+    "score": 0.0,
+    "reason": "Execution failed: protocol did not produce output. Details: PCR simulation ran successfully, but no amplicon was observe",
+    "category": "tool_assisted_llm",
+    "task": "gibson_design",
+    "n_tool_calls": 14,
+    "latency_s": 117.8
+  },
+  {
+    "idx": 11,
+    "id": "a4bf037c-2477-4cca-9ca3-12c5ee63c44f",
+    "type": "gibson",
+    "score": 1.0,
+    "reason": "Cloning validation passed",
+    "category": "tool_assisted_llm",
+    "task": "gibson_design",
+    "n_tool_calls": 14,
+    "latency_s": 1112.0
+  },
+  {
+    "idx": 12,
+    "id": "bc918101-32f3-4cba-a435-110093600f24",
+    "type": "gibson",
+    "score": 0.0,
+    "reason": "Format invalid: Expected RPAREN at position 1407, got COMMA",
+    "category": "tool_assisted_llm",
+    "task": "golden_gate_design",
+    "n_tool_calls": 14,
+    "latency_s": 140.1
+  },
+  {
+    "idx": 13,
+    "id": "5cf2e092-6ca5-447b-8860-c23fd9c3a9a7",
+    "type": "golden-gate",
+    "score": 0.0,
+    "reason": "Execution failed: protocol did not produce output. Details: PCR simulation ran successfully, but no amplicon was observe",
+    "category": "tool_assisted_llm",
+    "task": "golden_gate_design",
+    "n_tool_calls": 14,
+    "latency_s": 462.9
+  },
+  {
+    "idx": 14,
+    "id": "4fb34135-1416-4b17-8bb9-c3a4dd3a2da7",
+    "type": "restriction-ligation",
+    "score": 0.0,
+    "reason": "Execution failed: protocol did not produce output. Details: PCR simulation ran successfully, but no amplicon was observe",
+    "category": "tool_assisted_llm",
+    "task": "restriction_assembly_design",
+    "n_tool_calls": 14,
+    "latency_s": 87.1
+  }
+]

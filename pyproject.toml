@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dpsk_v4_bioseq_agent"
+version = "0.1.0"
+description = "A code-execution agent that lets DeepSeek-V4 solve LabBench2 sequence/cloning tasks by writing and running its own Python in a sandbox."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["llm", "agent", "bioinformatics", "labbench", "deepseek", "code-execution"]
+dependencies = [
+    "biopython>=1.81",
+    "pandas>=2.0",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+# NOTE: the LabBench2 eval repo is an *external* dependency (official scorers / assembly
+# engine / data). It is not pip-installable as a normal package — clone it and point
+# LABBENCH_ROOT / LABBENCH_DATA_ROOT at it (see .env.example). Repo:
+#   https://github.com/EdisonScientific/labbench2
+
+[project.scripts]
+dpsk-bioseq-cloning = "dpsk_v4_bioseq_agent.run_cloning:main"
+dpsk-bioseq-seqqa = "dpsk_v4_bioseq_agent.run_seqqa:main"
+dpsk-bioseq-dashboard = "dpsk_v4_bioseq_agent.monitor.dashboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+extend-select = ["I", "B"]   # isort + flake8-bugbear
