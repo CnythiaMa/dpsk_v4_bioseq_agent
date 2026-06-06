@@ -145,7 +145,7 @@
       "scores": {
         "HybridEvaluator": {
           "value": 0.0,
-          "reason": "Execution failed: protocol did not produce output. Details: File not found: pCAG-Golden-Gate-Destin.gb (searched for 'pCAG-Golden-Gate-Destin.gb' and stem 'pCAG-Golden-Gate-Destin' in /Users/maxue/.cache/labbench2/labbench2-data-public/cloning/31d22b22-0d48-41a4-88ed-b46ff451be52)"
+          "reason": "Execution failed: protocol did not produce output. Details: File not found: pCAG-Golden-Gate-Destin.gb (searched for 'pCAG-Golden-Gate-Destin.gb' and stem 'pCAG-Golden-Gate-Destin' in <DATA_ROOT>/labbench2-data-public/cloning/31d22b22-0d48-41a4-88ed-b46ff451be52)"
         }
       },
       "task_duration": 262.15,

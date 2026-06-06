@@ -3509,7 +3509,7 @@
     "type": "primer_design",
     "ideal": "GAATTCATGAATTGAACAACTGATAA,CTGCAGCTATTTATTTTGAAACAATT",
     "score": 0.0,
-    "reason": "run_error:HTTPStatusError:Client error '429 Too Many Requests' for url 'https://tokenhub.tencentmaas.com/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+    "reason": "run_error:HTTPStatusError:Client error '429 Too Many Requests' for url 'https://ark.cn-beijing.volces.com/api/coding/v3/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
     "extracted": null
   },
   {
