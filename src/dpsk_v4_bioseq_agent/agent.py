@@ -21,6 +21,7 @@ import httpx
 from . import config, llm, sandbox
 
 _PROTO_RE = re.compile(r"<protocol>(.*?)</protocol>", re.S | re.I)
+_ANS_RE = re.compile(r"<answer>.*?</answer>", re.S | re.I)
 
 CLONING_SYSTEM = """You are an expert molecular-cloning designer with a PYTHON SANDBOX. THE DESIGN IS YOUR JOB —
 reason it out yourself. Use the sandbox only to do the mechanical sequence work and to VERIFY. Never
@@ -68,15 +69,15 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
     base_dir = Path(base_dir)
     transcript = [dict(m) for m in messages]          # full raw model I/O for this question
     py_history: list[str] = []
-    content, last_protocol, nudged = "", None, False
+    content, last_protocol, last_answer, nudged = "", None, None, False
 
     with httpx.Client(timeout=config.HTTP_TIMEOUT) as client:
         for rnd in range(max_rounds + 1):
             force_final = rnd == max_rounds
             if force_final:
                 fm = {"role": "user", "content":
-                      ("Output your final answer now — only the value in the required format "
-                       "(<answer>...</answer>)." if not want_protocol else
+                      ("Output your final answer now — ONLY the value in the required format "
+                       "(e.g. <answer>...</answer>). No more tool calls." if not want_protocol else
                        "Round limit reached. Output your final answer now: exactly one "
                        "<protocol>...</protocol>. No more tool calls.")}
                 messages.append(fm)
@@ -86,6 +87,14 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
                 nm = {"role": "user", "content":
                       f"You are at round {rnd} of {max_rounds}. Stop exploring — commit to your design: "
                       "call dry_run_protocol once to verify, then output one <protocol>...</protocol>."}
+                messages.append(nm)
+                transcript.append(nm)
+            elif not want_protocol and rnd >= max_rounds - 3 and not nudged:   # near-limit: wrap up
+                nudged = True
+                nm = {"role": "user", "content":
+                      f"You are at round {rnd}/{max_rounds}. Stop exploring — you should already have what "
+                      "you need. In your NEXT message output ONLY the final <answer>...</answer>, no more "
+                      "tool calls."}
                 messages.append(nm)
                 transcript.append(nm)
 
@@ -103,6 +112,9 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
             if tool_calls:
                 arec["tool_calls"] = tool_calls
             transcript.append(arec)
+            # fallback 1 (seqqa): if the model returned no content, the answer may sit in the CoT
+            if not want_protocol and not content.strip() and msg.get("reasoning_content"):
+                content = msg["reasoning_content"].strip()
             if verbose:
                 print(f"    [r{rnd}] " + (", ".join(tc["function"]["name"] for tc in tool_calls)
                                           if tool_calls else f"final ({len(content)} chars)"))
@@ -121,10 +133,16 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
                         code = args.get("code", "")
                         result = sandbox.run_python(base_dir, code, py_history)
                         py_history.append(code)
+                        stdout = result.get("stdout", "") if isinstance(result, dict) else ""
                         if want_protocol:
-                            m = _PROTO_RE.search(result.get("stdout", "") if isinstance(result, dict) else "")
+                            m = _PROTO_RE.search(stdout)
                             if m and not last_protocol:
                                 last_protocol = m.group(1).strip()
+                        else:
+                            # fallback 2 (seqqa): capture an <answer> the model printed in the sandbox
+                            m = _ANS_RE.search(stdout)
+                            if m:
+                                last_answer = m.group(0)
                     elif fn == "dry_run_protocol":
                         result = sandbox.dry_run_protocol(base_dir, args.get("protocol", ""))
                         if want_protocol and isinstance(result, dict) and result.get("ok") and args.get("protocol"):
@@ -142,6 +160,11 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
         content = (content or "") + f"\n\n<protocol>\n{last_protocol}\n</protocol>"
         transcript.append({"role": "harness_note",
                            "content": "appended last tool-verified <protocol> (model omitted the tags)"})
+    # fallback 3 (seqqa): model never emitted <answer> but printed one in the sandbox -> use it
+    elif not want_protocol and "<answer>" not in (content or "").lower() and last_answer:
+        content = (content + "\n" + last_answer) if content else last_answer
+        transcript.append({"role": "harness_note",
+                           "content": "appended last <answer> printed in the sandbox (model omitted the tags)"})
     return {"output": content, "transcript": transcript,
             "n_tool_calls": sum(1 for m in transcript if m.get("role") == "tool")}
 

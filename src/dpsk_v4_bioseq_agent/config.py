@@ -19,7 +19,7 @@ MODEL_ALIASES = {"flash": "deepseek-v4-flash", "pro": "deepseek-v4-pro"}
 
 # --- agent loop / HTTP ---
 AGENT_MAX_ROUNDS: int = int(os.environ.get("AGENT_MAX_ROUNDS", "14"))   # cloning design agent
-SEQQA_MAX_ROUNDS: int = int(os.environ.get("SEQQA_MAX_ROUNDS", "6"))     # seqqa compute agent
+SEQQA_MAX_ROUNDS: int = int(os.environ.get("SEQQA_MAX_ROUNDS", "14"))    # seqqa compute agent
 HTTP_TIMEOUT: int = int(os.environ.get("HTTP_TIMEOUT", "180"))
 
 # --- external LabBench2 eval repo (scorers / assembly engine / question-file downloader) ---

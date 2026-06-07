@@ -52,6 +52,12 @@ def score_seqqa(q, output, files_path):
     if not m:
         return 0.0, "no_answer_extracted"
     kwargs = {**(json.loads(q["validator_params"]) if q.get("validator_params") else {}), **m.groupdict()}
+    # The question regex always names its capture group "answer", but some validators expect a
+    # differently-named param (codon_optimization -> "optimized_dna", cds_oligo/oligo_design ->
+    # "oligo"). The official registry encodes this as Validator.answer_param; replicate the rename.
+    answer_param = getattr(val, "answer_param", "answer")
+    if answer_param != "answer" and "answer" in kwargs:
+        kwargs[answer_param] = kwargs.pop("answer")
     for k, v in list(kwargs.items()):
         if k.endswith("_path") and isinstance(v, str):
             r = resolve_file_path(v, files_path)
