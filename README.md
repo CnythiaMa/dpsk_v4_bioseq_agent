@@ -1,5 +1,7 @@
 # dpsk_v4_bioseq_agent
 
+> 📊 **[在线结果总览 →](https://cnythiama.github.io/dpsk_v4_bioseq_agent/web/overview.html#overview)** —— 交互式网页,一眼看全 SeqQA / CloningQA 各配置成绩与逐题对比。
+
 一个极简的**代码执行 Agent：**让本身没有工具的大模型(**DeepSeek-V4-flash / -pro**)
 通过**自己写并运行 Python**(在沙箱里)来解 **LabBench2** 的序列 / 克隆题——而不是在思维链里硬数碱基、易出错。
 
