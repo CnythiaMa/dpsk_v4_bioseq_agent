@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生命科学 Benchmark 介绍 · BixBench / LABBench2</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;background:#f5f7fa;color:#1a1a2e}
+h1{padding:24px 32px 8px;font-size:22px;font-weight:700}
+.subtitle{padding:0 32px 20px;font-size:13px;color:#666}
+.subtitle a{color:#4a6fa5;text-decoration:none}
+.wrap{padding:0 24px 40px}
+.table-wrap{overflow-x:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+table{width:100%;border-collapse:collapse;background:#fff}
+thead th{background:#2d3e6e;color:#fff;padding:10px 12px;text-align:left;font-size:12px;white-space:nowrap}
+tbody tr.main-row{cursor:pointer;transition:background .15s}
+tbody tr.main-row:hover{background:#eef2ff}
+tbody tr.main-row.open{background:#e8eeff}
+td{padding:9px 12px;border-bottom:1px solid #eee;vertical-align:top;font-size:13px;line-height:1.5}
+td.name{font-weight:600;color:#2d3e6e;white-space:nowrap}
+td.year{color:#888;text-align:center}
+td.scale{white-space:nowrap}
+td.links a{display:inline-block;padding:2px 7px;margin:1px 2px;border-radius:4px;font-size:11px;text-decoration:none;background:#e8f0fe;color:#2d3e6e;border:1px solid #c5d3f0}
+td.links a:hover{background:#4a6fa5;color:#fff}
+.arrow{display:inline-block;transition:transform .2s;margin-right:6px;color:#4a6fa5;font-size:10px}
+.arrow.open{transform:rotate(90deg)}
+.detail-row{display:none}
+.detail-row.show{display:table-row}
+.detail-cell{padding:0!important;border-bottom:2px solid #4a6fa5!important}
+.detail-box{padding:16px 20px 22px;background:#fafbff}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tab-btn{padding:5px 14px;border-radius:20px;border:1px solid #c5d3f0;background:#fff;font-size:12px;cursor:pointer;color:#2d3e6e;transition:all .15s}
+.tab-btn:hover{background:#e8eeff}
+.tab-btn.active{background:#2d3e6e;color:#fff;border-color:#2d3e6e}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.md-body{font-size:13px;line-height:1.7;color:#222;max-height:78vh;overflow-y:auto;padding-right:8px}
+.md-body h2{font-size:15px;margin:16px 0 6px;color:#2d3e6e;border-bottom:1px solid #e0e6f0;padding-bottom:4px}
+.md-body h3{font-size:14px;margin:12px 0 4px;color:#374151}
+.md-body p{margin-bottom:8px}
+.md-body ul{margin:4px 0 10px 20px}
+.md-body li{margin:2px 0}
+.md-body pre{background:#f1f5f9;border-radius:6px;padding:10px 12px;overflow-x:auto;font-size:12px;margin:8px 0}
+.md-body code{font-family:monospace;font-size:12px;background:#f1f5f9;padding:1px 4px;border-radius:3px}
+.md-body pre code{background:none;padding:0}
+.md-body table{font-size:12px;border-collapse:collapse;margin:8px 0;width:auto}
+.md-body table th,.md-body table td{border:1px solid #ddd;padding:5px 10px}
+.md-body table th{background:#e8eeff}
+.md-body a{color:#4a6fa5}
+.note{color:#666;font-size:12px;background:#fff7ed;border-left:3px solid #fdba74;padding:6px 12px;border-radius:4px;margin:6px 0 12px}
+.muted{color:#999;font-weight:400}
+.gated{display:inline-block;padding:1px 6px;border-radius:8px;font-size:10px;background:#fee2e2;color:#e53e3e;margin-left:4px}
+.sample{background:#fff;border:1px solid #e3e8f4;border-radius:8px;padding:12px 14px;margin:10px 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.sample-head{font-size:13px;font-weight:600;color:#2d3e6e;margin-bottom:6px}
+.sample-head code{background:#eef2ff;color:#3651a0}
+.tag-pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;background:#e0e7ff;color:#3730a3}
+.sample ul.meta{list-style:none;margin:4px 0 8px;padding:0;font-size:12px;color:#555}
+.sample ul.meta li{margin:2px 0}
+.field{margin-top:8px}
+.flabel{font-size:11px;font-weight:700;color:#4a6fa5;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.ftext{font-size:13px;line-height:1.6;color:#222;white-space:pre-wrap;background:#f8fafc;border-radius:6px;padding:8px 10px;border:1px solid #eef1f6}
+.ftext.zh{margin-top:6px;background:#f0f7f1;border-color:#d7ebda;color:#1f3d28}
+</style></head>
+<body>
+<h1>生命科学 Benchmark 介绍 · BixBench / LABBench2</h1>
+<p class="subtitle">更新日期：2026-06-04　·　格式参考 <a href="https://cnythia-scitix.github.io/benchmark-overview/" target="_blank">benchmark-overview</a>　·　点击任意行展开详情（数据集介绍 / 采样题目）。采样题目保留英文原文并附中文翻译。</p>
+<div class="wrap"><div class="table-wrap">
+<table>
+  <thead><tr><th>数据集</th><th>年份</th><th>规模</th><th>内容</th><th>题型</th><th>链接</th></tr></thead>
+  <tbody>
+      <tr class="main-row" onclick="toggle(0)" id="row-0">
+        <td class="name"><span class="arrow" id="arr-0">▶</span>BixBench</td>
+        <td class="year">2025</td>
+        <td class="scale">205 题 / 59 胶囊</td>
+        <td>生物信息学 · 数据分析 agent</td>
+        <td>开放式数值/区间</td>
+        <td class="links"><a href="https://github.com/Future-House/BixBench" target="_blank" onclick="event.stopPropagation()">GitHub</a><a href="https://huggingface.co/datasets/futurehouse/BixBench" target="_blank" onclick="event.stopPropagation()">HuggingFace</a></td>
+      </tr>
+      <tr class="detail-row" id="det-0"><td class="detail-cell" colspan="6">
+        <div class="detail-box"><div class="tabs"><button class="tab-btn active" onclick="pick(this,0,0)">数据集介绍</button><button class="tab-btn" onclick="pick(this,0,1)">采样题目</button></div><div class="tab-content active" id="tc-0-0"><div class="md-body">
+    <h2>内容介绍</h2>
+    <p><b>BixBench</b>（Bioinformatics Benchmark）由 FutureHouse 与 ScienceMachine 联合发布，用于评测 AI agent 在<b>真实生物信息学与数据分析任务</b>上的端到端能力。每道题都基于一篇真实论文的<b>分析「胶囊」（capsule）</b>构建——胶囊源自 Code Ocean 等可复现研究平台的概念，是一个把<b>原始数据 + 可执行分析 notebook + 研究假设/问题</b>打包在一起的自包含单元。模型拿到某个胶囊的原始数据与一个研究问题，需要自己写代码、执行分析（DESeq2、富集分析、统计建模等）并给出数值/区间答案。</p>
+    <ul>
+      <li><b>规模</b>：205 道开放式问答（题目主文件 <code>BixBench.jsonl</code>），覆盖 59 个分析胶囊。</li>
+      <li><b>形式</b>：开放式数值/区间作答，附带干扰项（distractors）可转为多选；评测方式 <code>str_verifier</code>。</li>
+      <li><b>任务类型</b>：RNA-seq 差异表达、GO/通路富集、统计回归、网络生物学、转录组学等。</li>
+      <li><b>载荷</b>：64 个 <code>CapsuleFolder-*.zip</code>（约 5.5GB），每个含一篇论文的数据（<code>CapsuleData/</code>）与一份已执行的分析 notebook（<code>CapsuleNotebook/*.ipynb</code>）。</li>
+      <li><b>防污染</b>：每条数据带 canary GUID，声明「不得进入训练语料」。</li>
+    </ul>
+    <h2>仓库与下载地址</h2>
+    <ul>
+      <li><b>论文</b>：BixBench: a Comprehensive Benchmark for LLM-based Agents in Computational Biology（arXiv:2503.00096）</li>
+      <li><b>GitHub</b>：<a href="https://github.com/Future-House/BixBench" target="_blank">github.com/Future-House/BixBench</a></li>
+      <li><b>Hugging Face</b>：<a href="https://huggingface.co/datasets/futurehouse/BixBench" target="_blank">huggingface.co/datasets/futurehouse/BixBench</a></li>
+      <li><b>本地路径</b>：<code>benchmarks/bixbench/</code></li>
+    </ul>
+    <pre><code>from huggingface_hub import snapshot_download
+snapshot_download("futurehouse/BixBench", repo_type="dataset",
+                  local_dir="benchmarks/bixbench")</code></pre>
+    </div></div><div class="tab-content" id="tc-0-1"><div class="md-body"><h2>采样题目</h2><p class="note">以下为从 <code>BixBench.jsonl</code> 中按类别采样的题目，保留英文原文并附中文翻译。</p>
+    <div class="sample">
+      <div class="sample-head">📄 <code>bix-1</code></div>
+      <ul class="meta"><li><b>Categories</b>：RNA-seq,Differential Expression Analysis,Transcriptomics,Network Biology</li><li><b>Eval mode</b>：str_verifier</li><li><b>Source paper</b>：https://doi.org/10.1172/jci.insight.167744</li></ul>
+      <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Truncating ASXL1 mutations will lead to specific gene expression changes in blood that reflect alterations in hematological processes, such as T cell and neutrophil activation.</div><div class="ftext zh">假设（中文）：截短型 ASXL1 突变会导致血液中特定的基因表达变化，反映造血过程的改变，例如 T 细胞和中性粒细胞的活化。</div></div>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Using the provided RNA-seq count data and metadata files, perform DESeq2 differential expression analysis to identify significant DEGs (padj &lt; 0.05), then run enrichGO analysis with clusterProfiler::simplify() (similarity &gt; 0.7). What is the approximate adjusted p-value (rounded to 4 decimal points) for &quot;regulation of T cell activation&quot; in the resulting simplified GO enrichment results?</div><div class="ftext zh">中文翻译：使用提供的 RNA-seq 计数数据和元数据文件，执行 DESeq2 差异表达分析以识别显著差异表达基因（padj &lt; 0.05），随后用 clusterProfiler::simplify()（相似度 &gt; 0.7）运行 enrichGO 富集分析。在所得的简化 GO 富集结果中，“regulation of T cell activation”（T 细胞活化的调控）对应的校正后 p 值约为多少（四舍五入到小数点后 4 位）？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <code>bix-10</code></div>
+      <ul class="meta"><li><b>Categories</b>：Other</li><li><b>Eval mode</b>：range_verifier</li><li><b>Source paper</b>：https://zenodo.org/records/12737228</li></ul>
+      <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Tubercolosis BCG re-vaccination reduces COVID-19 disease severity among healthcare workers</div><div class="ftext zh">假设（中文）：结核卡介苗（BCG）再接种可降低医护人员中的 COVID-19 疾病严重程度。</div></div>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What is the odds ratio of higher COVID-19 severity (encoded in the column AESEV) associated with BCG vaccination in a multivariable ordinal logistic regression model that includes patient interaction frequency variables as covariates?</div><div class="ftext zh">中文翻译：在一个将患者交互频率变量作为协变量的多变量有序逻辑回归模型中，BCG（卡介苗）接种与更高 COVID-19 严重程度（编码于 AESEV 列）相关的优势比（odds ratio）是多少？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <code>bix-11</code></div>
+      <ul class="meta"><li><b>Categories</b>：[&#x27;Genomics&#x27;, &#x27;Phylogenetics and Evolutionary Analysis&#x27;]</li><li><b>Eval mode</b>：llm_verifier</li><li><b>Source paper</b>：Not Available</li></ul>
+      <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Fungi have higher treeness values compared to animals.</div><div class="ftext zh">假设（中文）：真菌的 treeness 值高于动物。</div></div>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What is the difference between median treeness values for fungi versus animals?</div><div class="ftext zh">中文翻译：真菌与动物的 treeness（树性）中位数之间的差异是多少？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <code>bix-12</code></div>
+      <ul class="meta"><li><b>Categories</b>：[&#x27;Whole Genome Sequencing (WGS)&#x27;, &#x27;Genomics&#x27;, &#x27;Phylogenetics and Evolutionary Analysis&#x27;]</li><li><b>Eval mode</b>：llm_verifier</li><li><b>Source paper</b>：Not Available</li></ul>
+      <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Fungi have more parsimony informative sites compared to animals.</div><div class="ftext zh">假设（中文）：真菌比动物拥有更多的简约信息位点。</div></div>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What is the median percentage of parsimony informative sites across fungal gene alignments?</div><div class="ftext zh">中文翻译：真菌基因比对中简约信息位点（parsimony informative sites）所占百分比的中位数是多少？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <code>bix-13</code></div>
+      <ul class="meta"><li><b>Categories</b>：Sequence Analysis,RNA-seq,Differential Expression Analysis,Transcriptomics</li><li><b>Eval mode</b>：str_verifier</li><li><b>Source paper</b>：https://doi.org/10.17912/micropub.biology.001326</li></ul>
+      <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Knocking out either rhlI or lasI impacts the downstream expression of dozens of genes which may be involved in mediating the observed division of labor.</div><div class="ftext zh">假设（中文）：敲除 rhlI 或 lasI 任一基因都会影响下游数十个基因的表达，这些基因可能参与介导所观察到的分工现象。</div></div>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What percentage of the genes significantly differentially expressed (logfold cutoff either &gt; 1.5 or &lt; -1.5 and FDR&lt;0.05) in strain JBX97 are also significantly differentially expressed in strain JBX99, and not in any other strain (all relative to JBX1)?</div><div class="ftext zh">中文翻译：在菌株 JBX97 中显著差异表达（log fold 阈值 &gt; 1.5 或 &lt; -1.5 且 FDR &lt; 0.05）的基因里，有多少百分比同时在菌株 JBX99 中也显著差异表达、而不在任何其他菌株中（均相对于 JBX1）？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <code>bix-14</code></div>
+      <ul class="meta"><li><b>Categories</b>：Genomics,Genomic Variant Analysis</li><li><b>Eval mode</b>：range_verifier</li><li><b>Source paper</b>：https://doi.org/10.1172/jci.insight.167744</li></ul>
+      <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">The distribution of variant effects / types of putative somatic CHIP variants in Bloom Syndrome probands and carriers will not differ significantly from that of controls. </div><div class="ftext zh">假设（中文）：Bloom 综合征先证者与携带者中推定的体细胞 CHIP 变异的效应/类型分布，与对照组相比不会有显著差异。</div></div>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">In the BLM mutation carrier cohort, what fraction of variants with a variant allele frequency (VAF) below 0.3 are annotated as synonymous?</div><div class="ftext zh">中文翻译：在 BLM 突变携带者队列中，变异等位基因频率（VAF）低于 0.3 的变异里，被注释为同义突变（synonymous）的比例是多少？</div></div>
+    </div></div></div></div>
+      </td></tr>
+      <tr class="main-row" onclick="toggle(1)" id="row-1">
+        <td class="name"><span class="arrow" id="arr-1">▶</span>LABBench2</td>
+        <td class="year">2025–2026</td>
+        <td class="scale">1912 题 / 11 子任务</td>
+        <td>生物学研究流程 · 文献/序列/协议</td>
+        <td>开放式问答 / 设计</td>
+        <td class="links"><a href="https://arxiv.org/abs/2604.09554" target="_blank" onclick="event.stopPropagation()">Paper</a><a href="https://github.com/EdisonScientific/labbench2" target="_blank" onclick="event.stopPropagation()">GitHub</a><a href="https://huggingface.co/datasets/EdisonScientific/labbench2" target="_blank" onclick="event.stopPropagation()">HuggingFace</a></td>
+      </tr>
+      <tr class="detail-row" id="det-1"><td class="detail-cell" colspan="6">
+        <div class="detail-box"><div class="tabs"><button class="tab-btn active" onclick="pick(this,1,0)">数据集介绍</button><button class="tab-btn" onclick="pick(this,1,1)">采样题目</button></div><div class="tab-content active" id="tc-1-0"><div class="md-body">
+    <h2>内容介绍</h2>
+    <p><b>LAB-Bench 2（LABBench2）</b>由 FutureHouse / Edison Scientific 发布，是 LAB-Bench 的升级版，用于评测 AI 在<b>真实生物学研究流程</b>中的能力：文献检索、数据库访问、序列操作、协议排错、图表/表格阅读、专利与临床试验推理等。GPT-Rosalind 报告即以此为公开基准之一（在 11 项任务中 6 项超过 GPT-5.4，提升最大的是 <b>CloningQA</b>）。</p>
+    <ul>
+      <li><b>规模</b>：合并集 <code>all/</code> 共 <b>1912</b> 条，分为 11 个子任务。</li>
+      <li><b>形式</b>：<b>开放式作答（主观题）</b>——题目只给题干，不提供候选选项，模型须直接给出答案；部分子任务含图像（img）与 PDF 变体。</li>
+      <li><b>许可</b>：CC-BY-SA-4.0；Gated 数据集，需登录并接受许可后下载。</li>
+      <li><b>防污染</b>：每条带 canary 字段。</li>
+    </ul>
+    <blockquote><b>与 LAB-Bench 一代的关键区别：</b>一代（LitQA2 等）是<b>选择题</b>，每条数据带 <code>ideal</code> + <code>distractors</code>（干扰项），由它们共同构成 4 选 1 的选项；二代<b>移除了 <code>distractors</code> 字段</b>，改为<b>开放式问答</b>，只保留 <code>question</code> + <code>ideal</code>（标准答案），靠 <code>answer_regex</code> / 程序化校验器（如 SeqQA2 的序列与引物设计）判分，而非选字母。同一道题在两代里甚至从“…which of these antibiotics?”改写成了“…which antibiotic?”。</blockquote>
+    <h3>子任务一览</h3>
+    <table>
+      <thead><tr><th>子任务</th><th>目录</th><th>题量</th><th>考察内容</th></tr></thead>
+      <tbody><tr><td>LitQA3</td><td><code>litqa3/</code></td><td>168</td><td>Scientific literature retrieval &amp; reasoning</td></tr><tr><td>SeqQA2</td><td><code>seqqa2/</code></td><td>400</td><td>DNA/protein sequence manipulation</td></tr><tr><td>CloningQA</td><td><code>cloning/</code></td><td>14</td><td>End-to-end molecular cloning design</td></tr><tr><td>DbQA2</td><td><code>dbqa2/</code></td><td>86</td><td>Biological database access</td></tr><tr><td>ProtocolQA2</td><td><code>protocolqa2/</code></td><td>125</td><td>Troubleshooting lab protocols</td></tr><tr><td>TableQA2</td><td><code>tableqa2/</code></td><td>100</td><td>Reasoning over tables in papers</td></tr><tr><td>FigQA2</td><td><code>figqa2/</code></td><td>101</td><td>Reasoning over figures in papers</td></tr><tr><td>SuppQA2</td><td><code>suppqa2/</code></td><td>125</td><td>Reasoning over supplementary materials</td></tr><tr><td>PatentQA</td><td><code>patentqa/</code></td><td>121</td><td>Reasoning over patents</td></tr><tr><td>TrialQA</td><td><code>trialqa/</code></td><td>120</td><td>Clinical-trial reasoning</td></tr><tr><td>SourceQuality</td><td><code>sourcequality/</code></td><td>150</td><td>Judging quality/reliability of sources</td></tr></tbody>
+    </table>
+    <h2>评分原理</h2>
+    <p>LABBench2 按子任务类型路由到<b>不同的评测器</b>（见 harness 的 <code>HybridEvaluator</code>）：</p>
+    <ul>
+      <li><b>cloning / seqqa2</b> → <b>程序化验证器</b>（reward functions，in silico 执行后判定，不经 LLM）。</li>
+      <li><b>dbqa2</b> → 召回式 LLM judge（按 JSON 期望值逐条核对）。</li>
+      <li><b>figqa2 / tableqa2 / suppqa2</b> → 精确匹配式 LLM judge。</li>
+      <li><b>litqa3 / patentqa / trialqa / sourcequality</b> → 语义 LLM judge（标准答案+提交答案比对）。</li>
+    </ul>
+    <h3>CloningQA 的功能性验证器（结果导向）</h3>
+    <p>克隆题<b>不比对"标准协议"</b>，而是把模型写的实验方案<b>在计算机里真跑一遍，看最终产物对不对</b>：</p>
+    <ul>
+      <li><b>① 解析</b>：解析 <code>&lt;protocol&gt;</code> 内的 DSL，语法须合法。</li>
+      <li><b>② in silico 执行</b>：<code>pcr()</code> 用模型给的引物做 PCR 模拟（Go 二进制）、<code>gibson/goldengate/restriction_assemble</code> 做装配、<code>enzyme_cut</code> 做酶切 → 得到一条实际 DNA 序列。</li>
+      <li><b>③ 比对参考答案</b>：与标准答案序列做 Levenshtein 相似度比对，<b>阈值 0.95</b>。</li>
+    </ul>
+    <h3>有参考答案吗？答案唯一吗？</h3>
+    <ul>
+      <li><b>有参考答案</b>：每题一个 <code>&lt;id&gt;_assembled.fa</code>（GCS <code>validation/</code> 下），是<b>期望组装出的最终 DNA 构建体序列</b>（例如某 gibson 题为一条 13,898 bp 质粒）。注意：参考的是<b>终点产物</b>，不是协议/引物。</li>
+      <li><b>协议/路径：不唯一</b>。同一目标可由许多套不同引物、不同设计、甚至不同方法得到；验证器只看产物，不看怎么做到。</li>
+      <li><b>最终产物：基本唯一，但带容差</b>——① <b>≥95% 相似</b>即可（非精确匹配）；② <b>环状旋转等价</b>（质粒环状，起始位点无所谓）；③ <b>但不处理反向互补链</b>——若产物恰为参考的反向互补，会被判不匹配（验证器的一个局限）。</li>
+    </ul>
+    <blockquote>一句话：CloningQA 是<b>结果导向</b>评分——"模拟执行模型方案 → 比对最终产物 ≥95%（容许环状旋转、不容许反向互补）"。怎么设计引物/走哪条路线不唯一，但终点产物基本唯一。</blockquote>
+    <h2>仓库与下载地址</h2>
+    <ul>
+      <li><b>论文（二代）</b>：<a href="https://arxiv.org/abs/2604.09554" target="_blank">arXiv:2604.09554</a></li>
+      <li><b>GitHub（二代）</b>：<a href="https://github.com/EdisonScientific/labbench2" target="_blank">github.com/EdisonScientific/labbench2</a></li>
+      <li><b>Hugging Face（二代 LABBench2）</b>：<a href="https://huggingface.co/datasets/EdisonScientific/labbench2" target="_blank">huggingface.co/datasets/EdisonScientific/labbench2</a> <span class="gated">Gated</span></li>
+      <li><b>本地路径</b>：<code>benchmarks/labbench2/</code></li>
+      <li class="muted"><b>（一代参考）</b>GitHub <a href="https://github.com/Future-House/LAB-Bench" target="_blank">Future-House/LAB-Bench</a> · HF <a href="https://huggingface.co/datasets/futurehouse/lab-bench" target="_blank">futurehouse/lab-bench</a></li>
+    </ul>
+    <pre><code>from huggingface_hub import snapshot_download
+snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
+                  local_dir="benchmarks/labbench2",
+                  token="hf_xxx")   # gated: 需登录 token</code></pre>
+    </div></div><div class="tab-content" id="tc-1-1"><div class="md-body"><h2>采样题目</h2><p class="note">以下为从各子任务各采样 1 题，保留英文原文并附中文翻译。</p>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">LitQA3</span> <code>e3b5a4af-41d9-48db-becf-29a08d0ad28e</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：LitQA3 <span class="muted">(litqa3/, 168 items)</span></li>
+        <li><b>Focus</b>：Scientific literature retrieval &amp; reasoning</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Acinetobacter lwoffii has been evolved in the lab to be resistant to which antibiotic?</div><div class="ftext zh">中文翻译：在实验室中，Acinetobacter lwoffii（鲁氏不动杆菌）被定向进化以对哪种抗生素产生耐药性？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">SeqQA2</span> <code>a3a939e4-686c-4f4e-8881-8dc9fbe9facd</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：SeqQA2 <span class="muted">(seqqa2/, 400 items)</span></li>
+        <li><b>Focus</b>：DNA/protein sequence manipulation</li>
+        <li><b>Type</b>：amplicon_gc</li>
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Design primers to amplify a 200-300 bp amplicon from M. genitalium rpsR that does not contain any 30 bp window exceeding 65% GC.</div><div class="ftext zh">中文翻译：设计引物，从 M. genitalium（生殖支原体）的 rpsR 基因扩增出一段 200–300 bp 的扩增子，且其中不含任何 GC 含量超过 65% 的 30 bp 窗口。</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">CloningQA</span> <code>fb8fc27d-592a-40e8-a65f-9e1a60b7a708</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：CloningQA <span class="muted">(cloning/, 14 items)</span></li>
+        <li><b>Focus</b>：End-to-end molecular cloning design</li>
+        <li><b>Type</b>：gibson</li>
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">I want to clone a lentiviral mammalian expression vector for the mouse gene Sorcs2. I want to use pLVX-EGFP-IRES-puro from Addgene as the backbone, replacing EGFP with the canonical mouse Sorcs2 transcript from Ensembl. I will amplify Sorcs2 from mouse cDNA, and linearize the vector using PCR. Design the components and steps to complete this cloning using Gibson assembly.</div><div class="ftext zh">中文翻译：我想为小鼠基因 Sorcs2 克隆一个慢病毒哺乳动物表达载体：以 Addgene 的 pLVX-EGFP-IRES-puro 作为骨架，用 Ensembl 中规范的小鼠 Sorcs2 转录本替换 EGFP。我会从小鼠 cDNA 中扩增 Sorcs2，并用 PCR 将载体线性化。请用 Gibson 组装法设计完成该克隆所需的各组分与步骤。</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">DbQA2</span> <code>a1dae0d3-53c6-4d56-9e39-625cc1d32fa9</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：DbQA2 <span class="muted">(dbqa2/, 86 items)</span></li>
+        <li><b>Focus</b>：Biological database access</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What is the human genome reference sequence from region chr14:89000000-89000100 in hg38?</div><div class="ftext zh">中文翻译：在 hg38 中，人类基因组参考序列 chr14:89000000-89000100 区域的序列是什么？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">ProtocolQA2</span> <code>a68f494c-50de-4200-b12b-82108e9c1d8e</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：ProtocolQA2 <span class="muted">(protocolqa2/, 125 items)</span></li>
+        <li><b>Focus</b>：Troubleshooting lab protocols</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">While running the protocol, Inoticed that addition of GlycoBlue to the sample at the end of Day 3 resulted in no blue RNA precipitate. What might have caused this?</div><div class="ftext zh">中文翻译：执行该实验方案时，我注意到第 3 天结束时向样品中加入 GlycoBlue 后没有出现蓝色的 RNA 沉淀。可能是什么原因导致的？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">TableQA2</span> <code>28cddb99-558a-41e5-9a83-46c8ed73c4f8</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：TableQA2 <span class="muted">(tableqa2/, 100 items)</span></li>
+        <li><b>Focus</b>：Reasoning over tables in papers</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">In a study investigating the role of the small protein Mco6 in yeast mitochondrial protein import, researchers found that its alpha-helical outer membrane region co-assembles with mitochondrial Mdm10 as part of the SAM complex. Which source provided the recombinant DNA plasmid pFL39-mdm10?</div><div class="ftext zh">中文翻译：在一项研究小蛋白 Mco6 在酵母线粒体蛋白质输入中作用的研究里，研究者发现其 α 螺旋外膜区域作为 SAM 复合物的一部分与线粒体 Mdm10 共组装。重组 DNA 质粒 pFL39-mdm10 由哪个来源提供？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">FigQA2</span> <code>b9ba0817-f8c1-4817-8293-c71aa0d6efec</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：FigQA2 <span class="muted">(figqa2/, 101 items)</span></li>
+        <li><b>Focus</b>：Reasoning over figures in papers</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">In a study looking at the performance of single-cell foundation models, using the scGPT model, which dataset had the highest average BIO score?</div><div class="ftext zh">中文翻译：在一项考察单细胞基础模型性能的研究中，使用 scGPT 模型时，哪个数据集的平均 BIO 分数最高？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">SuppQA2</span> <code>70be3149-5beb-443f-bfe8-cf14da0dd59c</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：SuppQA2 <span class="muted">(suppqa2/, 125 items)</span></li>
+        <li><b>Focus</b>：Reasoning over supplementary materials</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Which part of the network architecture for function f has a bias term in a study led by Zhijian Yang and published in 2024 where a method for disease subtype classification using multi-view weakly-supervised deep clustering was developed?</div><div class="ftext zh">中文翻译：在 Zhijian Yang 主导、2024 年发表的一项研究中（该研究提出了一种用多视图弱监督深度聚类进行疾病亚型分类的方法），函数 f 的网络架构的哪一部分含有偏置项（bias term）？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">PatentQA</span> <code>dcbf1eb1-f1c1-4043-a40c-50f738c6c994</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：PatentQA <span class="muted">(patentqa/, 121 items)</span></li>
+        <li><b>Focus</b>：Reasoning over patents</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">In the stable bio-oil project described in patent CA2825940C, what specific compositional thresholds are used to define a thermally stable bio-oil that is cost-effective and suitable for use as a fuel without requiring deoxygenation processes such as hydrotreating?</div><div class="ftext zh">中文翻译：在专利 CA2825940C 所描述的稳定生物油项目中，用哪些具体的成分阈值来定义一种热稳定、具成本效益、且无需加氢处理（如加氢精制）脱氧即可用作燃料的生物油？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">TrialQA</span> <code>93f1229d-822e-4aa5-90d6-9c459c32dd0c</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：TrialQA <span class="muted">(trialqa/, 120 items)</span></li>
+        <li><b>Focus</b>：Clinical-trial reasoning</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">In the BMS-986178 immunotherapy trial, what specific timing requirements exist for patients who have received prior chemotherapy treatments, and how does this relate to their line of therapy classification?</div><div class="ftext zh">中文翻译：在 BMS-986178 免疫疗法试验中，对既往接受过化疗的患者存在哪些具体的时间要求？这又如何与他们的治疗线（line of therapy）分类相关联？</div></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">SourceQuality</span> <code>a56306f0-676c-4e7f-94f8-5b0ce7f94448</code></div>
+      <ul class="meta">
+        <li><b>Subset</b>：SourceQuality <span class="muted">(sourcequality/, 150 items)</span></li>
+        <li><b>Focus</b>：Judging quality/reliability of sources</li>
+        
+      </ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">A panel of evidence-based medicine experts determined that the study described in paper.pdf does not provide appropriate evidence to address the following research question: Does antibiotic therapy in people with acute bacterial conjunctivitis cause statistically significant differences in clinical and microbiological cure compared to placebo?. What was their justification for excluding this study?</div><div class="ftext zh">中文翻译：一组循证医学专家判定 paper.pdf 中描述的研究未能为以下研究问题提供恰当证据：抗生素治疗对急性细菌性结膜炎患者，与安慰剂相比，是否在临床治愈和微生物学治愈方面产生具有统计学意义的差异？他们排除这项研究的理由是什么？</div></div>
+    </div></div></div></div>
+      </td></tr></tbody>
+</table>
+</div></div>
+<script>
+function toggle(i){
+  var det=document.getElementById('det-'+i), row=document.getElementById('row-'+i), arr=document.getElementById('arr-'+i);
+  var open=det.classList.toggle('show'); row.classList.toggle('open',open); arr.classList.toggle('open',open);
+}
+function pick(btn,i,ti){
+  var box=btn.closest('.detail-box');
+  box.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  box.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active')});
+  btn.classList.add('active');
+  document.getElementById('tc-'+i+'-'+ti).classList.add('active');
+}
+</script>
+</body></html>
