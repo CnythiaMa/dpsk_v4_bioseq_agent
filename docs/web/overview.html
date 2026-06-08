@@ -256,6 +256,24 @@
     font-family: "JetBrains Mono", monospace; color: var(--accent-ink);
   }
 
+  /* ===== Collapsible code figure ===== */
+  details.code-fold { margin: 22px 0; }
+  details.code-fold > summary {
+    cursor: pointer; list-style: none; width: fit-content;
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: "JetBrains Mono", monospace; font-size: 0.84rem;
+    color: var(--accent-ink); background: var(--surface-2);
+    border: 1px solid var(--hair-2); border-radius: 9px;
+    padding: 8px 14px; user-select: none; transition: border-color .15s ease;
+  }
+  details.code-fold > summary::-webkit-details-marker { display: none; }
+  details.code-fold > summary::before {
+    content: "▶"; font-size: 0.7rem; transition: transform .15s ease;
+  }
+  details.code-fold[open] > summary::before { transform: rotate(90deg); }
+  details.code-fold > summary:hover { border-color: var(--accent); }
+  details.code-fold pre { margin: 12px 0 0; }
+
   /* ===== Blockquote ===== */
   blockquote {
     margin: 18px 0; padding: 18px 24px;
@@ -696,10 +714,33 @@ llm.py / adaptive.py / config.py  ← 请求层(429 重试)/ 自适应并发 / �
     <p class="reveal">模型知道可以用 Python 来帮助自己计数，不会再一个一个数了：</p>
     <blockquote class="reveal"><em>"Wait, maybe I'm counting wrong. Let me just use Python to count."</em></blockquote>
     <figure class="reveal">
-      <div class="frame">
-        <img src="https://my.feishu.cn/space/api/box/stream/download/asynccode/?code=M2I5ZDQ3YzljOTdlMWViMTllNzgyYjE0MWZhYTJmZWRfaUhHemZ4QlcyMWdqd2N2UVdVOXBxb0JaVlAxRHpISktfVG9rZW46SWlRQmJFY1ZIb3B3ckF4engzUWNOd3hrbnpoXzE3ODA4MzE1MDE6MTc4MDgzNTEwMV9WNA&add_watermark=true&scene_type=CCM" alt="模型用 Python 计数的交互截图" loading="lazy">
-      </div>
-      <figcaption>模型主动调用 Python 计数，替代冗长的手工逐碱基计数</figcaption>
+      <details class="code-fold">
+        <summary>展开交互留痕 · primer_design 代码 Agent 轮 7</summary>
+      <pre>// primer_design · 代码 Agent · 轮 7（v4-flash reasoning 留痕）
+
+That's 106 aa if it doesn't include the stop. Let me count:
+M(1)I(2)N(3)K(4)E(5)Q(6)D(7)L(8)N(9)Q(10) … K(103)D(104)
+Hmm, that's 104 aa. But let me recount more carefully.
+M-I-N-K-E-Q-D-L-N-Q-L-E-T-N-Q-E-Q-S-V-E-Q-N-Q-T-D-E-K-R-K- … -L-V-P-F-I-K-D
+[再逐字母从 M(1) 数到 D(104)] → That's 104 aa. So why does the feature say 106?
+
+→ Wait, maybe I'm counting wrong. Let me just use Python to count.
+
+&gt;&gt;&gt; expected = "MINKEQDLNQLETNQEQSVEQNQTDEKRKPKPNFKRAKKYCRFCAIGQLRIDFIDDLEAIKRFLSPYAKINPRRITGNCNMHQRHVANALKRARYLALVPFIKD"
+&gt;&gt;&gt; print(len(expected))
+&gt;&gt;&gt; from Bio.Seq import Seq
+&gt;&gt;&gt; cds   = Seq("ATGATTAAT … TTTATTAAAGATTAA")
+&gt;&gt;&gt; trans = cds.translate(table=4)
+&gt;&gt;&gt; print(trans, len(trans))
+&gt;&gt;&gt; print(str(trans[:-1]) == expected)
+
+Expected translation length: 104
+My translation with stop:    MINKEQ … VPFIKD*   (len 105)
+My translation without stop: MINKEQ … VPFIKD    (len 104)
+Match without stop:   True
+Match including stop: True</pre>
+      </details>
+      <figcaption>模型主动调用 Python 计数，替代冗长的手工逐碱基计数（原飞书截图链接已失效，此处为同一轮交互的文字留痕）</figcaption>
     </figure>
   </section>
 
