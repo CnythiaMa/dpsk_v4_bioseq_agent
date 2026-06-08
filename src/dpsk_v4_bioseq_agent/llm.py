@@ -10,10 +10,16 @@ from . import config
 MAX_RETRY = 8
 
 
-def _request(client, payload, limiter=None):
+def _request(client, payload, limiter=None, raw_log=None):
     """POST with concurrency gating (limiter) and retry/backoff on 429/5xx. Returns the
     response ``message`` dict. A concurrency slot is held only while a request is in
-    flight, never during backoff sleeps."""
+    flight, never during backoff sleeps.
+
+    ``raw_log``: optional callable(entry: dict). If given, it is invoked once PER HTTP
+    attempt (failed retries included) with the COMPLETE request payload actually sent and
+    the COMPLETE raw response body (incl. ``usage`` / ``finish_reason``), plus status,
+    attempt index and latency. The sink must serialize immediately — ``payload`` is a live
+    object the caller keeps mutating between rounds."""
     url = f"{config.BASE_URL}/chat/completions"
     headers = {"Authorization": f"Bearer {config.API_KEY}", "Content-Type": "application/json"}
     if config.THINKING and "thinking" not in payload:
@@ -22,9 +28,14 @@ def _request(client, payload, limiter=None):
     while True:
         if limiter:
             limiter.acquire()
+        t0 = time.time()
         try:
             r = client.post(url, json=payload, headers=headers, timeout=config.HTTP_TIMEOUT)
-        except (httpx.TransportError, httpx.TimeoutException):
+        except (httpx.TransportError, httpx.TimeoutException) as e:
+            if raw_log:
+                raw_log({"ts": time.time(), "attempt": attempt, "status": None,
+                         "latency_s": round(time.time() - t0, 3),
+                         "error": f"{type(e).__name__}: {e}", "request": payload})
             if limiter:
                 limiter.on_throttle()
             attempt += 1
@@ -37,6 +48,10 @@ def _request(client, payload, limiter=None):
                 limiter.release()
 
         if r.status_code == 429 or r.status_code >= 500:
+            if raw_log:
+                raw_log({"ts": time.time(), "attempt": attempt, "status": r.status_code,
+                         "latency_s": round(time.time() - t0, 3),
+                         "error": r.text[:2000], "request": payload})
             if limiter:
                 limiter.on_throttle()
             attempt += 1
@@ -51,7 +66,12 @@ def _request(client, payload, limiter=None):
         r.raise_for_status()
         if limiter:
             limiter.on_success()
-        return r.json()["choices"][0]["message"]
+        body = r.json()
+        if raw_log:
+            raw_log({"ts": time.time(), "attempt": attempt, "status": r.status_code,
+                     "latency_s": round(time.time() - t0, 3),
+                     "request": payload, "response": body})
+        return body["choices"][0]["message"]
 
 
 def chat(messages, tools=None, tool_choice=None, max_tokens=None, client=None, limiter=None):

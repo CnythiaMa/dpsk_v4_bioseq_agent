@@ -27,7 +27,9 @@ _print_lock = threading.Lock()
 def main():
     ap = argparse.ArgumentParser(description="Run CloningQA through the code-agent.")
     ap.add_argument("--model", default=config.MODEL, help="flash | pro | full Ark model id")
-    ap.add_argument("--conc", type=int, default=8, help="max concurrency")
+    ap.add_argument("--conc", type=int, default=8, help="max concurrency (limiter hi)")
+    ap.add_argument("--init", type=int, default=None,
+                    help="initial concurrency (limiter start); default = min(conc, 8)")
     ap.add_argument("--limit", type=int, default=None, help="only the first N tasks")
     ap.add_argument("--outdir", default="runs", help="output root")
     args = ap.parse_args()
@@ -38,7 +40,9 @@ def main():
 
     outdir = Path(args.outdir) / f"cloning_{tag}"
     (outdir / "transcripts").mkdir(parents=True, exist_ok=True)
-    limiter = AdaptiveLimiter(init=min(args.conc, 8), lo=3, hi=args.conc)
+    (outdir / "raw").mkdir(parents=True, exist_ok=True)   # complete raw API request/response, 1 JSONL/question
+    init_conc = args.init if args.init is not None else min(args.conc, 8)
+    limiter = AdaptiveLimiter(init=init_conc, lo=3, hi=args.conc)
     rows = pd.read_parquet(config.require_data_file(PARQUET)).to_dict("records")
     if args.limit:
         rows = rows[: args.limit]
@@ -51,10 +55,19 @@ def main():
 
     def work(i, q):
         t = time.time()
+        raw_path = outdir / "raw" / f"{i + 1:02d}_{q['id']}.jsonl"
+        raw_lock = threading.Lock()
+
+        def raw_log(entry):
+            # one COMPLETE request/response per line; serialize NOW (payload is mutated between rounds)
+            line = json.dumps(entry, ensure_ascii=False)
+            with raw_lock, open(raw_path, "a", encoding="utf-8") as f:
+                f.write(line + "\n")
+
         try:
             bd = Path(download_question_files(GCS_BUCKET, q["files"]))
             res = agent.design_cloning(str(q["question"]), bd,
-                                       str(q.get("prompt_suffix") or ""), limiter=limiter)
+                                       str(q.get("prompt_suffix") or ""), limiter=limiter, raw_log=raw_log)
             sc, reason = score_cloning(q, res["output"], bd)
             (outdir / "transcripts" / f"{i + 1:02d}_{q['id']}.json").write_text(json.dumps(
                 {"id": q["id"], "type": q["type"], "model": config.MODEL, "score": sc, "reason": reason,
@@ -63,6 +76,13 @@ def main():
             item = {"idx": i + 1, "id": q["id"], "type": q["type"], "score": sc, "reason": reason,
                     "n_tool_calls": res["n_tool_calls"], "latency_s": round(time.time() - t, 1)}
         except Exception as e:  # noqa: BLE001 — isolate per-task failure into a 0-score result
+            # still leave a transcript stub so no question is silent; raw/ JSONL holds any API I/O captured
+            (outdir / "transcripts" / f"{i + 1:02d}_{q['id']}.json").write_text(json.dumps(
+                {"id": q["id"], "type": q["type"], "model": config.MODEL, "score": 0.0,
+                 "reason": f"run_error:{type(e).__name__}:{e}", "question": str(q["question"]),
+                 "final_answer": "", "transcript": [],
+                 "note": "run raised before/after the model loop; see raw/ JSONL for captured API I/O"},
+                ensure_ascii=False, indent=2))
             item = {"idx": i + 1, "id": q["id"], "type": q["type"], "score": 0.0,
                     "reason": f"run_error:{type(e).__name__}:{e}", "latency_s": round(time.time() - t, 1)}
         prog.add_item(item, time.time(), limiter.snapshot())

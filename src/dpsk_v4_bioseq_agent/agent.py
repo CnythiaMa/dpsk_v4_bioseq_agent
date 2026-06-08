@@ -42,7 +42,15 @@ HOW TO WORK:
 3. Build primers/fragments IN PYTHON. If an insert is NOT a plain file region — a point mutant, a
    UTR-included transcript, a codon-optimized ORF, tandem repeats — COMPUTE the exact sequence in Python
    and use it as a quoted literal DNA string inside pcr(...).
-4. dry_run_protocol your draft; iterate until ok:true and a single (circular) product.
+4. VERIFY EARLY AND OFTEN. The MOMENT you have a first-draft protocol, call dry_run_protocol — do NOT
+   keep re-checking primers/overlaps by hand in run_python. After EVERY edit to a primer or fragment,
+   dry_run again. Treat run_python as scratch work and dry_run_protocol as the judge.
+
+PASS CRITERION (non-negotiable): a correct clone is ONE CIRCULAR plasmid. dry_run_protocol must return
+ok:true AND n_products==1 AND is_circular==true. ANY other outcome — "no amplicon", n_products>1,
+is_circular:false, or a parse error — means your design is WRONG. Do NOT rationalize it ("the user will
+circularize it", "close enough", "linear is fine"); keep fixing the primers/junctions and re-running
+dry_run until it TRULY passes. NEVER output a <protocol> that has not passed this exact check.
 
 PROTOCOL DSL (what you output): pcr(seq, "FWD", "REV"), gibson(s1, s2, ...),
 goldengate(s1, s2, ..., enzymes="Esp3I"), restriction_assemble(a, b), enzyme_cut(seq, "EnzymeName").
@@ -65,7 +73,7 @@ RULES:
   task specifies (e.g. a single value inside <answer>...</answer>). No explanation, no extra text."""
 
 
-def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, verbose=False):
+def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, verbose=False, raw_log=None):
     base_dir = Path(base_dir)
     transcript = [dict(m) for m in messages]          # full raw model I/O for this question
     py_history: list[str] = []
@@ -86,7 +94,8 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
                 nudged = True
                 nm = {"role": "user", "content":
                       f"You are at round {rnd} of {max_rounds}. Stop exploring — commit to your design: "
-                      "call dry_run_protocol once to verify, then output one <protocol>...</protocol>."}
+                      "dry_run_protocol until it PASSES (ok:true, n_products==1, is_circular==true), then "
+                      "output that exact <protocol>...</protocol>."}
                 messages.append(nm)
                 transcript.append(nm)
             elif not want_protocol and rnd >= max_rounds - 3 and not nudged:   # near-limit: wrap up
@@ -102,7 +111,12 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
             if not force_final:
                 payload["tools"] = tools_spec
                 payload["tool_choice"] = "auto"
-            msg = llm._request(client, payload, limiter=limiter)
+            try:
+                msg = llm._request(client, payload, limiter=limiter, raw_log=raw_log)
+            except Exception as e:  # noqa: BLE001 — API died after all retries; keep the partial transcript
+                transcript.append({"role": "harness_note",
+                                   "content": f"api_error after retries at round {rnd}: {type(e).__name__}: {e}"})
+                break
             tool_calls = msg.get("tool_calls") or []
             content = msg.get("content") or ""
 
@@ -132,7 +146,12 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
                     if fn == "run_python":
                         code = args.get("code", "")
                         result = sandbox.run_python(base_dir, code, py_history)
-                        py_history.append(code)
+                        # Only SUCCESSFUL cells persist into the notebook history. A failed cell
+                        # must NOT be replayed on later calls — otherwise one early error poisons
+                        # every subsequent run_python with "ERROR in earlier cell" and the session
+                        # is unrecoverable (the model burns all remaining rounds fighting a ghost).
+                        if isinstance(result, dict) and result.get("ok"):
+                            py_history.append(code)
                         stdout = result.get("stdout", "") if isinstance(result, dict) else ""
                         if want_protocol:
                             m = _PROTO_RE.search(stdout)
@@ -145,8 +164,19 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
                                 last_answer = m.group(0)
                     elif fn == "dry_run_protocol":
                         result = sandbox.dry_run_protocol(base_dir, args.get("protocol", ""))
-                        if want_protocol and isinstance(result, dict) and result.get("ok") and args.get("protocol"):
-                            last_protocol = args["protocol"]
+                        if want_protocol and isinstance(result, dict):
+                            passed = (result.get("ok") and result.get("n_products") == 1
+                                      and result.get("is_circular") is True)
+                            # hard verdict fed back to the model — stops it rationalizing a red light
+                            result["VERDICT"] = (
+                                "PASS — one circular product. You MAY finalize THIS exact <protocol>."
+                                if passed else
+                                "NOT ACCEPTED — a valid clone must be ONE CIRCULAR product "
+                                "(ok:true, n_products==1, is_circular==true). Keep fixing and re-run "
+                                "dry_run; do NOT submit this design.")
+                            # only a design that truly passed is eligible as the auto-recovered answer
+                            if passed and args.get("protocol"):
+                                last_protocol = args["protocol"]
                     else:
                         result = {"error": f"unknown tool {fn}"}
                 except Exception as e:  # noqa: BLE001 — feed any tool error back to the model
@@ -169,7 +199,7 @@ def _loop(messages, tools_spec, base_dir, limiter, max_rounds, want_protocol, ve
             "n_tool_calls": sum(1 for m in transcript if m.get("role") == "tool")}
 
 
-def design_cloning(question, base_dir, prompt_suffix="", limiter=None, verbose=False):
+def design_cloning(question, base_dir, prompt_suffix="", limiter=None, verbose=False, raw_log=None):
     files = sandbox.ensure_dsl_safe_files(base_dir)
     user = (str(question)
             + "\n\nInput files in the working directory (use the exact names below in your protocol):\n"
@@ -179,10 +209,10 @@ def design_cloning(question, base_dir, prompt_suffix="", limiter=None, verbose=F
     user += "\n\nStart by exploring the files with run_python, then design, then dry_run_protocol, then output."
     messages = [{"role": "system", "content": CLONING_SYSTEM}, {"role": "user", "content": user}]
     return _loop(messages, sandbox.CLONING_TOOLS, base_dir, limiter,
-                 config.AGENT_MAX_ROUNDS, want_protocol=True, verbose=verbose)
+                 config.AGENT_MAX_ROUNDS, want_protocol=True, verbose=verbose, raw_log=raw_log)
 
 
-def solve_seqqa(question, base_dir, prompt_suffix="", limiter=None, verbose=False):
+def solve_seqqa(question, base_dir, prompt_suffix="", limiter=None, verbose=False, raw_log=None):
     files = sorted(f.name for f in Path(base_dir).iterdir() if f.is_file()) if base_dir else []
     user = str(question) + (("\n\n" + str(prompt_suffix)) if prompt_suffix else "")
     if files:
@@ -190,4 +220,4 @@ def solve_seqqa(question, base_dir, prompt_suffix="", limiter=None, verbose=Fals
                  "large):\n" + "\n".join(f"- {n}" for n in files))
     messages = [{"role": "system", "content": SEQQA_SYSTEM}, {"role": "user", "content": user}]
     return _loop(messages, sandbox.SEQQA_TOOLS, base_dir, limiter,
-                 config.SEQQA_MAX_ROUNDS, want_protocol=False, verbose=verbose)
+                 config.SEQQA_MAX_ROUNDS, want_protocol=False, verbose=verbose, raw_log=raw_log)
