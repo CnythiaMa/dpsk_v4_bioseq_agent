@@ -1,0 +1,79 @@
+<!doctype html><html><head><meta charset="utf-8"><title>SeqQA2 · codon_optimization (codon_flash_rerun) · Live</title>
+<style>
+ body{font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#0f1117;color:#e6e6e6}
+ .wrap{max-width:1040px;margin:0 auto;padding:22px}
+ h1{font-size:20px;margin:0 0 2px} .sub{color:#8b93a7;font-size:12px;margin-bottom:16px}
+ .card{background:#171a23;border:1px solid #232838;border-radius:12px;padding:16px 18px;margin-bottom:16px}
+ .row{display:flex;gap:12px;flex-wrap:wrap}
+ .stat{flex:1;min-width:104px;background:#10131b;border:1px solid #232838;border-radius:10px;padding:9px 12px}
+ .stat .v{font-size:21px;font-weight:600} .stat .k{color:#8b93a7;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em}
+ .bar{height:16px;background:#10131b;border-radius:8px;overflow:hidden;border:1px solid #232838;position:relative}
+ .bar>.fill{height:100%;background:linear-gradient(90deg,#22d3ee,#3b82f6);transition:width .4s}
+ .bar>.pass{position:absolute;top:0;left:0;height:100%;background:linear-gradient(90deg,#16a34a,#4ade80);opacity:.85;transition:width .4s}
+ table{width:100%;border-collapse:collapse;font-size:12.5px} th,td{text-align:left;padding:5px 8px;border-bottom:1px solid #232838}
+ th{color:#8b93a7;font-weight:500;position:sticky;top:0;background:#171a23}
+ .pill{padding:1px 8px;border-radius:20px;font-size:11px}
+ .ok{background:#16351f;color:#6ee7a8}.bad{background:#3a1d1d;color:#f3a3a3}
+ .tool_only{background:#1d2b3a;color:#7cc4ff}.tool_assisted_llm{background:#2c2440;color:#c4a3ff}
+ .llm_only{background:#3a331d;color:#f3d77c}.ERROR{background:#3a1d1d;color:#f3a3a3}
+ .scroll{max-height:360px;overflow:auto}.mut{color:#8b93a7}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px;margin-top:8px}
+ .typ{background:#10131b;border:1px solid #232838;border-radius:8px;padding:5px 8px;font-size:11px}
+ .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+ .live{background:#4ade80}.done{background:#7cc4ff}
+</style></head><body><div class="wrap">
+ <h1><span class="dot live" id="dot"></span>SeqQA2 · codon_optimization (codon_flash_rerun) · Live Monitor</h1>
+ <div class="sub" id="sub">connecting…</div>
+ <div class="card"><div class="row">
+   <div class="stat"><div class="k">Status</div><div class="v" id="status">—</div></div>
+   <div class="stat"><div class="k">Done</div><div class="v" id="done">—</div></div>
+   <div class="stat"><div class="k">Passed</div><div class="v" id="passed">—</div></div>
+   <div class="stat"><div class="k">Conc limit</div><div class="v" id="limit">—</div></div>
+   <div class="stat"><div class="k">In flight</div><div class="v" id="active">—</div></div>
+   <div class="stat"><div class="k">429s</div><div class="v" id="thr">—</div></div>
+   <div class="stat"><div class="k">Calls</div><div class="v" id="calls">—</div></div>
+   <div class="stat"><div class="k">Elapsed</div><div class="v" id="elapsed">—</div></div>
+ </div>
+ <div class="bar" style="margin-top:14px"><div class="pass" id="passbar" style="width:0%"></div><div class="fill" id="fill" style="width:0%"></div></div>
+ <div id="splits" style="margin-top:10px"></div>
+ </div>
+ <div class="card"><b>By type</b><div class="grid" id="bytype"></div></div>
+ <div class="card"><b>Items</b> <span class="mut" id="ihdr"></span>
+   <div class="scroll"><table><thead><tr><th>#</th><th>type</th><th>route</th><th>score</th><th>how</th><th>lat</th><th>reason</th></tr></thead>
+   <tbody id="rows"></tbody></table></div></div>
+</div>
+<script>window.__DATA__={"title": "SeqQA2 · deepseek-v4-flash", "status": "done", "started_at": 1780836508.7601652, "updated_at": 1780836659.2327979, "total": 20, "done": 20, "passed": 19, "limiter": {"limit": 12, "active": 0, "throttles": 0, "max_limit": 12, "min_limit": 8, "calls": 130}, "category_split": {"?": 20}, "by_type": {"codon_optimization": {"n": 20, "pass": 19}}, "items": [{"idx": 7, "id": "6cbe4fd3-0304-49b8-a658-e4aafdcd559f", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 2, "latency_s": 14.6}, {"idx": 5, "id": "a94693a7-5c21-4ec7-8df3-98b55d2bc031", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 3, "latency_s": 16.0}, {"idx": 9, "id": "49f3c46e-863d-47fc-bde3-3344569b830e", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 3, "latency_s": 17.1}, {"idx": 1, "id": "65d9d8c7-0fa8-4b51-9b93-2517fd36f3a1", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 4, "latency_s": 19.4}, {"idx": 14, "id": "7d8fffec-f84c-485d-9787-a7e3b3ec4596", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 2, "latency_s": 9.3}, {"idx": 10, "id": "0d23f0cc-db47-4576-847f-86c5079ae9f2", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 4, "latency_s": 26.2}, {"idx": 12, "id": "83a60e72-3d56-4e68-93d9-274fb9335eee", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 4, "latency_s": 28.0}, {"idx": 4, "id": "2955f0e3-ab4c-4fd8-ba71-d05d72154dd1", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 4, "latency_s": 28.6}, {"idx": 13, "id": "92800fec-57d0-4758-b271-9f8c07de8c34", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 4, "latency_s": 20.2}, {"idx": 16, "id": "ca2dcb19-adab-4502-bc48-5a5c69da06c3", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 3, "latency_s": 18.5}, {"idx": 17, "id": "256572b0-3c45-4ff3-b430-9d7df73e8119", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 3, "latency_s": 14.0}, {"idx": 18, "id": "dee6494b-22d2-490f-8625-d439d31dd618", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 3, "latency_s": 13.9}, {"idx": 19, "id": "58afd3ac-06a3-42c9-865a-8825e4dd2dba", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 4, "latency_s": 25.4}, {"idx": 15, "id": "946759dd-43d6-4923-83e2-3076991ca7eb", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 8, "latency_s": 38.1}, {"idx": 20, "id": "4958b9df-9dd2-46d1-a9ba-413f168b956e", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 5, "latency_s": 27.5}, {"idx": 11, "id": "f9bf8a2b-e8be-4dcb-8c3f-e6d7c8bcbe11", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 12, "latency_s": 67.3}, {"idx": 6, "id": "2a35cfc4-d4f0-4c54-b6f2-9285117d6d7f", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 7, "latency_s": 99.4}, {"idx": 3, "id": "c337fa42-dcf9-4a63-98db-5e3b1256812d", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 9, "latency_s": 101.8}, {"idx": 8, "id": "194a5e89-c683-4bd0-ac2d-a5dbd5251e06", "type": "codon_optimization", "score": 1.0, "reason": "ok", "n_tool_calls": 12, "latency_s": 122.2}, {"idx": 2, "id": "1ec88f47-ab0b-465b-bbd8-4f1e60133913", "type": "codon_optimization", "score": 0.0, "reason": "ok", "n_tool_calls": 14, "latency_s": 150.5}]};</script>
+<script>
+const $=id=>document.getElementById(id);
+const fmtT=s=>{s=Math.max(0,Math.floor(s));return Math.floor(s/60)+"m"+String(s%60).padStart(2,"0")+"s"};
+const short=c=>(c||'').replace('tool_assisted_llm','tool+llm').replace('tool_only','tool').replace('llm_only','llm');
+async function tick(){
+ let st=window.__DATA__;
+ if(!st.title){$("sub").textContent="waiting for run…";return}
+ $("sub").textContent="静态快照 · 由 monitor/dashboard 渲染（已结束的 run，非实时）";
+ $("dot").className="dot "+(st.status==="done"?"done":"live");
+ $("status").textContent=st.status; $("done").textContent=`${st.done}/${st.total}`;
+ $("passed").textContent=st.passed;
+ const L=st.limiter||{};
+ $("limit").textContent=L.limit??"—";$("active").textContent=L.active??"—";
+ $("thr").textContent=L.throttles??0;$("calls").textContent=L.calls??0;
+ $("elapsed").textContent=fmtT(st.updated_at-st.started_at);
+ const pct=st.total?100*st.done/st.total:0, pp=st.total?100*st.passed/st.total:0;
+ $("fill").style.width=pct+"%"; $("passbar").style.width=pp+"%";
+ $("splits").innerHTML=Object.entries(st.category_split||{}).map(([k,v])=>
+   `<span class="pill ${k}" style="margin-right:6px">${short(k)}: ${v}</span>`).join("");
+ $("bytype").innerHTML=Object.entries(st.by_type||{}).sort().map(([t,d])=>
+   `<div class="typ"><b>${t}</b><br><span class="mut">${d.pass}/${d.n} pass</span></div>`).join("");
+ const items=st.items||[];
+ $("ihdr").textContent=`(${items.length})`;
+ $("rows").innerHTML=items.slice(-60).reverse().map((x)=>{
+   const ok=x.score===1.0, sc=(x.score===undefined?'':x.score);
+   return `<tr><td class="mut">${x.idx??''}</td><td>${x.type||''}</td>
+   <td><span class="pill ${x.category||''}">${short(x.category)}</span></td>
+   <td>${sc!==''?`<span class="pill ${ok?'ok':'bad'}">${sc}</span>`:''}</td>
+   <td class="mut">${x.method||x.n_tool_calls||''}</td>
+   <td class="mut">${x.latency_s??''}s</td>
+   <td class="mut">${(x.reason||'').slice(0,60)}</td></tr>`}).join("");
+}
+tick();
+</script></body></html>
