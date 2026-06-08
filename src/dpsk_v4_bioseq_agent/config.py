@@ -48,3 +48,24 @@ def ensure_labbench_on_path() -> None:
         if p.exists() and str(p) not in sys.path:
             sys.path.insert(0, str(p))
     _labbench_wired = True
+
+
+def require_data_file(path: Path) -> Path:
+    """Return ``path`` if it exists, else raise a clear, actionable error.
+
+    Used by the runners to fail early (instead of a bare ``FileNotFoundError``) when the
+    LabBench2 dataset has not been downloaded into ``LABBENCH_DATA_ROOT`` yet.
+    """
+    if path.exists():
+        return path
+    raise RuntimeError(
+        f"Dataset file not found: {path}\n"
+        f"LABBENCH_DATA_ROOT is currently: {LABBENCH_DATA_ROOT}\n"
+        "Download the LabBench2 dataset (question manifests) from the HuggingFace dataset\n"
+        "EdisonScientific/labbench2 so that these files exist:\n"
+        f"  {LABBENCH_DATA_ROOT}/labbench2/seqqa2/train-00000-of-00001.parquet\n"
+        f"  {LABBENCH_DATA_ROOT}/labbench2/cloning/train-00000-of-00001.parquet\n"
+        "e.g.  huggingface-cli download EdisonScientific/labbench2 \\\n"
+        f"        --repo-type dataset --local-dir {LABBENCH_DATA_ROOT}/labbench2\n"
+        "See README.md (安装与准备, step 3) and .env.example."
+    )

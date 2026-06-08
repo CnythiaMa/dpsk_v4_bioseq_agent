@@ -36,15 +36,50 @@ DeepSeek-V4 总体很强,但在长序列任务(互补配对、碱基计数、特
 | flash · 代码 Agent              |        **73.7%** |
 | **pro · 代码 Agent**      |        **79.9%** |
 
-## 安装
+## 安装与准备
+
+完整复现需要三样东西,对应下面三步:**本包** + **官方 LabBench2 代码仓库**(打分器 / 装配引擎 / 题目文件下载器)+ **LabBench2 数据集**(题目 parquet)。
+注意:代码仓库和数据集是**两个独立的来源**,数据集**不随代码仓库一起下载**。
+
+**第 1 步 · 安装本包**
 
 ```bash
 pip install -e .            # 或:pip install -e ".[test]"
-cp .env.example .env        # 填入 ARK_API_KEY、LABBENCH_ROOT、LABBENCH_DATA_ROOT
+cp .env.example .env        # 填入 ARK_API_KEY,以及下面两步得到的路径
 ```
 
-需要一个本地的**外部** [LabBench2 评测仓库](https://github.com/EdisonScientific/labbench2)
-(提供官方打分器 / in-silico 装配引擎 / 题目文件下载器);把 `LABBENCH_ROOT` 和 `LABBENCH_DATA_ROOT` 指向它。
+**第 2 步 · 克隆官方 LabBench2 代码仓库 → `LABBENCH_ROOT`**
+
+提供官方打分器 / in-silico 装配引擎 / 题目文件下载器(`evals.utils`):
+
+```bash
+git clone https://github.com/EdisonScientific/labbench2
+# 然后在 .env 里设:LABBENCH_ROOT=/abs/path/to/labbench2
+```
+
+**第 3 步 · 下载 LabBench2 数据集 → `LABBENCH_DATA_ROOT`**
+
+题目清单(parquet)来自 HuggingFace 数据集
+[`EdisonScientific/labbench2`](https://huggingface.co/datasets/EdisonScientific/labbench2),需单独拉取:
+
+```bash
+# 把数据集下到 $LABBENCH_DATA_ROOT/labbench2/ 下(下例假设 LABBENCH_DATA_ROOT=/abs/path/to/benchmarks)
+huggingface-cli download EdisonScientific/labbench2 \
+  --repo-type dataset --local-dir /abs/path/to/benchmarks/labbench2
+# 然后在 .env 里设:LABBENCH_DATA_ROOT=/abs/path/to/benchmarks
+```
+
+下完后,目录必须满足以下结构(runner 直接读这两个文件,缺了会报错并提示本步骤):
+
+```
+$LABBENCH_DATA_ROOT/
+└── labbench2/
+    ├── seqqa2/train-00000-of-00001.parquet
+    └── cloning/train-00000-of-00001.parquet
+```
+
+> 每道题的**原始序列文件**(`.gb` 等)无需手动准备——runner 运行时会通过官方 `download_question_files` 自动从 GCS 拉取。
+> 你手动准备的只有上面这两个题目清单 parquet。
 
 ## 运行
 

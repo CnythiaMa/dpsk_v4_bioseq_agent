@@ -217,11 +217,18 @@ dpsk_v4_bioseq_agent/
 └── tests/                    ← 无 API 模块单测(sandbox / adaptive / dnacode)
 ```
 
-**复现**(需一个 LabBench2 checkout + Ark API key):
+**复现**(需 LabBench2 代码仓库 + LabBench2 数据集 + Ark API key;完整步骤见 [README](../README.md) 的「安装与准备」):
 
 ```bash
 pip install -e .
-export LABBENCH_ROOT=/path/to/labbench2  LABBENCH_DATA_ROOT=/path/to/benchmarks
+# 1) 官方代码仓库(打分器/装配引擎/题目下载器)
+git clone https://github.com/EdisonScientific/labbench2
+export LABBENCH_ROOT=/abs/path/to/labbench2
+# 2) 数据集(题目 parquet,来自 HuggingFace,不随代码仓库下载)
+export LABBENCH_DATA_ROOT=/abs/path/to/benchmarks
+huggingface-cli download EdisonScientific/labbench2 \
+  --repo-type dataset --local-dir "$LABBENCH_DATA_ROOT/labbench2"
+# 3) Ark key,然后跑
 export ARK_API_KEY=...
 dpsk-bioseq-cloning --model pro      # 14 题 cloning,逐题完整 transcript 落盘
 dpsk-bioseq-seqqa   --model pro      # 400 题 seqqa

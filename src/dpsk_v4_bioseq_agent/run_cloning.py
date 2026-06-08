@@ -39,7 +39,7 @@ def main():
     outdir = Path(args.outdir) / f"cloning_{tag}"
     (outdir / "transcripts").mkdir(parents=True, exist_ok=True)
     limiter = AdaptiveLimiter(init=min(args.conc, 8), lo=3, hi=args.conc)
-    rows = pd.read_parquet(PARQUET).to_dict("records")
+    rows = pd.read_parquet(config.require_data_file(PARQUET)).to_dict("records")
     if args.limit:
         rows = rows[: args.limit]
 

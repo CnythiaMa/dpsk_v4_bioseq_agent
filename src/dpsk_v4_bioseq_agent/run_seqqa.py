@@ -44,7 +44,7 @@ def main():
     config.MODEL = config.MODEL_ALIASES.get(args.model, args.model)
     tag = config.MODEL.replace("deepseek-v4-", "")
 
-    rows = pd.read_parquet(PARQUET).to_dict("records")
+    rows = pd.read_parquet(config.require_data_file(PARQUET)).to_dict("records")
     if args.type:
         keep = {x.strip() for x in args.type.split(",")}
         rows = [q for q in rows if q["type"] in keep]
