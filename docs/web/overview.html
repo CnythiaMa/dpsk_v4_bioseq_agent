@@ -543,7 +543,7 @@
       <span class="sec-eyebrow">03 — Dead End</span>
       <h2>思路一（走过的弯路）：把 Agent 能力外置进 Prompt</h2>
     </div>
-    <p class="reveal">LabBench 的题目<strong>限制使用 in-context learning</strong> 类方法，直接添加 Agent 能力未必符合题意。所以我们先尝试<strong>把 Agent 能力外置</strong>：用脚本预先算好<strong>核酸序列的结构化摘要信息</strong>，塞进 prompt 里，让模型「读现成的摘要」而不是自己数。</p>
+    <p class="reveal">本次笔试<strong>限制使用 in-context learning</strong> 的方法，直接添加 Agent 能力未必符合题意。所以我们先尝试<strong>把 Agent 能力外置</strong>：用脚本预先算好<strong>核酸序列的结构化摘要信息</strong>，塞进 prompt 里，让模型「读现成的摘要」而不是自己数。</p>
 
     <h3 class="reveal">示例 A · SeqQA 注入长度、GC 含量、翻译、坐标等信息</h3>
     <pre class="reveal">%% [asserted] id=demo  organism="synthetic"  gene=demoG  molecule=DNA  topology=linear
