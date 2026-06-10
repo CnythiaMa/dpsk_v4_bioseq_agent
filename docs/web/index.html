@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>生命科学 Benchmark 介绍 · BixBench / LABBench2</title>
+<title>生命科学 Benchmark 介绍 · BixBench / LABBench2 / CompBioBench / BioMysteryBench</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;background:#f5f7fa;color:#1a1a2e}
@@ -59,10 +59,18 @@ td.links a:hover{background:#4a6fa5;color:#fff}
 .flabel{font-size:11px;font-weight:700;color:#4a6fa5;text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
 .ftext{font-size:13px;line-height:1.6;color:#222;white-space:pre-wrap;background:#f8fafc;border-radius:6px;padding:8px 10px;border:1px solid #eef1f6}
 .ftext.zh{margin-top:6px;background:#f0f7f1;border-color:#d7ebda;color:#1f3d28}
+details.ans{margin-top:8px}
+details.ans>summary{cursor:pointer;display:inline-flex;align-items:center;gap:6px;list-style:none;font-size:11px;font-weight:700;letter-spacing:.04em;color:#b45309;background:#fff7ed;border:1px solid #fed7aa;border-radius:6px;padding:4px 11px;user-select:none}
+details.ans>summary::-webkit-details-marker{display:none}
+details.ans>summary::before{content:'▶';font-size:9px;transition:transform .2s}
+details.ans[open]>summary::before{transform:rotate(90deg)}
+.ftext.ans{margin-top:6px;background:#fffaf0;border-color:#fde6c8;color:#7c3f12}
+.ftext.ans b{color:#92400e}
+.ftext.ans .vmeta{display:block;margin-top:7px;padding-top:6px;border-top:1px dashed #fde6c8;font-size:11.5px;line-height:1.55;color:#9a6a3a}
 </style></head>
 <body>
-<h1>生命科学 Benchmark 介绍 · BixBench / LABBench2</h1>
-<p class="subtitle">更新日期：2026-06-04　·　格式参考 <a href="https://cnythia-scitix.github.io/benchmark-overview/" target="_blank">benchmark-overview</a>　·　点击任意行展开详情（数据集介绍 / 采样题目）。采样题目保留英文原文并附中文翻译。</p>
+<h1>生命科学 Benchmark 介绍 · BixBench / LABBench2 / CompBioBench / BioMysteryBench</h1>
+<p class="subtitle">更新日期：2026-06-10　·　格式参考 <a href="https://cnythia-scitix.github.io/benchmark-overview/" target="_blank">benchmark-overview</a>　·　点击任意行展开详情（数据集介绍 / 采样题目）。采样题目保留英文原文并附中文翻译。</p>
 <div class="wrap"><div class="table-wrap">
 <table>
   <thead><tr><th>数据集</th><th>年份</th><th>规模</th><th>内容</th><th>题型</th><th>链接</th></tr></thead>
@@ -102,36 +110,48 @@ snapshot_download("futurehouse/BixBench", repo_type="dataset",
       <ul class="meta"><li><b>Categories</b>：RNA-seq,Differential Expression Analysis,Transcriptomics,Network Biology</li><li><b>Eval mode</b>：str_verifier</li><li><b>Source paper</b>：https://doi.org/10.1172/jci.insight.167744</li></ul>
       <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Truncating ASXL1 mutations will lead to specific gene expression changes in blood that reflect alterations in hematological processes, such as T cell and neutrophil activation.</div><div class="ftext zh">假设（中文）：截短型 ASXL1 突变会导致血液中特定的基因表达变化，反映造血过程的改变，例如 T 细胞和中性粒细胞的活化。</div></div>
       <div class="field"><div class="flabel">Question</div><div class="ftext">Using the provided RNA-seq count data and metadata files, perform DESeq2 differential expression analysis to identify significant DEGs (padj &lt; 0.05), then run enrichGO analysis with clusterProfiler::simplify() (similarity &gt; 0.7). What is the approximate adjusted p-value (rounded to 4 decimal points) for &quot;regulation of T cell activation&quot; in the resulting simplified GO enrichment results?</div><div class="ftext zh">中文翻译：使用提供的 RNA-seq 计数数据和元数据文件，执行 DESeq2 差异表达分析以识别显著差异表达基因（padj &lt; 0.05），随后用 clusterProfiler::simplify()（相似度 &gt; 0.7）运行 enrichGO 富集分析。在所得的简化 GO 富集结果中，“regulation of T cell activation”（T 细胞活化的调控）对应的校正后 p 值约为多少（四舍五入到小数点后 4 位）？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>0.0002<span class="vmeta">验证：字符串/数值匹配验证器（str_verifier）：与标准答案精确匹配。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <code>bix-10</code></div>
       <ul class="meta"><li><b>Categories</b>：Other</li><li><b>Eval mode</b>：range_verifier</li><li><b>Source paper</b>：https://zenodo.org/records/12737228</li></ul>
       <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Tubercolosis BCG re-vaccination reduces COVID-19 disease severity among healthcare workers</div><div class="ftext zh">假设（中文）：结核卡介苗（BCG）再接种可降低医护人员中的 COVID-19 疾病严重程度。</div></div>
       <div class="field"><div class="flabel">Question</div><div class="ftext">What is the odds ratio of higher COVID-19 severity (encoded in the column AESEV) associated with BCG vaccination in a multivariable ordinal logistic regression model that includes patient interaction frequency variables as covariates?</div><div class="ftext zh">中文翻译：在一个将患者交互频率变量作为协变量的多变量有序逻辑回归模型中，BCG（卡介苗）接种与更高 COVID-19 严重程度（编码于 AESEV 列）相关的优势比（odds ratio）是多少？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>(1.50, 1.54)<span class="vmeta">验证：区间验证器（range_verifier）：作答落在该区间内即判对（标准答案本身即为一个区间）。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <code>bix-11</code></div>
       <ul class="meta"><li><b>Categories</b>：[&#x27;Genomics&#x27;, &#x27;Phylogenetics and Evolutionary Analysis&#x27;]</li><li><b>Eval mode</b>：llm_verifier</li><li><b>Source paper</b>：Not Available</li></ul>
       <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Fungi have higher treeness values compared to animals.</div><div class="ftext zh">假设（中文）：真菌的 treeness 值高于动物。</div></div>
       <div class="field"><div class="flabel">Question</div><div class="ftext">What is the difference between median treeness values for fungi versus animals?</div><div class="ftext zh">中文翻译：真菌与动物的 treeness（树性）中位数之间的差异是多少？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>0.05<span class="vmeta">验证：LLM 评判器（llm_verifier）：由 LLM 将作答与标准答案语义比对。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <code>bix-12</code></div>
       <ul class="meta"><li><b>Categories</b>：[&#x27;Whole Genome Sequencing (WGS)&#x27;, &#x27;Genomics&#x27;, &#x27;Phylogenetics and Evolutionary Analysis&#x27;]</li><li><b>Eval mode</b>：llm_verifier</li><li><b>Source paper</b>：Not Available</li></ul>
       <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Fungi have more parsimony informative sites compared to animals.</div><div class="ftext zh">假设（中文）：真菌比动物拥有更多的简约信息位点。</div></div>
       <div class="field"><div class="flabel">Question</div><div class="ftext">What is the median percentage of parsimony informative sites across fungal gene alignments?</div><div class="ftext zh">中文翻译：真菌基因比对中简约信息位点（parsimony informative sites）所占百分比的中位数是多少？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>3.5%<span class="vmeta">验证：LLM 评判器（llm_verifier）：由 LLM 将作答与标准答案语义比对。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <code>bix-13</code></div>
       <ul class="meta"><li><b>Categories</b>：Sequence Analysis,RNA-seq,Differential Expression Analysis,Transcriptomics</li><li><b>Eval mode</b>：str_verifier</li><li><b>Source paper</b>：https://doi.org/10.17912/micropub.biology.001326</li></ul>
       <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">Knocking out either rhlI or lasI impacts the downstream expression of dozens of genes which may be involved in mediating the observed division of labor.</div><div class="ftext zh">假设（中文）：敲除 rhlI 或 lasI 任一基因都会影响下游数十个基因的表达，这些基因可能参与介导所观察到的分工现象。</div></div>
       <div class="field"><div class="flabel">Question</div><div class="ftext">What percentage of the genes significantly differentially expressed (logfold cutoff either &gt; 1.5 or &lt; -1.5 and FDR&lt;0.05) in strain JBX97 are also significantly differentially expressed in strain JBX99, and not in any other strain (all relative to JBX1)?</div><div class="ftext zh">中文翻译：在菌株 JBX97 中显著差异表达（log fold 阈值 &gt; 1.5 或 &lt; -1.5 且 FDR &lt; 0.05）的基因里，有多少百分比同时在菌株 JBX99 中也显著差异表达、而不在任何其他菌株中（均相对于 JBX1）？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>10.6%<span class="vmeta">验证：字符串/数值匹配验证器（str_verifier）：与标准答案精确匹配。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <code>bix-14</code></div>
       <ul class="meta"><li><b>Categories</b>：Genomics,Genomic Variant Analysis</li><li><b>Eval mode</b>：range_verifier</li><li><b>Source paper</b>：https://doi.org/10.1172/jci.insight.167744</li></ul>
       <div class="field"><div class="flabel">Hypothesis</div><div class="ftext">The distribution of variant effects / types of putative somatic CHIP variants in Bloom Syndrome probands and carriers will not differ significantly from that of controls. </div><div class="ftext zh">假设（中文）：Bloom 综合征先证者与携带者中推定的体细胞 CHIP 变异的效应/类型分布，与对照组相比不会有显著差异。</div></div>
       <div class="field"><div class="flabel">Question</div><div class="ftext">In the BLM mutation carrier cohort, what fraction of variants with a variant allele frequency (VAF) below 0.3 are annotated as synonymous?</div><div class="ftext zh">中文翻译：在 BLM 突变携带者队列中，变异等位基因频率（VAF）低于 0.3 的变异里，被注释为同义突变（synonymous）的比例是多少？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>(0.6, 0.7)<span class="vmeta">验证：区间验证器（range_verifier）：作答落在该区间内即判对（标准答案本身即为一个区间）。</span></div></details></div>
     </div></div></div></div>
       </td></tr>
       <tr class="main-row" onclick="toggle(1)" id="row-1">
@@ -201,6 +221,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">Acinetobacter lwoffii has been evolved in the lab to be resistant to which antibiotic?</div><div class="ftext zh">中文翻译：在实验室中，Acinetobacter lwoffii（鲁氏不动杆菌）被定向进化以对哪种抗生素产生耐药性？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>ciprofloxacin<span class="vmeta">验证：语义 LLM judge：将作答与 ideal 语义比对。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">SeqQA2</span> <code>a3a939e4-686c-4f4e-8881-8dc9fbe9facd</code></div>
@@ -210,6 +232,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         <li><b>Type</b>：amplicon_gc</li>
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">Design primers to amplify a 200-300 bp amplicon from M. genitalium rpsR that does not contain any 30 bp window exceeding 65% GC.</div><div class="ftext zh">中文翻译：设计引物，从 M. genitalium（生殖支原体）的 rpsR 基因扩增出一段 200–300 bp 的扩增子，且其中不含任何 GC 含量超过 65% 的 30 bp 窗口。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>TGGTAAACTCAGTTTTACTCCC,TGCTTGTTCAAACTCAGCTTC（一对引物）<span class="vmeta">验证：程序化验证器（reward function）：对设计的引物做 in silico 校验（扩增子长度、GC 窗口等约束），不经 LLM。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">CloningQA</span> <code>fb8fc27d-592a-40e8-a65f-9e1a60b7a708</code></div>
@@ -219,6 +243,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         <li><b>Type</b>：gibson</li>
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">I want to clone a lentiviral mammalian expression vector for the mouse gene Sorcs2. I want to use pLVX-EGFP-IRES-puro from Addgene as the backbone, replacing EGFP with the canonical mouse Sorcs2 transcript from Ensembl. I will amplify Sorcs2 from mouse cDNA, and linearize the vector using PCR. Design the components and steps to complete this cloning using Gibson assembly.</div><div class="ftext zh">中文翻译：我想为小鼠基因 Sorcs2 克隆一个慢病毒哺乳动物表达载体：以 Addgene 的 pLVX-EGFP-IRES-puro 作为骨架，用 Ensembl 中规范的小鼠 Sorcs2 转录本替换 EGFP。我会从小鼠 cDNA 中扩增 Sorcs2，并用 PCR 将载体线性化。请用 Gibson 组装法设计完成该克隆所需的各组分与步骤。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">功能性验证器（结果导向）：把模型写的协议在计算机里模拟执行，得到一条 DNA 产物，再与参考<b>终产物</b>做 Levenshtein 相似度 ≥ 0.95 比对（容许环状旋转等价、不容许反向互补）。本题为 Gibson 组装，参考答案是组装出的最终质粒序列；数据集 <code>ideal</code> 字段为空，仅由验证器判定。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">DbQA2</span> <code>a1dae0d3-53c6-4d56-9e39-625cc1d32fa9</code></div>
@@ -228,6 +254,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">What is the human genome reference sequence from region chr14:89000000-89000100 in hg38?</div><div class="ftext zh">中文翻译：在 hg38 中，人类基因组参考序列 chr14:89000000-89000100 区域的序列是什么？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>{"reference_sequence": "ATCTTGTCACTATGGTGGGGGAGCTTGGAGCAGCTGGGACCACTGTGGGAAGCATGAGGGTGAAGCCAACATGGTGGAAAGCAGATCTAAATCTGGAGAGA"}<span class="vmeta">验证：召回式 LLM judge：按 JSON 期望值逐字段核对（此处为 hg38 chr14:89000000-89000100 的参考序列）。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">ProtocolQA2</span> <code>a68f494c-50de-4200-b12b-82108e9c1d8e</code></div>
@@ -237,6 +265,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">While running the protocol, Inoticed that addition of GlycoBlue to the sample at the end of Day 3 resulted in no blue RNA precipitate. What might have caused this?</div><div class="ftext zh">中文翻译：执行该实验方案时，我注意到第 3 天结束时向样品中加入 GlycoBlue 后没有出现蓝色的 RNA 沉淀。可能是什么原因导致的？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>In step 29 on Day 3, you should take the aqueous phase. You took the organic phase.<span class="vmeta">验证：语义 LLM judge：开放式排错作答，与 ideal 语义比对。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">TableQA2</span> <code>28cddb99-558a-41e5-9a83-46c8ed73c4f8</code></div>
@@ -246,6 +276,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">In a study investigating the role of the small protein Mco6 in yeast mitochondrial protein import, researchers found that its alpha-helical outer membrane region co-assembles with mitochondrial Mdm10 as part of the SAM complex. Which source provided the recombinant DNA plasmid pFL39-mdm10?</div><div class="ftext zh">中文翻译：在一项研究小蛋白 Mco6 在酵母线粒体蛋白质输入中作用的研究里，研究者发现其 α 螺旋外膜区域作为 SAM 复合物的一部分与线粒体 Mdm10 共组装。重组 DNA 质粒 pFL39-mdm10 由哪个来源提供？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>Becker Lab<span class="vmeta">验证：精确匹配式 LLM judge。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">FigQA2</span> <code>b9ba0817-f8c1-4817-8293-c71aa0d6efec</code></div>
@@ -255,6 +287,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">In a study looking at the performance of single-cell foundation models, using the scGPT model, which dataset had the highest average BIO score?</div><div class="ftext zh">中文翻译：在一项考察单细胞基础模型性能的研究中，使用 scGPT 模型时，哪个数据集的平均 BIO 分数最高？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>PBMC (12k)<span class="vmeta">验证：精确匹配式 LLM judge。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">SuppQA2</span> <code>70be3149-5beb-443f-bfe8-cf14da0dd59c</code></div>
@@ -264,6 +298,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">Which part of the network architecture for function f has a bias term in a study led by Zhijian Yang and published in 2024 where a method for disease subtype classification using multi-view weakly-supervised deep clustering was developed?</div><div class="ftext zh">中文翻译：在 Zhijian Yang 主导、2024 年发表的一项研究中（该研究提出了一种用多视图弱监督深度聚类进行疾病亚型分类的方法），函数 f 的网络架构的哪一部分含有偏置项（bias term）？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>Decoder from z1, z2<span class="vmeta">验证：精确匹配式 LLM judge。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">PatentQA</span> <code>dcbf1eb1-f1c1-4043-a40c-50f738c6c994</code></div>
@@ -273,6 +309,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">In the stable bio-oil project described in patent CA2825940C, what specific compositional thresholds are used to define a thermally stable bio-oil that is cost-effective and suitable for use as a fuel without requiring deoxygenation processes such as hydrotreating?</div><div class="ftext zh">中文翻译：在专利 CA2825940C 所描述的稳定生物油项目中，用哪些具体的成分阈值来定义一种热稳定、具成本效益、且无需加氢处理（如加氢精制）脱氧即可用作燃料的生物油？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>O ≤ 30 wt%, H2O &lt; 6 wt%, Conradson Carbon &lt; 25 wt%, TAN ≤ 30 mgKOH/g, preferably free of carboxylic acids and &lt; 6 wt% carbonyls, without hydrotreating.<span class="vmeta">验证：语义 LLM judge：将作答与 ideal 语义比对。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">TrialQA</span> <code>93f1229d-822e-4aa5-90d6-9c459c32dd0c</code></div>
@@ -282,6 +320,8 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">In the BMS-986178 immunotherapy trial, what specific timing requirements exist for patients who have received prior chemotherapy treatments, and how does this relate to their line of therapy classification?</div><div class="ftext zh">中文翻译：在 BMS-986178 免疫疗法试验中，对既往接受过化疗的患者存在哪些具体的时间要求？这又如何与他们的治疗线（line of therapy）分类相关联？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>Patients must wait 6+ months after completing chemotherapy before trial entry, with previous treatment counting as first-line if less than 12 months have passed.<span class="vmeta">验证：语义 LLM judge。</span></div></details></div>
     </div>
     <div class="sample">
       <div class="sample-head">📄 <span class="tag-pill">SourceQuality</span> <code>a56306f0-676c-4e7f-94f8-5b0ce7f94448</code></div>
@@ -291,6 +331,243 @@ snapshot_download("EdisonScientific/labbench2", repo_type="dataset",
         
       </ul>
       <div class="field"><div class="flabel">Question</div><div class="ftext">A panel of evidence-based medicine experts determined that the study described in paper.pdf does not provide appropriate evidence to address the following research question: Does antibiotic therapy in people with acute bacterial conjunctivitis cause statistically significant differences in clinical and microbiological cure compared to placebo?. What was their justification for excluding this study?</div><div class="ftext zh">中文翻译：一组循证医学专家判定 paper.pdf 中描述的研究未能为以下研究问题提供恰当证据：抗生素治疗对急性细菌性结膜炎患者，与安慰剂相比，是否在临床治愈和微生物学治愈方面产生具有统计学意义的差异？他们排除这项研究的理由是什么？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>This study is not placebo-controlled; it compares active treatments without a placebo group.<span class="vmeta">验证：语义 LLM judge。</span></div></details></div>
+    </div></div></div></div>
+      </td></tr>
+      <tr class="main-row" onclick="toggle(2)" id="row-2">
+        <td class="name"><span class="arrow" id="arr-2">▶</span>CompBioBench</td>
+        <td class="year">2026</td>
+        <td class="scale">100 题 / 8 领域</td>
+        <td>计算生物学 · 端到端 agent</td>
+        <td>单一可验证答案</td>
+        <td class="links"><a href="https://www.biorxiv.org/content/10.64898/2026.04.06.716850v1" target="_blank" onclick="event.stopPropagation()">Paper</a><a href="https://github.com/Genentech/compbiobench-runner" target="_blank" onclick="event.stopPropagation()">GitHub</a><a href="https://huggingface.co/datasets/Genentech/compbiobench-data-v1" target="_blank" onclick="event.stopPropagation()">HuggingFace</a></td>
+      </tr>
+      <tr class="detail-row" id="det-2"><td class="detail-cell" colspan="6">
+        <div class="detail-box"><div class="tabs"><button class="tab-btn active" onclick="pick(this,2,0)">数据集介绍</button><button class="tab-btn" onclick="pick(this,2,1)">采样题目</button></div><div class="tab-content active" id="tc-2-0"><div class="md-body">
+    <h2>内容介绍</h2>
+    <p><b>CompBioBench</b> 由 <b>Genentech（基因泰克）</b> 推出（2026-04 发布于 bioRxiv），用于评测通用 agentic 系统（Claude Code、Codex CLI 等）在<b>真实计算生物学任务</b>上的端到端能力。最大特点是 <b>“裸环境”（bare-minimum environment）</b>：agent 从一个几乎空白的环境起步，需要<b>自己抓取数据、安装工具/依赖、写定制代码、与真实外部资源交互</b>，再给出答案。</p>
+    <ul>
+      <li><b>规模</b>：100 道精心策划的题目，覆盖 8 个领域（主文件 <code>compbiobench.v1.tsv</code> + <code>data/</code> 输入文件）。</li>
+      <li><b>形式</b>：每题<b>单一、可验证的标准答案</b>（verifiable），便于自动化判分（如基因符号、数值、坐标、逗号分隔列表）。</li>
+      <li><b>防“背答案”</b>：大量题目基于真实数据集做<b>合成/增强（synthetic/augmented）</b>与<b>元数据打乱/抹除（metadata scrambling/scrubbing）</b>，强迫模型真正去分析而非检索命中。</li>
+      <li><b>每题元数据</b>：<code>domain</code>（领域）、<code>question_style</code>（题型）、<code>skills_tested</code>（考察技能）、<code>internet_required</code>（是否需联网）、<code>gpu_preferred</code>（是否偏好 GPU）、<code>file_paths</code>（输入文件）。</li>
+    </ul>
+    <h3>领域分布（8 类，共 100 题）</h3>
+    <table>
+      <thead><tr><th>领域 Domain</th><th>题量</th><th>领域 Domain</th><th>题量</th></tr></thead>
+      <tbody>
+        <tr><td>Single-cell（单细胞）</td><td>21</td><td>Transcriptomics（转录组）</td><td>17</td></tr>
+        <tr><td>Genomics（基因组）</td><td>20</td><td>Population Genetics（群体遗传）</td><td>12</td></tr>
+        <tr><td>Epigenomics（表观基因组）</td><td>20</td><td>Machine Learning（机器学习）</td><td>7</td></tr>
+        <tr><td>Spatial（空间转录组）</td><td>2</td><td>Structure（结构）</td><td>1</td></tr>
+      </tbody>
+    </table>
+    <h3>题型分布（5 类 question_style）</h3>
+    <table>
+      <thead><tr><th>题型</th><th>题量</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td>Metadata Recovery</td><td>27</td><td>从数据中“反推”被打乱/抹除的元数据（样本身份、亲缘、参考版本等）</td></tr>
+        <tr><td>Synthetic/Augmented Data</td><td>26</td><td>在真实数据上人工植入信号（cryptic exon、缺失、混样等）后让模型找出</td></tr>
+        <tr><td>Routine Analysis</td><td>22</td><td>标准生信流程（samtools / bedtools / GC 含量 / 比对等）</td></tr>
+        <tr><td>Retrieval</td><td>17</td><td>查库/取数（Ensembl、ClinVar、1000G、UCSC 等）</td></tr>
+        <tr><td>Tooling</td><td>8</td><td>跑成熟流水线或深度学习模型（ENCODE pipeline、Borzoi、Enformer 等）</td></tr>
+      </tbody>
+    </table>
+    <h2>评分原理</h2>
+    <p>每题有<b>唯一 ground-truth</b>，按规定格式作答即可程序化判定（不依赖“走了哪条路”，只看最终答案）。runner 框架为每题提供隔离的 conda 环境、超时控制（默认 120 分钟）、并行 worker，并记录完整 prompt、推理链 trace、token 用量与成本。</p>
+    <blockquote><b>主要结果（论文）：</b>Codex CLI（GPT 5.4）整体 <b>83%</b>、最难题 59%；Claude Code（Opus 4.6）整体 <b>81%</b>、最难题 <b>69%</b>。结论：顶级 agent 在界定清晰、可验证的计算生物学问题上已相当强，且在最难题上 Claude Code 反超。</blockquote>
+    <h2>仓库与下载地址</h2>
+    <ul>
+      <li><b>论文</b>：<a href="https://www.biorxiv.org/content/10.64898/2026.04.06.716850v1" target="_blank">Agentic systems are adept at solving well-scoped, verifiable problems in computational biology（bioRxiv, 2026）</a></li>
+      <li><b>GitHub（runner）</b>：<a href="https://github.com/Genentech/compbiobench-runner" target="_blank">github.com/Genentech/compbiobench-runner</a></li>
+      <li><b>Hugging Face（数据）</b>：<a href="https://huggingface.co/datasets/Genentech/compbiobench-data-v1" target="_blank">huggingface.co/datasets/Genentech/compbiobench-data-v1</a></li>
+    </ul>
+    <pre><code>from huggingface_hub import snapshot_download
+snapshot_download("Genentech/compbiobench-data-v1", repo_type="dataset",
+                  local_dir="benchmarks/compbiobench")
+# 题目主文件：compbiobench.v1.tsv ；输入数据在 data/</code></pre>
+    </div></div><div class="tab-content" id="tc-2-1"><div class="md-body"><h2>采样题目</h2><p class="note">以下从 8 个领域各采样代表性题目（覆盖全部 5 种题型），取自 <code>compbiobench.v1.tsv</code>，保留英文原文并附中文翻译。<code>net</code>=需联网，<code>gpu</code>=偏好 GPU。</p>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Genomics</span> <code>ensembl-grab-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Retrieval（检索）</li><li><b>考察技能</b>：API/Web Fetching</li><li><b>资源</b>：net=是 · gpu=否 · 无附带文件</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Convert all of the following to Ensembl gene IDs. Provide the ID without the Ensembl version (e.g., ENSGXXXXXXXXXXXX not ENSGXXXXXXXXXXXX.XX). Respond with semi-colon separated values, no spaces. Inputs: 1. NM_001276266.2 2. TERB2 3. ENST00000267814 4. chr15:45167214-45187966 (hg38) 5. GeneID:9153 6. NP_922946.1 7. MIM:617658 8. BEN domain containing 5, transcript variant 6.</div><div class="ftext zh">中文翻译：把下列所有标识符转换为 Ensembl 基因 ID，去掉版本号（如 ENSGXXXXXXXXXXXX 而非 ENSGXXXXXXXXXXXX.XX）。以分号分隔、无空格返回。输入：1. NM_001276266.2  2. TERB2  3. ENST00000267814  4. chr15:45167214-45187966（hg38）  5. GeneID:9153  6. NP_922946.1  7. MIM:617658  8. BEN domain containing 5（转录本变体 6）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Genomics</span> <code>bam-ops-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Routine Analysis（常规分析）</li><li><b>考察技能</b>：Bioinformatics Tools</li><li><b>资源</b>：net=否 · gpu=否 · 文件 <code>mt.sorted.bam</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">For the given BAM file mt.sorted.bam, how many reads pass quality threshold of 30 and are properly paired?</div><div class="ftext zh">中文翻译：对于给定的 BAM 文件 mt.sorted.bam，有多少条 reads 同时满足比对质量 ≥ 30 且为 properly paired（正确配对）？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Transcriptomics</span> <code>cryptic-exon-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Synthetic/Augmented Data（合成/增强数据）</li><li><b>考察技能</b>：Coding, Reasoning, Bioinformatics Tools</li><li><b>资源</b>：net=是 · gpu=否 · 文件 <code>cryptic.exon.q1.fq.gz</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">I have a bulk human RNA-seq fastq file cryptic.exon.q1.fq.gz. There is exactly one highly expressed coding gene that has a cryptic exon in it formed by two novel junctions. Report the HGNC gene symbol (uppercase) for that gene.</div><div class="ftext zh">中文翻译：我有一个人类 bulk RNA-seq fastq 文件 cryptic.exon.q1.fq.gz。其中恰好有一个高表达的编码基因含有一个由两个新剪接位点（novel junctions）形成的隐性外显子（cryptic exon）。请报告该基因的 HGNC 基因符号（大写）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Single-cell</span> <code>cell-proportions-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Synthetic/Augmented Data（合成/增强数据）</li><li><b>考察技能</b>：Reasoning, Bioinformatics Tools</li><li><b>资源</b>：net=是 · gpu=否 · 文件 <code>cell.proportions.q1.mtx.gz</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">I have a counts matrix of single cell transcriptomic data, cell.proportions.q1.mtx.gz. The data contains measurements from 5350 cells, each with 1000 measured genes. That data was generated by measuring data from a co-culture of a few unique cell types. Can you tell me the proportions of those cells in descending order to the nearest 5 percent? Drop any cells with questionable QC. Expected output: 35;35;20;10 if there are 4 cell types.</div><div class="ftext zh">中文翻译：我有一个单细胞转录组计数矩阵 cell.proportions.q1.mtx.gz，包含 5350 个细胞、每个细胞测了 1000 个基因。数据来自几种不同细胞类型的共培养（co-culture）。请告诉我这些细胞类型的比例，按降序排列、四舍五入到最接近的 5%。请丢弃 QC 存疑的细胞。输出示例：若有 4 种细胞类型，则形如 35;35;20;10。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Epigenomics</span> <code>encode-atac-pipeline-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Tooling（工具/流水线）</li><li><b>考察技能</b>：Tooling, Data Wrangling</li><li><b>资源</b>：net=是 · gpu=否 · 文件 <code>encode.atac.pipeline.q1.R1.fq.gz, ...R2.fq.gz</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">encode.atac.pipeline.q1.R1.fq.gz and encode.atac.pipeline.q1.R2.fq.gz are paired-end ATAC-seq reads from a human sample. Process them through the ENCODE ATAC-seq pipeline v2.2.3. Keep the input json similar to the ENCSR356KRQ_subsampled.json example, but remove the atac.enable_xcor line. After the pipeline completes, report the reproducibility IDR N_opt number from the qc.json file.</div><div class="ftext zh">中文翻译：encode.atac.pipeline.q1.R1.fq.gz 与 ...R2.fq.gz 是来自人类样本的双端 ATAC-seq reads。请用 ENCODE ATAC-seq pipeline v2.2.3 处理它们。input json 保持与示例 ENCSR356KRQ_subsampled.json 类似，但删除 atac.enable_xcor 这一行。pipeline 完成后，从 qc.json 文件中报告 reproducibility 的 IDR N_opt 数值。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Population Genetics</span> <code>identify-related-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Metadata Recovery（元数据反推）</li><li><b>考察技能</b>：Bioinformatics Tools, Reasoning, Data Wrangling</li><li><b>资源</b>：net=是 · gpu=否 · 文件 <code>identify.related.q1.tfam, .tped.gz</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">You are given identify.related.q1.tfam and identify.related.q1.tped.gz files of genotypes. I need to know if there are any 1st-degree relatives. Print a comma separated, sorted list of all individuals with a 1st-degree or closer relative in the dataset (e.g. SAMPLE_001,SAMPLE_002). If no such individuals exist, print None.</div><div class="ftext zh">中文翻译：给你 identify.related.q1.tfam 与 identify.related.q1.tped.gz 两个基因型文件。我想知道数据中是否存在一级亲属（1st-degree relatives）。请打印一个逗号分隔、已排序的列表，列出数据集中所有拥有一级或更近亲缘关系的个体（如 SAMPLE_001,SAMPLE_002）。若不存在这样的个体，则打印 None。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Machine Learning</span> <code>borzoi-rnaseq-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Tooling（深度学习模型）</li><li><b>考察技能</b>：ML Frameworks, Coding, Reasoning, API/Web Fetching, Tooling</li><li><b>资源</b>：net=是 · <b>gpu=是</b> · 文件 <code>borzoi.rnaseq.q1.pdf</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Use the Borzoi model (replicate 0) to predict the total RNA-seq coverage on the forward strand for the experiment ENCFF281BWX, over the genomic interval chr1:70157360-70353968 in the hg38 genome. Return the total predicted RNA-seq coverage over the specified interval, which means reversing any transformations that were applied to RNA-seq coverage before training the Borzoi model. The Borzoi paper is saved as borzoi.rnaseq.q1.pdf. Round the answer to the nearest 10.</div><div class="ftext zh">中文翻译：用 Borzoi 模型（replicate 0）预测实验 ENCFF281BWX 在 hg38 基因组区间 chr1:70157360-70353968 上、正链（forward strand）的 RNA-seq 总覆盖度。返回该区间上预测的 RNA-seq 总覆盖度——这意味着需要把训练前对 RNA-seq 覆盖度施加的所有变换都逆转回去。Borzoi 论文保存在 borzoi.rnaseq.q1.pdf。答案四舍五入到最接近的 10。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Spatial</span> <code>spatial-sim-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Synthetic/Augmented Data（合成/增强数据）</li><li><b>考察技能</b>：Coding, Reasoning, Visual Reasoning, Data Wrangling</li><li><b>资源</b>：net=是 · gpu=否 · 文件 <code>spatial.sim.tar.gz</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">You are given single cell transcriptomic data and Visium spatial transcriptomic data (spatial.sim.tar.gz): sc counts, sc metadata (cell types), spatial matrix / features / barcodes, scale factors, hires/lowres tissue images, and tissue positions. The spot-based data is comprised entirely of cell types found in the single cell data. Can you tell me what cell type or cell types are included in spot ID Spot_710-1? List these separated by commas in alphabetical order. Expected answer format: Endothelial,Macrophage.</div><div class="ftext zh">中文翻译：给你一组单细胞转录组数据与 Visium 空间转录组数据（spatial.sim.tar.gz），含单细胞计数矩阵、单细胞细胞类型元数据、空间矩阵/基因/spot 条形码、缩放因子、高低分辨率组织图像、组织位置等。基于 spot 的数据完全由单细胞数据中出现的细胞类型组成。请告诉我 spot ID 为 Spot_710-1 的位点包含哪种或哪些细胞类型？按字母顺序、逗号分隔列出。答案格式示例：Endothelial,Macrophage。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Structure</span> <code>protein-shape-q1</code></div>
+      <ul class="meta"><li><b>题型</b>：Synthetic/Augmented Data（合成/增强数据）</li><li><b>考察技能</b>：Coding, Visual Reasoning</li><li><b>资源</b>：net=否 · gpu=否 · 文件 <code>protein.shape.q1.pdb</code></li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Consider the PDB protein in the file protein.shape.q1.pdb. Which of the following uppercase letters does it resemble most closely: B, D, F, H, J, L, N, P, R, T, V, X, Z? Consider all possible projections and pick the best fit.</div><div class="ftext zh">中文翻译：考察文件 protein.shape.q1.pdb 中的 PDB 蛋白质。它最接近下列哪个大写字母：B, D, F, H, J, L, N, P, R, T, V, X, Z？请考虑所有可能的投影方向，挑选最契合的一个。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b><span class="muted">未公开 / 由验证器判定</span><span class="vmeta">该数据集<b>未公开 ground-truth</b>（标准答案不随数据集发布）。验证机制：每题按题面规定格式（基因符号 / 数值 / 坐标 / 逗号分隔列表等）对<b>单一标准答案</b>做程序化精确匹配判定。</span></div></details></div>
+    </div></div></div></div>
+      </td></tr>
+      <tr class="main-row" onclick="toggle(3)" id="row-3">
+        <td class="name"><span class="arrow" id="arr-3">▶</span>BioMysteryBench</td>
+        <td class="year">2026</td>
+        <td class="scale">99 题（76 可解 / 23 困难）</td>
+        <td>生物信息学研究 · 端到端 agent</td>
+        <td>客观 ground-truth / rubric 评分</td>
+        <td class="links"><a href="https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench" target="_blank" onclick="event.stopPropagation()">Blog</a><a href="https://huggingface.co/datasets/Anthropic/BioMysteryBench-full" target="_blank" onclick="event.stopPropagation()">HuggingFace</a></td>
+      </tr>
+      <tr class="detail-row" id="det-3"><td class="detail-cell" colspan="6">
+        <div class="detail-box"><div class="tabs"><button class="tab-btn active" onclick="pick(this,3,0)">数据集介绍</button><button class="tab-btn" onclick="pick(this,3,1)">采样题目</button></div><div class="tab-content active" id="tc-3-0"><div class="md-body">
+    <h2>内容介绍</h2>
+    <p><b>BioMysteryBench</b> 由 <b>Anthropic</b>（discovery 团队）创建，是一个<b>生物信息学研究基准</b>，用于评测模型在<b>真实生物数据集</b>上做端到端分析的能力。它的核心思路是绕开“科学结论难以验证”的难题：题目不问主观结论，而是问数据中<b>受控、客观的属性</b>——这些属性对应某个真实的实验/临床发现，因此存在<b>唯一的 ground-truth</b>。出题时专家须提交<b>验证 notebook</b> 证明“信号确实存在于数据中”，保证题目理论上可解。</p>
+    <ul>
+      <li><b>规模</b>：99 道由领域专家撰写的题目（主文件 <code>problems.csv</code> / <code>problems.parquet</code>，每题对应 <code>data/*.zip</code> 数据包）。</li>
+      <li><b>难度分层</b>：<b>76 题 human-solvable</b>（5 位专家中至少 1 人答对）+ <b>23 题 human-difficult</b>（无人答对，部分是人类目前也难以/无法独立解决的）。</li>
+      <li><b>裸环境 + 工具</b>：模型可联网访问指定数据库（NCBI、Ensembl 等）、用 pip/conda 装工具、写代码分析，自行决定路径。</li>
+      <li><b>覆盖数据类型</b>：WGS、scRNA-seq、甲基化、ChIP-seq、宏基因组、Hi-C，以及蛋白质组学、代谢组学等。</li>
+    </ul>
+    <h3>题库字段（problems.csv）</h3>
+    <table>
+      <thead><tr><th>字段</th><th>含义</th></tr></thead>
+      <tbody>
+        <tr><td><code>id</code></td><td>题目标识符</td></tr>
+        <tr><td><code>question</code></td><td>给模型的任务题面</td></tr>
+        <tr><td><code>answer_rubric</code></td><td>评分标准（含期望答案）</td></tr>
+        <tr><td><code>allowed_domains</code></td><td>求解环境允许访问的网络域名</td></tr>
+        <tr><td><code>human_solvable</code></td><td>是否至少有一位人类基准测试者解出（yes/no）</td></tr>
+      </tbody>
+    </table>
+    <h2>评分原理</h2>
+    <p>答案来自数据的<b>客观真值（objective ground truth）</b>，而非科学家的主观结论；评分<b>只看最终答案、不看路径</b>（鼓励创造性解法），按 <code>answer_rubric</code> 判定。这样既容许“多种合理分析方法/主观研究决策”，又能给出可复现的对错判定。</p>
+    <blockquote><b>主要结果（Anthropic 博客）：</b>Claude Opus 4.6 在 human-solvable 集上 <b>77.4%</b>、在 human-difficult 集上 <b>23.5%</b>；Claude Mythos Preview 解出约 <b>30%</b> 的 human-difficult 题（其中不乏“人类觉得困难甚至无法独立解决”的任务）。可靠性分析：可解题上 5 次尝试中答对 ≥4 次的一致率达 <b>86%</b>；但困难集上“脆性”明显，近一半正确答案来自不可复现的推理路径。</blockquote>
+    <h2>是否开源可访问？</h2>
+    <p class="note">数据集<b>公开列出、免费、许可 CC-BY-4.0</b>，但属于 <b>Gated（auto 自动审批）</b>：需<b>登录 Hugging Face → 勾选同意“仅用于评测、不得用于训练/微调/蒸馏”条款</b>，即时获批后即可下载。匿名访问 <code>problems.csv</code> 会返回 HTTP 401；登录并同意条款后可正常下载（本页“采样题目”即为登录后取得的<b>逐字真实题面</b>，已下载到完整 99 题）。</p>
+    <h2>仓库与下载地址</h2>
+    <ul>
+      <li><b>官方博客</b>：<a href="https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench" target="_blank">Evaluating Claude’s bioinformatics research capabilities with BioMysteryBench</a></li>
+      <li><b>Hugging Face</b>：<a href="https://huggingface.co/datasets/Anthropic/BioMysteryBench-full" target="_blank">huggingface.co/datasets/Anthropic/BioMysteryBench-full</a> <span class="gated">Gated</span></li>
+      <li><b>本地路径（建议）</b>：<code>benchmarks/biomysterybench/</code></li>
+    </ul>
+    <pre><code>from huggingface_hub import snapshot_download
+snapshot_download("Anthropic/BioMysteryBench-full", repo_type="dataset",
+                  local_dir="benchmarks/biomysterybench",
+                  token="hf_xxx")   # gated：须先在网页同意条款，再用登录 token</code></pre>
+    </div></div><div class="tab-content" id="tc-3-1"><div class="md-body"><h2>采样题目</h2><p class="note">✅ 已用登录 token 下载到 gated 题库（<code>problems.csv</code>，99 题），以下为<b>逐字真实题面</b>采样（10 题，覆盖各数据模态，含 2 道 human-difficult），保留英文原文并附中文翻译。全部题目 <code>allowed_domains</code> 统一为：conda / NCBI / Ensembl / UCSC / UniProt / Bioconductor / PyPI / EBI 等。</p>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Single-cell</span> <code>hb001</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：scRNA-seq</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Which human organ is this cell type single-cell RNA-seq dataset derived from?</div><div class="ftext zh">中文翻译：这个按细胞类型组织的单细胞 RNA-seq 数据集来自人体的哪个器官？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>lung<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Genomics</span> <code>hb003</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：sequencing（敲除检测）</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Name one gene that was knocked out in the experimental sample compared to the control samples. Provide the gene symbol.</div><div class="ftext zh">中文翻译：与对照样本相比，实验样本中被敲除（knocked out）的基因里，说出其中一个。请提供基因符号。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>ITGAV（接受任一被敲除基因，rubric 列表中此题为 ITGAV）<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Population Genetics</span> <code>hb012</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：genomic sequences（亲缘）</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What sample is the mother of sample X? What sample is the father? Answer should be comma separated: mother comes first, father comes second.</div><div class="ftext zh">中文翻译：哪个样本是样本 X 的母亲？哪个是父亲？以逗号分隔作答：母亲在前、父亲在后。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>Sample_13, Sample_05（母在前、父在后）<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Metagenomics</span> <code>hb019</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：viral sequencing</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What viral species is the human patient infected with? Provide the answer using ICTV viral abbreviations (e.g. ZIKV, YFV, HCV, etc).</div><div class="ftext zh">中文翻译：这名人类患者感染了哪种病毒物种？请用 ICTV 病毒缩写作答（如 ZIKV、YFV、HCV 等）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>EBOV（埃博拉病毒，ICTV 缩写）<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Genomics</span> <code>recc3vmqjrsefqw57</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：WGS（结构变异）</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Which exon of the BRCA1 gene contains a homozygous deletion in this sample? Provide the Ensembl exon ID (e.g., ENSE00004011560).</div><div class="ftext zh">中文翻译：在该样本中，BRCA1 基因的哪个外显子含有纯合缺失（homozygous deletion）？请提供 Ensembl 外显子 ID（如 ENSE00004011560）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>ENSE00004011566<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Genome Editing</span> <code>rec6xeqyddiz6desi</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：CRISPR WGS（双端）</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Identify the genomic coordinate (hg38 assembly) of the primary on-target Cas9 cleavage site from paired-end whole-genome sequencing data of CRISPR–edited human cell line. Report the coordinate as the position of the blunt end of the Cas9 cut (3bp upstream of the PAM, 1-based hg38 coordinates). Report the coordinate in the format chr#:position (e.g., chr1:12345678).</div><div class="ftext zh">中文翻译：从一个 CRISPR 编辑过的人类细胞系的双端全基因组测序数据中，确定主要 on-target Cas9 切割位点的基因组坐标（hg38）。请把坐标报告为 Cas9 平末端切口的位置（PAM 上游 3 bp，1-based hg38 坐标），格式为 chr#:position（如 chr1:12345678）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>chr3:46373175<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Proteomics</span> <code>hb046</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：mass spectrometry</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Given the mass spectrometry data, identify the taxonomic family of the organism from which the data is derived. Provide the scientific name of the taxonomic family (e.g., Muridae, Hominidae).</div><div class="ftext zh">中文翻译：根据质谱（mass spectrometry）数据，判断数据来源生物所属的分类学“科”（family）。请提供该科的学名（如 Muridae、Hominidae）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>Muridae<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Proteomics</span> <code>recjgwpbyodqoihqc</code></div>
+      <ul class="meta"><li><b>human_solvable</b>：yes（可解集）</li><li><b>数据类型</b>：gel filtration / 层析</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Can you calculate the observed molecular weight of my purified protein (based on the elution profile of a gel filtration standard containing Thyroglobulin (670 kDa), γ-Globulin (158 kDa), Ovalbumin (44 kDa), Myoglobin (17 kDa), and Vitamin B12 (1.35 kDa)? Report the molecular weight in kDa, rounded to the nearest whole number.</div><div class="ftext zh">中文翻译：能否根据凝胶过滤（gel filtration）标准品的洗脱曲线计算我纯化蛋白的实测分子量？标准品含甲状腺球蛋白（670 kDa）、γ-球蛋白（158 kDa）、卵清蛋白（44 kDa）、肌红蛋白（17 kDa）和维生素 B12（1.35 kDa）。以 kDa 报告分子量，四舍五入到整数。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>47 kDa（标准 47 ± 1 kDa，接受 46–48 kDa / 46000–48000 Da）<span class="vmeta">验证：评分：all-or-nothing；本题<b>有容差</b>——46–48 kDa（或 46000–48000 Da）均判对。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Genomics</span> <code>hb014</code> <span class="gated">human-difficult</span></div>
+      <ul class="meta"><li><b>human_solvable</b>：no（困难集，无专家答对）</li><li><b>数据类型</b>：mtDNA</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">What is the mitochondrial haplogroup of this patient/sample?</div><div class="ftext zh">中文翻译：这名患者/样本的线粒体单倍群（mitochondrial haplogroup）是什么？</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>L0（线粒体单倍群）<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <div class="sample">
+      <div class="sample-head">📄 <span class="tag-pill">Cancer Genomics</span> <code>recsvhviava5okg19</code> <span class="gated">human-difficult</span></div>
+      <ul class="meta"><li><b>human_solvable</b>：no（困难集，无专家答对）</li><li><b>数据类型</b>：体细胞突变 / 突变特征</li></ul>
+      <div class="field"><div class="flabel">Question</div><div class="ftext">Which COSMIC single-base substitution (SBS) mutational signature has the highest relative contribution (%) in the breast tumor samples? Provide the answer as the COSMIC SBS signature ID (e.g., SBS1).</div><div class="ftext zh">中文翻译：在乳腺肿瘤样本中，哪个 COSMIC 单碱基替换（SBS）突变特征（mutational signature）的相对贡献（%）最高？请以 COSMIC SBS signature ID 作答（如 SBS1）。</div></div>
+    
+      <div class="field"><details class="ans"><summary>显示答案 / Answer</summary><div class="ftext ans"><b>答案：</b>SBS3（COSMIC SBS 突变特征）<span class="vmeta">验证：评分：all-or-nothing（全有或全无，无部分分），由 rubric 判 1.0 / 0.0。</span></div></details></div>
+    </div>
+    <p class="note muted">题库字段：<code>id / question / answer_rubric / allowed_domains / human_solvable</code>，每题附带 <code>data/&lt;id&gt;.zip</code> 数据包。本页未展示 <code>answer_rubric</code>（含答案）。</p>
     </div></div></div></div>
       </td></tr></tbody>
 </table>
